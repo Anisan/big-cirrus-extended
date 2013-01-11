@@ -1278,19 +1278,15 @@
 				<posy>100</posy>
 				<width>25</width>
 				<height>220</height>
-				<!-- texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<textureslidernib>ScrollBarV.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus-->
-				 <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				  <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				  <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				  <textureslidernib>ScrollBarNib.png</textureslidernib>
-				  <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 				<onleft>2</onleft>
 				<onright>569</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-				<!--visible>Control.IsVisible(569)</visible-->
 				<visible allowhiddenfocus="true">Control.IsVisible(569) + Control.HasFocus(60)</visible>
 		    </control>
 		</control>
