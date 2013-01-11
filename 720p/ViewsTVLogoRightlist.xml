@@ -193,7 +193,7 @@
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
 				</control>
-				
+								
 				<control type="group">
 					<description>Nextaired</description>
 					<posx>-80</posx>
@@ -426,7 +426,7 @@
 					<bordersize>8</bordersize>
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
-					</control>
+				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>14</posy>
@@ -439,8 +439,8 @@
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
 					<visible>Skin.HasSetting(jpgsupport)</visible>
-					</control>
-					<control type="image">
+				</control>
+				<control type="image">
 					<posx>0</posx>
 					<posy>14</posy>
 					<width>514</width>
@@ -452,7 +452,7 @@
 					<visible>Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
 					<visible>!Skin.HasSetting(jpgsupport)</visible>
-					</control>
+				</control>
 				<control type="image">
 					<width>161</width>
 					<height>110</height>
@@ -465,7 +465,7 @@
 				</control>
 				<!-- TV SHOW LOGO -->
 				<control type="largeimage" id="7914"> 
-					<posx>295r</posx> 
+					<posx>335r</posx> 
 					<posy>8</posy> 
 					<width>335</width> 
 					<height>130</height> 

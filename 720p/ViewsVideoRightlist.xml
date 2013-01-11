@@ -4,7 +4,7 @@
 <!-- ====================Movies, TV Shows, Seasons, Episodes, Music ====================== -->
 	<include name="RightListView">
 		<control type="group">
-		<animation type="WindowOpen" reversible="false">
+			<animation type="WindowOpen" reversible="false">
 			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 			<effect type="fade" start="0" end="100" time="300" />
 			</animation>
@@ -66,19 +66,19 @@
 				<texture flipx="true">blackgradient.png</texture>
 			</control>
 			<control type="image">
-        <posx>268</posx>
-        <posy>360</posy>
-        <width>385</width>
-        <height>200</height>
-		<texture>black-back.png</texture>
-		<bordertexture border="8">contentpanelvertical.png</bordertexture>
-		<bordersize>8</bordersize>
-        <aspectratio>stretch</aspectratio>
-		<visible>Skin.Hassetting(videowindowglobal)</visible>
-		<visible>Player.HasVideo</visible>
-		<visible>!Skin.Hassetting(videowindownoborder)</visible>
-		<visible>Control.IsVisible(569)</visible>
-      </control>
+				<posx>268</posx>
+				<posy>360</posy>
+				<width>385</width>
+				<height>200</height>
+				<texture>black-back.png</texture>
+				<bordertexture border="8">contentpanelvertical.png</bordertexture>
+				<bordersize>8</bordersize>
+				<aspectratio>stretch</aspectratio>
+				<visible>Skin.Hassetting(videowindowglobal)</visible>
+				<visible>Player.HasVideo</visible>
+				<visible>!Skin.Hassetting(videowindownoborder)</visible>
+				<visible>Control.IsVisible(569)</visible>
+			</control>
 			<control type="videowindow" id="8">
 		        <posx>280</posx>
 		        <posy>370</posy>
@@ -87,34 +87,33 @@
 		        <visible>Skin.Hassetting(videowindowglobal)</visible>
 				<visible>Control.IsVisible(569)</visible>
 		     </control> 
-		  <control type="label">
-          <description>Title label</description>
-          <posx>296</posx>
-          <posy>510</posy>
-          <height>30</height>
-          <width>330</width>
-          <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=orange] (,)[/COLOR]]</label>
-          <align>center</align>
-          <aligny>center</aligny>
-          <font>cirrus_20</font>
-          <textcolor>white</textcolor>
-          
-		  <visible>Skin.HasSetting(videowindowglobal)</visible>
-		  <visible>Player.HasVideo</visible>
-		  <visible>Control.IsVisible(569)</visible>
-		  <visible>!Skin.HasSetting(videonotitle)</visible>
-        </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <posx>296</posx>
+			  <posy>510</posy>
+			  <height>30</height>
+			  <width>330</width>
+			  <label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=orange] (,)[/COLOR]]</label>
+			  <align>center</align>
+			  <aligny>center</aligny>
+			  <font>cirrus_20</font>
+			  <textcolor>white</textcolor>
+			  <visible>Skin.HasSetting(videowindowglobal)</visible>
+			  <visible>Player.HasVideo</visible>
+			  <visible>Control.IsVisible(569)</visible>
+			  <visible>!Skin.HasSetting(videonotitle)</visible>
+			</control>
 			<!-- START OF ACTUAL LIST -->
 			<control type="list" id="569"> <!-- CUSTOM Scroll + Trailer  Hack -->
 			<!--visible>Skin.HasSetting(rightlist_view)</visible-->
-			<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-			<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-			</animation>      
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+					<effect type="fade" start="0" end="100" time="300" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+					<effect type="fade" start="100" end="0" time="300" />
+				</animation>      
 				<posx>600r</posx>
 				<posy>100</posy>
 				<width>600</width>
@@ -124,7 +123,7 @@
 				<onleft>60</onleft>
 				<onup>569</onup>
 				<ondown>569</ondown>
-				<onright condition="Container.Content(Movies) | Container.Content(Episodes)">ActivateWindow(1121)</onright>
+				<!--onright condition="Container.Content(Movies) | Container.Content(Episodes)">ActivateWindow(1121)</onright>
 				<!-- <onright>ActivateWindow(1121)</onright> -->
 				<viewtype label="40003">list</viewtype>
 				<pagecontrol>60</pagecontrol>
@@ -294,7 +293,18 @@
 					<visible>!Skin.HasSetting(poster) + !Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</visible>
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
 				</control>
-				
+				<control type="image"> 
+					<posx>-10</posx>
+					<posy>-148</posy>
+					<width>250</width>
+					<height>141</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<texture background="true">$INFO[ListItem.Path]clearart.png</texture>
+					<bordersize>8</bordersize>
+					<visible>!Skin.HasSetting(widethumb) + !Skin.HasSetting(banner) + !Skin.HasSetting(poster)</visible>
+					<visible>!IsEmpty(ListItem.Thumb)</visible> 
+				</control>
 				
 				<control type="group">
 					<description>Nextaired</description>
@@ -1263,21 +1273,26 @@
 					<visible>!IsEmpty(ListItem.Thumb)</visible> 
 				</control>
 			</control>
-			 <control type="scrollbar" id="60">
-        <posx>10</posx>
-        <posy>100</posy>
-        <width>25</width>
-        <height>220</height>
-        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-        <textureslidernib>ScrollBarV.png</textureslidernib>
-        <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
-        <onleft>2</onleft>
-        <onright>569</onright>
-        <showonepage>false</showonepage>
-        <orientation>vertical</orientation>
-        <visible>Control.IsVisible(569)</visible>
-		<visible allowhiddenfocus="true">Control.IsVisible(569) + Control.HasFocus(60)</visible>
-      </control>
+			<control type="scrollbar" id="60">
+				<posx>10</posx>
+				<posy>100</posy>
+				<width>25</width>
+				<height>220</height>
+				<!-- texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<textureslidernib>ScrollBarV.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus-->
+				 <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				  <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				  <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				  <textureslidernib>ScrollBarNib.png</textureslidernib>
+				  <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>2</onleft>
+				<onright>569</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<!--visible>Control.IsVisible(569)</visible-->
+				<visible allowhiddenfocus="true">Control.IsVisible(569) + Control.HasFocus(60)</visible>
+		    </control>
 		</control>
 	</include>
 </includes>

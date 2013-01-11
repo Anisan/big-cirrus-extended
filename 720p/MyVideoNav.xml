@@ -11,51 +11,52 @@
 <!-- Hide menu if kiosk mode turned ON -->
 <visible>!Skin.HasSetting(kiosk)</visible>
 <controls>
-<include condition="System.HasAddon(script.moviesets)">ContainerMovieSets</include>
-<include>CommonVideoBackground</include>
+	<include condition="System.HasAddon(script.moviesets)">ContainerMovieSets</include>
+	<include>CommonVideoBackground</include>
 	<!-- FANART IMAGES Mod  -->
 	<control type="group">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<include>global_kenburns_fanart</include>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<visible>!Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591) | Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
-			<visible>Container.Content(Movies) | Window.IsVisible(VideoLibrary)</visible>
-		</control>
-		 <control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
-			<include>global_kenburns_fanart</include>
-			<timeperimage>8000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>FanartCrossfadeTime</fadetime>
-			<visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
+		<!-- Movie FANART -->
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<include>global_kenburns_fanart</include>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>!Skin.HasSetting(VideoLibraryMovieFanart)</visible>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</imagepath>
+				<include>global_kenburns_fanart</include>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>Skin.HasSetting(VideoLibraryMovieFanart)</visible>
+				<visible>!Skin.HasSetting(VideoLibraryBlackFanart)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>special://skin/backgrounds/blackbackground.jpg</texture>
+				<include>global_kenburns_fanart</include>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>Skin.HasSetting(VideoLibraryMovieFanart)</visible>
+				<visible>Skin.HasSetting(VideoLibraryBlackFanart)</visible>
+			</control>
 			<visible>Container.Content(Movies)</visible>
-			<visible>!Skin.HasSetting(VideoLibraryBlackFanart)</visible>
-		</control>
-		 <control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>special://skin/backgrounds/blackbackground.jpg</texture>
-			<include>global_kenburns_fanart</include>
-			<timeperimage>8000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>FanartCrossfadeTime</fadetime>
-			<visible>Skin.HasSetting(VideoLibraryMovieFanart) | Control.IsVisible(590) | Control.IsVisible(591)| Control.IsVisible(592) | Control.IsVisible(593) | Control.IsVisible(594) | Control.IsVisible(595)</visible>
-			<visible>Container.Content(Movies)</visible>
-		    <visible>Skin.HasSetting(VideoLibraryBlackFanart)</visible>
 		</control>
 		<!-- ExtraFanart Mod -->
-		<control type="multiimage">
+		<!--control type="multiimage">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -66,60 +67,116 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>global_kenburns_fanart</include>
 			<visible>System.IdleTime(10) + Skin.HasSetting(ExtraFanMovies) + Container.Content(Movies)</visible>
+		</control-->
+		<!-- TvShows FANART -->
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<include>global_kenburns_fanart</include>
+				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
+			</control>
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
+				<visible>!Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>special://skin/backgrounds/blackbackground.jpg</texture>
+				<include>global_kenburns_fanart</include>
+				<timeperimage>8000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>FanartCrossfadeTime</fadetime>
+				<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
+				<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<visible>Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
+			</control>
+			
+			<control type="group">
+				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<info>Fanart.Image</info>
+					<texture background="true">$INFO[Fanart.Image]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>global_kenburns_fanart</include>
+					<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,videodb://5/)]</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>global_kenburns_fanart</include>
+					<visible>Container.Content(seasons)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>global_kenburns_fanart</include>
+					<visible>Container.Content(episodes)</visible>
+				</control>
+			</control>
+			
+			<control type="group">
+				<!-- ExtraFanart Mod -->
+				<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
+				<visible>Skin.HasSetting(ExtraFanTV)</visible>
+				<control type="multiimage">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<imagepath fallback="special://skin/backgrounds/tv_shows.jpg" background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
+					<timeperimage>7000</timeperimage>
+					<randomize>false</randomize>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>global_kenburns_fanart</include>
+					<visible>System.IdleTime(10) + Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				</control>
+				<control type="multiimage">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<imagepath fallback="special://skin/backgrounds/tv_shows.jpg" background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
+					<timeperimage>7000</timeperimage>
+					<randomize>false</randomize>
+					<fadetime>FanartCrossfadeTime</fadetime>
+					<include>global_kenburns_fanart</include>
+					<visible>System.IdleTime(10) + Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				</control>
+			</control>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>global_kenburns_fanart</include>
-			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-			<visible>Container.Content(TVShows) | Container.Content(Episodes)</visible>
-		</control>
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath background="true">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</imagepath>
-			<timeperimage>8000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>FanartCrossfadeTime</fadetime>
-	        <animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-	        <animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-			<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
-			<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-			<visible>!Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>special://skin/backgrounds/blackbackground.jpg</texture>
-			<!-- <imagepath fallback="special://skin/backgrounds/tv_shows.jpg" background="true">$INFO[ListItem.Path]/extrafanart</imagepath> -->
-			<include>global_kenburns_fanart</include>
-			<timeperimage>8000</timeperimage>
-            <randomize>true</randomize>
-            <fadetime>FanartCrossfadeTime</fadetime>
-			<visible>Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)</visible>
-			<visible>Skin.HasSetting(VideoLibraryTVFanart)</visible>
-		    <visible>Skin.HasSetting(VideoLibraryBlackTVFanart)</visible>
-		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<info>Fanart.Image</info>
-			<texture background="true">$INFO[Fanart.Image]</texture>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>global_kenburns_fanart</include>
-			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-			<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,videodb://5/)]</visible>
-		</control>
+		<!-- Music FANART -->
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -143,65 +200,6 @@
 			<include>global_kenburns_fanart</include>
 			<texture background="true" fallback="backgrounds/movies.jpg">special://skin/extras/moviegenrefanart/$INFO[ListItem.Label].jpg</texture>
 			<visible>Container.Content(genres)</visible>
-		</control>
-		 <control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<info>Fanart.Image</info>
-			<texture background="true">$INFO[Fanart.Image]</texture>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>global_kenburns_fanart</include>
-			<visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-			<visible>Container.Content(Seasons) | [Container.Content(Episodes) + !substring(Container.FolderPath,videodb://5/)]</visible>
-		</control>
-      <control type="image">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1280</width>
-        <height>720</height>
-        <texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
-        <fadetime>FanartCrossfadeTime</fadetime>
-		<include>global_kenburns_fanart</include>
-        <visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-        <visible>Container.Content(seasons)</visible>
-      </control>
-      <control type="image">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1280</width>
-        <height>720</height>
-        <texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
-        <fadetime>FanartCrossfadeTime</fadetime>
-		<include>global_kenburns_fanart</include>
-        <visible>!Skin.HasSetting(VideoLibraryTVFanart)</visible>
-        <visible>Container.Content(episodes)</visible>
-      </control>
-		<!-- ExtraFanart Mod -->
-		<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/tv_shows.jpg" background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
-			<timeperimage>7000</timeperimage>
-			<randomize>false</randomize>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>global_kenburns_fanart</include>
-			<visible>System.IdleTime(10) + Skin.HasSetting(ExtraFanTV) + Container.Content(TVShows) | Skin.HasSetting(ExtraFanTV) + Container.Content(Seasons) | Skin.HasSetting(ExtraFanTV) + Container.Content(Episodes)</visible>
-		</control>
-			<control type="multiimage">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<imagepath fallback="special://skin/backgrounds/tv_shows.jpg" background="true">$INFO[ListItem.Path]../extrafanart</imagepath>
-			<timeperimage>7000</timeperimage>
-			<randomize>false</randomize>
-			<fadetime>FanartCrossfadeTime</fadetime>
-			<include>global_kenburns_fanart</include>
-			<visible>System.IdleTime(10) + Skin.HasSetting(ExtraFanTV) + Container.Content(TVShows) | Skin.HasSetting(ExtraFanTV) + Container.Content(Seasons) | Skin.HasSetting(ExtraFanTV) + Container.Content(Episodes)</visible>
 		</control>
 		<!-- Changes End MOD 1.2.0 -->
     </control>
@@ -688,19 +686,5 @@
 			</control>
 		</control>
     </control>
-	<!-- Mod Scroll List Letter -->
-	<control type="group">
-		<posx>20</posx>
-		<posy>50</posy>
-		<visible>Container.Content(Movies) + Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
-		<include>VisibleFadeEffect</include>
-		<animation effect="slide" end="-510,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="-510,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-		<control type="label">
-			<include>WindowTitleCommons</include>
-			<posx>0</posx>
-			<label>$INFO[ListItem.SortLetter]</label>
-		</control>
-	</control>
 </controls>
 </window>
