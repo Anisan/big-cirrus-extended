@@ -216,9 +216,6 @@
 	<include>FanartSlide</include> <!-- view id = 666 -->
 	<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 	<include>RightListView</include> <!-- view id = 569 -->
-	<include>RightListView_Games</include> <!-- view id = 593 -->
-	<include>RightListView_Games_Square</include> <!-- view id = 594 -->
-	<include>RightListView_Games_Landscape</include> <!-- view id = 595 -->
 	<include>WallView</include> <!-- view id = 513 -->
 	<include>HalfWallView</include> <!-- view id = 514 -->
     <include>HalfWallTV</include> <!-- view id = 560 -->
@@ -256,11 +253,10 @@
 		</control>
 	</control>
 	
-	<!-- LABELS FOR TV BREADCRUMB TRAIL -->
 	<control type="group">
 		<posx>20</posx>
-		<posy>50</posy>
-		<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+		<posy>38</posy>
+		<visible>Container.Content(TVShows)</visible>
 		<include>VisibleFadeEffect</include>
 		<animation effect="slide" end="-1300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 		<animation effect="slide" start="-1300,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -268,31 +264,13 @@
 			<include>WindowTitleCommons</include>
 			<posx>0</posx>
 			<label>$LOCALIZE[20343]</label>
-			<visible>!Skin.HasSetting(nobreadcrumb)</visible>
 		</control>
 	</control>
-	
+
 	<control type="group">
 		<posx>20</posx>
-		<posy>50</posy>
-		<visible>Container.Content(Episodes)</visible>
-		<include>VisibleFadeEffect</include>
-		<animation effect="slide" end="-1300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="-1300,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-		<control type="label">
-			<include>WindowTitleCommons</include>
-			<posx>0</posx>
-			<label>$LOCALIZE[20343]</label>
-			<visible>Skin.HasSetting(nobreadcrumb) + !Skin.HasSetting(nobreadcrumbepisode)</visible>
-		</control>
-	</control>
-	
-	
-	<!-- LABELS FOR TV BREADCRUMB TRAIL - Seasons & Episodes bit -->
-	<control type="group">
-		<posx>20</posx>
-		<posy>100</posy>
-		<visible>Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(TVShows)</visible>
+		<posy>45</posy>
+		<visible>Container.Content(Seasons) | Container.Content(Episodes)</visible>
 		<include>VisibleFadeEffect</include>
 		<animation effect="slide" end="-1300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 		<animation effect="slide" start="-1300,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
@@ -301,23 +279,6 @@
 			<include>WindowTVShowTitleCommons</include>
 			<posx>00</posx>
 			<label>$INFO[ListItem.TVShowTitle]</label>
-			<visible>!Skin.HasSetting(nobreadcrumb)</visible>
-		</control>
-	</control>
-	
-	<control type="group">
-		<posx>20</posx>
-		<posy>100</posy>
-		<visible>Container.Content(Episodes)</visible>
-		<include>VisibleFadeEffect</include>
-		<animation effect="slide" end="-1300,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="-1300,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-		<control type="label">
-			<width>850</width>
-			<include>WindowTVShowTitleCommons</include>
-			<posx>0</posx>
-			<label>$INFO[ListItem.TVShowTitle]</label>
-			<visible>Skin.HasSetting(nobreadcrumb) + !Skin.HasSetting(nobreadcrumbepisode)</visible>
 		</control>
 	</control>
 	
