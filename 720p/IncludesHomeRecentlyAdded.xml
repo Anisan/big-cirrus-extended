@@ -2036,7 +2036,7 @@
               <item id="1">
                 <label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomMovie.1.Plot)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.1.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.1.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</thumb>
 				<property name="Year">$INFO[Window(Home).Property(RandomMovie.1.Year)]</property>
@@ -2045,7 +2045,7 @@
               <item id="2">
                 <label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomMovie.2.Plot)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.2.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.2.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomMovie.2.Art(poster))]</thumb>
 				<property name="Year">$INFO[Window(Home).Property(RandomMovie.2.Year)]</property>
@@ -2054,7 +2054,7 @@
               <item id="3">
                 <label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomMovie.3.Plot)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.3.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.3.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomMovie.3.Art(poster))]</thumb>
 				<property name="Year">$INFO[Window(Home).Property(RandomMovie.3.Year)]</property>
@@ -2063,7 +2063,7 @@
               <item id="4">
                 <label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomMovie.4.Plot)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.4.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomMovie.4.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomMovie.4.Art(poster))]</thumb>
 				<property name="Year">$INFO[Window(Home).Property(RandomMovie.4.Year)]</property>
@@ -2171,28 +2171,28 @@
               <item id="1">
                 <label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomEpisode.1.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.1.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.1.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</thumb>
               </item>
               <item id="2">
                 <label>$INFO[Window(Home).Property(RandomEpisode.2.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomEpisode.2.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.2.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.2.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.2.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomEpisode.2.Art(thumb))]</thumb>
               </item>
               <item id="3">
                 <label>$INFO[Window(Home).Property(RandomEpisode.3.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomEpisode.3.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.3.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.3.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.3.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomEpisode.3.Art(thumb))]</thumb>
               </item>
               <item id="4">
                 <label>$INFO[Window(Home).Property(RandomEpisode.4.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RandomEpisode.4.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.4.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.4.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RandomEpisode.4.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RandomEpisode.4.Art(thumb))]</thumb>
               </item>
@@ -2204,28 +2204,28 @@
               <item id="1">
                 <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.1.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.1.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
               </item>
               <item id="2">
                 <label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVShowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.2.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.2.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</thumb>
               </item>
               <item id="3">
                 <label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVShowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.3.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.3.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</thumb>
               </item>
               <item id="4">
                 <label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
                 <label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVShowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</label2>
-                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.4.Path)])</onclick>
+                <onclick>PlayMedia($INFO[Window(Home).Property(RecommendedEpisode.4.File)])</onclick>
                 <icon>-</icon>
                 <thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</thumb>
               </item>
