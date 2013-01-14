@@ -46,6 +46,7 @@
   <include file="IncludesHomepageWeatherWidget.xml" /> 
 
   <include file="IncludesHomepageNextAiredWidgets.xml" /> 
+  <include file="IncludesHomepageFotoWidgets.xml" /> 
 
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 

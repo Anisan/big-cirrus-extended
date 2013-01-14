@@ -3753,6 +3753,19 @@
 							<selected>Skin.HasSetting(ShowWeatherWidget)</selected>
 						</control>
 						<control type="radiobutton" id="1015">
+							<description>Enable Foto Widget</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<label>Enable Foto Widget</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowFotoWidget)</onclick>
+							<selected>Skin.HasSetting(ShowFotoWidget)</selected>
+						</control>
+						<control type="radiobutton" id="1016">
 							<description>Enable SystemInfo Widget</description>
 							<width>750</width>
 							<height>40</height>

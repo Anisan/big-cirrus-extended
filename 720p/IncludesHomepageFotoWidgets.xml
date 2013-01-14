@@ -1,0 +1,73 @@
+<includes>
+	<include name="HomepageFotoWidget">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+
+
+			<control type="group">
+				<visible>Container(9000).Hasfocus(4) + !Window.IsVisible(1117)</visible>
+				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
+				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
+				<control type="group" id="7022">
+					<posx>30r</posx>
+					<posy>0</posy>
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>250</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>15</posy>
+						<height>20</height>
+						<width>1050</width>
+						<label>Random foto</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="image">
+						<description>foto1</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">keep</aspectratio>
+						<posy>40</posy>
+						<width>920</width>
+						<height>200</height>
+						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</texture>
+					</control>
+					<control type="image">
+						<description>foto2</description>
+						<posx>720r</posx>
+						<aspectratio alignx="left">keep</aspectratio>
+						<posy>70</posy>
+						<width>920</width>
+						<height>200</height>
+						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</texture>
+					</control>
+					<control type="image">
+						<description>foto3</description>
+						<posx>520r</posx>
+						<aspectratio alignx="left">keep</aspectratio>
+						<posy>100</posy>
+						<width>920</width>
+						<height>200</height>
+						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</texture>
+					</control>
+					
+					
+				</control>
+			</control>
+		</control>
+	</include>
+
+</includes>

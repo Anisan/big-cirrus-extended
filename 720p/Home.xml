@@ -18,7 +18,8 @@
 	<include condition="Skin.HasSetting(ShowWeatherWidget)">HomepageWeatherWidget</include> 
 	<include condition="Skin.HasSetting(ShowSystemInfoWidget)">HomepageSystemInfoWidget</include> 
 	<include condition="Skin.HasSetting(NextAiredWidgets)">HomepageNextAiredWidget</include> 
-
+	<include condition="Skin.HasSetting(ShowFotoWidget)">HomepageFotoWidget</include> 
+    
 	<include>HomeNowPlaying</include>
     <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMenu</include>
 	<include condition="Skin.HasSetting(horzHomeMenu)">HomeMenuHoriz</include>
@@ -35,6 +36,8 @@
 				<!--onfocus>XBMC.RunScript(script.nextaired,limit=4)</onfocus-->
 				<!-- <onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=4)</onfocus> -->
 				<!--onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=8&totals=True&albums=True&unplayed=True)</onfocus--> 
+				<onfocus condition="Skin.HasSetting(ShowFotoWidget)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Added'&amp;limit=10)</onfocus>
+				<onfocus condition="Skin.HasSetting(ShowFotoWidget)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onfocus>
 				<onfocus>SetFocus(9000)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
