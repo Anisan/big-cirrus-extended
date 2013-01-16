@@ -45,6 +45,8 @@
   <!-- Home Weather Widget -->
   <include file="IncludesHomepageWeatherWidget.xml" /> 
 
+  <include file="IncludesHomepageNextAiredWidgets.xml" /> 
+
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 
   <include file="WeatherOsd.xml" /> 

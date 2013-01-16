@@ -25,7 +25,7 @@
 				</control>
 
 				<control type="label" id="52">
-					<description>XBMC XBE BUILD Version</description> 
+					<description>System Info Widget</description> 
 					<posx>20r</posx> 
 					<posy>10</posy> 
 					<width>800</width> 
@@ -44,13 +44,13 @@
 					<itemlayout width="600" height="34">
 						<control type="image">
 							<posx>36r</posx>
-							<posy>2</posy>
+							<posy>1</posy>
 							<width>30</width>
 							<height>30</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>40r</posx>
+							<posx>50r</posx>
 							<posy>4</posy>
 							<width>500</width>
 							<height>34</height>
@@ -63,13 +63,13 @@
 					<focusedlayout width="600" height="34">
 						<control type="image">
 							<posx>36r</posx>
-							<posy>2</posy>
+							<posy>1</posy>
 							<width>30</width>
 							<height>30</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posx>45r</posx>
+							<posx>50r</posx>
 							<posy>4</posy>
 							<width>500</width>
 							<height>34</height>
