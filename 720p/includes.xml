@@ -49,6 +49,7 @@
   <include file="IncludesHomepageFotoWidgets.xml" /> 
   <include file="IncludesHomepageMusicWidgets.xml" /> 
   <include file="IncludesHomepageTvShowsWidgets.xml" /> 
+  <include file="IncludesHomepageMoviesWidgets.xml" /> 
 
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 
