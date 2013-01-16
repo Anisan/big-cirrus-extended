@@ -143,7 +143,7 @@
 					<description>Playing Label</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>240</width>
+					<width>340</width>
 					<height>35</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -156,7 +156,7 @@
 					<description>Paused Label</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>240</width>
+					<width>340</width>
 					<height>35</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -169,7 +169,7 @@
 					<description>Cache Label</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>240</width>
+					<width>340</width>
 					<height>35</height>
 					<align>left</align>
 					<aligny>center</aligny>
