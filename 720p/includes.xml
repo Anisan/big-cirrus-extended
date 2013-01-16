@@ -47,6 +47,7 @@
 
   <include file="IncludesHomepageNextAiredWidgets.xml" /> 
   <include file="IncludesHomepageFotoWidgets.xml" /> 
+  <include file="IncludesHomepageMusicWidgets.xml" /> 
 
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 

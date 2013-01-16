@@ -517,20 +517,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 						</control>
-						<control type="radiobutton" id="210">
-							<description>Show Recently Music added info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[2]</label>
-							<onclick>Skin.ToggleSetting(homepageHideRecentlyMusicAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRecentlyMusicAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-						</control>
+						
 						<control type="button" id="211">
 							<description>Show Random info</description>
 							<width>750</width>
@@ -588,20 +575,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
 						</control>
-						<control type="radiobutton" id="215">
-							<description>Show Random Music info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[2]</label>
-							<onclick>Skin.ToggleSetting(homepageHideRandomMusicAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRandomMusicAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
-						</control>
+						
 						<control type="button" id="216">
 							<description>Show statistics Button</description>
 							<width>750</width>
@@ -653,20 +627,6 @@
 							<label> - $LOCALIZE[20343]</label>
 							<onclick>Skin.ToggleSetting(homepageHideTvShowsStatistics)</onclick>
 							<selected>Skin.HasSetting(homepageHideTvShowsStatistics)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideStatistics)</visible>
-						</control>
-						<control type="radiobutton" id="220">
-							<description>Show Recently Music added info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[2]</label>
-							<onclick>Skin.ToggleSetting(homepageHideMusicStatistics)</onclick>
-							<selected>Skin.HasSetting(homepageHideMusicStatistics)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(homepageHideStatistics)</visible>
@@ -3714,6 +3674,111 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Movie Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>TvShows Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Music Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="1015">
+							<description>Enable Music Widget</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<label>Enable Music Widgets</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowMusicWidget)</onclick>
+							<selected>Skin.HasSetting(ShowMusicWidget)</selected>
+						</control>
+						<control type="radiobutton" id="210">
+							<description>Show Recently Music added info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Recently Music Added</label>
+							<onclick>Skin.ToggleSetting(ShowRecentlyMusicAddedWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRecentlyMusicAddedWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
+						</control>
+						<control type="radiobutton" id="215">
+							<description>Show Random Music info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Random Music</label>
+							<onclick>Skin.ToggleSetting(ShowRandomMusicWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRandomMusicWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
+						</control>
+						<control type="radiobutton" id="220">
+							<description>Show Recently Music added info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Music Statistics Widget</label>
+							<onclick>Skin.ToggleSetting(ShowMusicStatisticsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowMusicStatisticsWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Program Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>TVGuide Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
 						<control type="radiobutton" id="123">
 							<width>750</width> 
 							<height>40</height> 
@@ -3739,6 +3804,16 @@
 							<selected>Skin.HasSetting(UseNextAiredClearart)</selected> 
 							<visible>Skin.HasSetting(NextAiredWidgets)</visible> 
 						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Weather Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
 						<control type="radiobutton" id="1014">
 							<description>Enable Weather Widget</description>
 							<width>750</width>
@@ -3751,6 +3826,16 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(ShowWeatherWidget)</onclick>
 							<selected>Skin.HasSetting(ShowWeatherWidget)</selected>
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Foto Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
 						</control>
 						<control type="radiobutton" id="1015">
 							<description>Enable Foto Widget</description>
@@ -3790,6 +3875,16 @@
 							<onclick>Skin.ToggleSetting(RandomFotoWidget)</onclick> 
 							<selected>Skin.HasSetting(RandomFotoWidget)</selected> 
 							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
+						</control>
+						<control type="label" id="1089">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>System Widgets</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
 						</control>
 						<control type="radiobutton" id="1018">
 							<description>Enable SystemInfo Widget</description>
