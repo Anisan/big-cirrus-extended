@@ -21,13 +21,13 @@
 						<aspectratio alignx="left">stretch</aspectratio>
 						<posy>0</posy>
 						<width>920</width>
-						<height>250</height>
+						<height>240</height>
 						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
 					</control>
 					<control type="label">
 						<description>Title label</description>
 						<posx>30r</posx>
-						<posy>15</posy>
+						<posy>10</posy>
 						<height>20</height>
 						<width>1050</width>
 						<label>Latest foto</label>
@@ -41,13 +41,16 @@
 					<control type="list" id="8000">
 						<orientation>horizontal</orientation>
 						<posx>920r</posx>
-						<posy>40</posy>
+						<posy>35</posy>
 						<width>920</width>
 						<height>200</height>
 						<onleft>8000</onleft>
 						<onright>8000</onright>
 						<onup>9000</onup>
 						<ondown>8010</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
 						<itemlayout width="180" height="200">
 							<control type="image">
 								<posx>0</posx>
@@ -60,11 +63,30 @@
 						</itemlayout>
 						<focusedlayout width="180" height="200">
 							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>301</width>
+								<height>201</height>
+								<texture border="0,2,0,2">menuitemFO.png</texture>
+								<visible>Control.HasFocus(8000)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="image">
 								<posx>-50</posx>
 								<posy>1</posy>
 								<width>300</width>
 								<height>200</height>
 								<aspectratio alignx="left">keep</aspectratio>
+								<visible>Control.HasFocus(8000)</visible>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>175</width>
+								<height>200</height>
+								<aspectratio alignx="left">scale</aspectratio>
+								<visible>!Control.HasFocus(8000)</visible>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 							</control>
 							<control type="label">
@@ -75,6 +97,7 @@
 								<font>cirrus_16_Bold</font>
 								<scroll>true</scroll>
 								<align>center</align> 
+								<visible>Control.HasFocus(8000)</visible>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</focusedlayout>
@@ -110,7 +133,7 @@
 
 				<control type="group">
 					<posx>30r</posx>
-					<posy>260</posy>
+					<posy>240</posy>
 					<visible>Skin.HasSetting(RandomFotoWidget)</visible>
 					<control type="image">
 						<description>background</description>
@@ -118,13 +141,13 @@
 						<aspectratio alignx="left">stretch</aspectratio>
 						<posy>0</posy>
 						<width>920</width>
-						<height>250</height>
+						<height>240</height>
 						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
 					</control>
 					<control type="label">
 						<description>Title label</description>
 						<posx>30r</posx>
-						<posy>15</posy>
+						<posy>10</posy>
 						<height>20</height>
 						<width>1050</width>
 						<label>Random foto</label>
@@ -137,7 +160,7 @@
 					<control type="list" id="8010">
 						<orientation>horizontal</orientation>
 						<posx>920r</posx>
-						<posy>40</posy>
+						<posy>35</posy>
 						<width>920</width>
 						<height>200</height>
 						<onleft>8010</onleft>
@@ -156,10 +179,30 @@
 						</itemlayout>
 						<focusedlayout width="180" height="200">
 							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>301</width>
+								<height>201</height>
+								<texture border="0,2,0,2">menuitemFO.png</texture>
+								<visible>Control.HasFocus(8010)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="image">
 								<posx>-50</posx>
 								<posy>1</posy>
 								<width>300</width>
 								<height>200</height>
+								<aspectratio alignx="left">keep</aspectratio>
+								<visible>Control.HasFocus(8010)</visible>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>175</width>
+								<height>200</height>
+								<aspectratio alignx="left">scale</aspectratio>
+								<visible>!Control.HasFocus(8010)</visible>
 								<texture background="true">$INFO[ListItem.Icon]</texture>
 							</control>
 							<control type="label">
@@ -170,6 +213,7 @@
 								<font>cirrus_16_Bold</font>
 								<scroll>true</scroll>
 								<align>left</align> 
+								<visible>Control.HasFocus(8010)</visible>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</focusedlayout>
