@@ -33,7 +33,7 @@
 						<posy>15</posy>
 						<height>20</height>
 						<width>450</width>
-						<label>Today Next Aired TvShows $INFO[Window(Home).Property(NextAired.TodayTotal)]</label>
+						<label>Today Next Aired TvShows</label>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>cirrus_24_Bold</font>
@@ -52,7 +52,7 @@
 								<height>60</height> 
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture> 
-								<visible>!Control.HasFocus(8013)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<visible>!Control.HasFocus(8100)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 							<control type="image">
@@ -61,7 +61,7 @@
 								<height>140</height>
 								<aspectratio>keep</aspectratio>
 								<texture background="true">$INFO[Window(Home).Property(NextAired.1.Art(clearlogo))]</texture> 
-								<visible>!Control.HasFocus(8013)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<visible>!Control.HasFocus(8100)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 							<control type="image">
@@ -70,7 +70,7 @@
 								<height>60</height> 
 								<aspectratio>keep</aspectratio> 
 								<texture background="true">$INFO[Window(Home).Property(NextAired.1.Network),flagging/Studios/,.png]</texture> 
-								<visible>!Control.HasFocus(8013)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<visible>!Control.HasFocus(8100)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 							<control type="image">
@@ -79,7 +79,7 @@
 								<height>140</height>
 								<aspectratio>keep</aspectratio> 
 								<texture background="true">$INFO[Window(Home).Property(NextAired.1.Art(clearlart)]</texture> 
-								<visible>!Control.HasFocus(8013)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<visible>!Control.HasFocus(8100)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 
@@ -89,8 +89,8 @@
 								<height>60</height> 
 								<aspectratio>keep</aspectratio> 
 								<fadetime>200</fadetime> 
-								<texture background="true">$INFO[Container(8013).ListItem.Property(Network),flagging/Studios/,.png]</texture> 
-								<visible>Control.HasFocus(8013)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<texture background="true">$INFO[Container(8100).ListItem.Property(Network),flagging/Studios/,.png]</texture> 
+								<visible>Control.HasFocus(8100)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 							<control type="image">
@@ -99,8 +99,8 @@
 								<height>140</height>
 								<aspectratio>keep</aspectratio> 
 								<fadetime>200</fadetime> 
-								<texture background="true">$INFO[Container(8013).ListItem.Property(Logo)]</texture> 
-								<visible>Control.HasFocus(8013)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<texture background="true">$INFO[Container(8100).ListItem.Property(Logo)]</texture> 
+								<visible>Control.HasFocus(8100)+ !Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 
@@ -110,8 +110,8 @@
 								<height>60</height> 
 								<aspectratio>keep</aspectratio> 
 								<fadetime>200</fadetime> 
-								<texture background="true">$INFO[Container(8013).ListItem.Property(Network),flagging/Studios/,.png]</texture> 
-								<visible>Control.HasFocus(8013)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<texture background="true">$INFO[Container(8100).ListItem.Property(Network),flagging/Studios/,.png]</texture> 
+								<visible>Control.HasFocus(8100)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 							<control type="image">
@@ -120,8 +120,8 @@
 								<height>140</height>
 								<aspectratio>keep</aspectratio> 
 								<fadetime>200</fadetime> 
-								<texture background="true">$INFO[Container(8013).ListItem.Property(Clearart)]</texture> 
-								<visible>Control.HasFocus(8013)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
+								<texture background="true">$INFO[Container(8100).ListItem.Property(Clearart)]</texture> 
+								<visible>Control.HasFocus(8100)+ Skin.HasSetting(UseNextAiredClearart)</visible> 
 								<include>VisibleFadeEffect</include> 
 							</control>
 
@@ -155,19 +155,19 @@
 							<selectedcolor>selected</selectedcolor>
 							<align>center</align>
 							<aligny>center</aligny>
-							<label>$INFO[Container(8013).ListItem.Label]</label>
+							<label>$INFO[Container(8100).ListItem.Property(NextTitle)]</label>
 							<scroll>true</scroll>
 						</control>
 					</control>
-					<control type="list" id="8013">
+					<control type="list" id="8100">
 						<posx>850r</posx>
 						<posy>58</posy>
 						<width>1050</width>
 						<height>170</height>
 						<onleft>8003</onleft>
 						<onright>9000</onright>
-						<onup>8013</onup>
-						<ondown>8013</ondown>
+						<onup>8100</onup>
+						<ondown>8100</ondown>
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
@@ -206,7 +206,7 @@
 								<width>450</width>
 								<height>40</height>
 								<texture border="0,2,0,2">menuitemFO.png</texture>
-								<visible>Control.HasFocus(8013)</visible>
+								<visible>Control.HasFocus(8100)</visible>
 								<include>VisibleFadeEffect</include>
 							</control>
 						</focusedlayout>
