@@ -618,6 +618,8 @@
 					<include condition="[[!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyVideoAdded)] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomVideoAdded)]]">FirstControl</include>
 					<include condition="[Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyVideoAdded)] | [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomVideoAdded)]">LastControl</include>
 					<visible>Skin.HasSetting(homepageHideVideoStatistics) + Skin.HasSetting(homepageHideStatistics)</visible>
+					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
+					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
 					<control type="image">
 						<description>background</description>
 						<posx>920r</posx>
@@ -1020,6 +1022,9 @@
 					<include condition="[Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyMovieAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomMovieAdded)]">LastControl</include>
 
 					<visible>Skin.HasSetting(homepageHideMovieStatistics) + Skin.HasSetting(homepageHideStatistics)</visible>
+					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
+					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
+					
 					<control type="image">
 						<description>background</description>
 						<posx>920r</posx>
@@ -1264,7 +1269,7 @@
 					<posx>30r</posx>
 					<include condition="!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)">FirstControl</include>
 					<include condition="Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)">SecondControl</include>
-					<visible>[Skin.HasSetting(homepageHideRandomAdded) + [Skin.HasSetting(homepageHideRandomTvShowsAdded) | Skin.HasSetting(UseNextAired)]  + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
+					<visible>[Skin.HasSetting(homepageHideRandomAdded) + [Skin.HasSetting(homepageHideRandomTvShowsAdded)]  + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
 					<control type="image">
 						<description>background</description>
 						<posx>920r</posx>
@@ -1407,11 +1412,21 @@
 					<!--include condition="!Control.IsVisible(7021) + !Control.IsVisible(7022)">FirstControl</include>
           <include condition="[!Control.IsVisible(7021) + Control.IsVisible(7022)] | [Control.IsVisible(7021) + !Control.IsVisible(7022)]">SecondControl</include>
           <include condition="Control.IsVisible(7021) + Control.IsVisible(7022)">LastControl</include-->
-					<include condition="[ !Skin.HasSetting(UseNextAired) + [!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) ] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">FirstControl</include>
+					<!--include condition="[ !Skin.HasSetting(UseNextAired) + [!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded) ] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">FirstControl</include>
 					<include condition="[ !Skin.HasSetting(UseNextAired) + [Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">SecondControl</include>
 					<include condition="[ !Skin.HasSetting(UseNextAired) + [!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">SecondControl</include>
-					<include condition="[ Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]">LastControl</include>
+					<include condition="[ Skin.HasSetting(UseNextAired) + Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]">LastControl</include-->
+
+					<include condition="[[!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">FirstControl</include>
+					<include condition="[[Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [!Skin.HasSetting(homepageHideRandomAdded) | !Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">SecondControl</include>
+					<include condition="[[!Skin.HasSetting(homepageHideRecentlyAdded) | !Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]]">SecondControl</include>
+					<include condition="[Skin.HasSetting(homepageHideRecentlyAdded) + Skin.HasSetting(homepageHideRecentlyTvShowsAdded)] + [Skin.HasSetting(homepageHideRandomAdded) + Skin.HasSetting(homepageHideRandomTvShowsAdded)]">LastControl</include>
+
+					
 					<visible>Skin.HasSetting(homepageHideTvShowsStatistics) + Skin.HasSetting(homepageHideStatistics)</visible>
+					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
+					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
+					
 					<control type="image">
 						<description>background</description>
 						<posx>920r</posx>
