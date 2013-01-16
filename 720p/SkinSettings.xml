@@ -3664,7 +3664,7 @@
 						<onright>64</onright>
 						<onup>9008</onup>
 						<ondown>9008</ondown>
-						<control type="label" id="1089">
+						<control type="label" id="1800">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3674,7 +3674,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="label" id="1089">
+						<control type="label" id="1810">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3684,7 +3684,8 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1820">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3694,7 +3695,77 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="label" id="1089">
+						<control type="radiobutton" id="1821">
+							<description>Enable TvShows Widget</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<label>Enable TvShows Widgets</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowTvShowsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowTvShowsWidget)</selected>
+						</control>
+						<control type="radiobutton" id="1822">
+							<description>Show Recently TvShows added info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Recently TvShows Added</label>
+							<onclick>Skin.ToggleSetting(ShowRecentlyTvShowsAddedWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowTvShowsWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1823">
+							<description>Show Recomended TvShows info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Recomended TvShows</label>
+							<onclick>Skin.ToggleSetting(ShowRecomendedTvShowsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRecomendedTvShowsWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowTvShowsWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1824">
+							<description>Show Random TvShows info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Random TvShows</label>
+							<onclick>Skin.ToggleSetting(ShowRandomTvShowsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRandomTvShowsWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowTvShowsWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1825">
+							<description>Show Statistics TvShows</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - TvShows Statistics Widget</label>
+							<onclick>Skin.ToggleSetting(ShowTvShowsStatisticsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowTvShowsStatisticsWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowTvShowsWidget)</visible>
+						</control>
+						
+						<control type="label" id="1830">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3704,7 +3775,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="1015">
+						<control type="radiobutton" id="1831">
 							<description>Enable Music Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3717,7 +3788,7 @@
 							<onclick>Skin.ToggleSetting(ShowMusicWidget)</onclick>
 							<selected>Skin.HasSetting(ShowMusicWidget)</selected>
 						</control>
-						<control type="radiobutton" id="210">
+						<control type="radiobutton" id="1832">
 							<description>Show Recently Music added info</description>
 							<width>750</width>
 							<height>40</height>
@@ -3731,7 +3802,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
 						</control>
-						<control type="radiobutton" id="215">
+						<control type="radiobutton" id="1833">
 							<description>Show Random Music info</description>
 							<width>750</width>
 							<height>40</height>
@@ -3745,8 +3816,8 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
 						</control>
-						<control type="radiobutton" id="220">
-							<description>Show Recently Music added info</description>
+						<control type="radiobutton" id="1834">
+							<description>Show Statistics Music</description>
 							<width>750</width>
 							<height>40</height>
 							<font>cirrus_20</font>
@@ -3759,7 +3830,8 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1840">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3769,7 +3841,8 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1850">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3779,7 +3852,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="123">
+						<control type="radiobutton" id="1851">
 							<width>750</width> 
 							<height>40</height> 
 							<font>cirrus_20</font> 
@@ -3791,7 +3864,7 @@
 							<onclick>Skin.ToggleSetting(NextAiredWidgets)</onclick> 
 							<selected>Skin.HasSetting(NextAiredWidgets)</selected> 
 						</control>
-						<control type="radiobutton" id="124">
+						<control type="radiobutton" id="1852">
 							<width>750</width> 
 							<height>40</height> 
 							<font>cirrus_20</font> 
@@ -3804,7 +3877,8 @@
 							<selected>Skin.HasSetting(UseNextAiredClearart)</selected> 
 							<visible>Skin.HasSetting(NextAiredWidgets)</visible> 
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1860">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3814,7 +3888,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="1014">
+						<control type="radiobutton" id="1861">
 							<description>Enable Weather Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3827,7 +3901,8 @@
 							<onclick>Skin.ToggleSetting(ShowWeatherWidget)</onclick>
 							<selected>Skin.HasSetting(ShowWeatherWidget)</selected>
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1870">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3837,7 +3912,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="1015">
+						<control type="radiobutton" id="1871">
 							<description>Enable Foto Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3850,7 +3925,7 @@
 							<onclick>Skin.ToggleSetting(ShowFotoWidget)</onclick>
 							<selected>Skin.HasSetting(ShowFotoWidget)</selected>
 						</control>
-						<control type="radiobutton" id="1016">
+						<control type="radiobutton" id="1872">
 							<width>750</width> 
 							<height>40</height> 
 							<font>cirrus_20</font> 
@@ -3863,7 +3938,7 @@
 							<selected>Skin.HasSetting(LastFotoWidget)</selected> 
 							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
 						</control>
-						<control type="radiobutton" id="1017">
+						<control type="radiobutton" id="1873">
 							<width>750</width> 
 							<height>40</height> 
 							<font>cirrus_20</font> 
@@ -3876,7 +3951,8 @@
 							<selected>Skin.HasSetting(RandomFotoWidget)</selected> 
 							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
 						</control>
-						<control type="label" id="1089">
+						
+						<control type="label" id="1880">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -3886,7 +3962,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="1018">
+						<control type="radiobutton" id="1881">
 							<description>Enable SystemInfo Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3899,7 +3975,7 @@
 							<onclick>Skin.ToggleSetting(ShowSystemInfoWidget)</onclick>
 							<selected>Skin.HasSetting(ShowSystemInfoWidget)</selected>
 						</control>
-						<control type="radiobutton" id="1019">
+						<control type="radiobutton" id="1882">
 							<width>750</width> 
 							<height>40</height> 
 							<font>cirrus_20</font> 

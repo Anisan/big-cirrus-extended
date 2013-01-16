@@ -20,6 +20,7 @@
 	<include condition="Skin.HasSetting(NextAiredWidgets)">HomepageNextAiredWidget</include> 
 	<include condition="Skin.HasSetting(ShowFotoWidget)">HomepageFotoWidget</include> 
     <include condition="Skin.HasSetting(ShowMusicWidget)">HomepageMusicWidget</include> 
+    <include condition="Skin.HasSetting(ShowTvShowsWidget)">HomepageTvShowsWidget</include> 
     
 	<include>HomeNowPlaying</include>
     <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMenu</include>

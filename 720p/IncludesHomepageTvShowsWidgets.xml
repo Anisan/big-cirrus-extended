@@ -1,0 +1,405 @@
+<includes>
+	<include name="HomepageTvShowsWidget">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+			
+			<control type="group">
+				<!-- TVSHOW Menu -->
+				<visible>Library.HasContent(TVShows) + Container(9000).Hasfocus(11) + !Window.IsVisible(1117)</visible>
+				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
+				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
+				<!-- RecentlyTVShowsAdded -->
+				<control type="group" id="7021">
+					<posx>0</posx>
+					<posy>0</posy>
+					<visible>Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)</visible>
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>240</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>15</posy>
+						<height>20</height>
+						<width>450</width>
+						<label>31324</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="group">
+						<posx>280r</posx>
+						<posy>10</posy>
+
+						<control type="image">
+							<description>Main Icon</description>
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>170</height>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" diffuse="maskthumbnail.png">$INFO[Window.Property(LatestEpisode.1.Thumb)]</texture>
+							<visible>!Control.HasFocus(8003)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="image">
+							<description>Main Icon</description>
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>170</height>
+							<aspectratio>stretch</aspectratio>
+							<fadetime>200</fadetime>
+							<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8003).ListItem.Thumb]</texture>
+							<visible>Control.HasFocus(8003)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="image">
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>170</height>
+							<aspectratio aligny="top">stretch</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<texture background="true" diffuse="maskthumbnail.png">GlassOverlay2.png</texture>
+						</control>
+						<control type="image">
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>172</height>
+							<aspectratio aligny="bottom">stretch</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<texture>border-thumbnail-info.png</texture>
+						</control>
+						<control type="label">
+							<posx>-30</posx>
+							<posy>185</posy>
+							<width>280</width>
+							<height>20</height>
+							<font>cirrus_16</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[Container(8003).ListItem.Label]</label>
+							<scroll>true</scroll>
+						</control>
+					</control>
+					<control type="list" id="8003">
+						<posx>850r</posx>
+						<posy>58</posy>
+						<width>1050</width>
+						<height>236</height>
+						<onleft>8000</onleft>
+						<onright>8013</onright>
+						<onup>8003</onup>
+						<ondown>8003</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="40" width="330">
+							<control type="label">
+								<posx>510</posx>
+								<posy>0</posy>
+								<width>630</width>
+								<height>40</height>
+								<font>cirrus_24</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<selectedcolor>selected</selectedcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="40" width="340">
+							<control type="label">
+								<posx>510</posx>
+								<posy>0</posy>
+								<width>540</width>
+								<height>40</height>
+								<font>cirrus_24</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<selectedcolor>selected</selectedcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+							<control type="image">
+								<posx>65</posx>
+								<posy>0</posy>
+								<width>450</width>
+								<height>40</height>
+								<texture border="0,2,0,2">menuitemFO.png</texture>
+								<visible>Control.HasFocus(8003)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="1">
+								<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
+								<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
+								<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+								<icon>-</icon>
+								<thumb>$INFO[Window.Property(LatestEpisode.1.Thumb)]</thumb>
+							</item>
+							<item id="2">
+								<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
+								<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
+								<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+								<icon>-</icon>
+								<thumb>$INFO[Window.Property(LatestEpisode.2.Thumb)]</thumb>
+							</item>
+							<item id="3">
+								<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
+								<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
+								<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+								<icon>-</icon>
+								<thumb>$INFO[Window.Property(LatestEpisode.3.Thumb)]</thumb>
+							</item>
+							<item id="4">
+								<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
+								<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
+								<onclick>PlayMedia($INFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+								<icon>-</icon>
+								<thumb>$INFO[Window.Property(LatestEpisode.4.Thumb)]</thumb>
+							</item>
+						</content>
+					</control>
+				</control>
+				<!-- Recomended TVShows -->
+				<control type="group" id="7022">
+					<posx>30r</posx>
+					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)">FirstControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)">SecondControl</include>
+					<visible>Skin.HasSetting(ShowRecomendedTvShowsWidget)  + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>240</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>15</posy>
+						<height>20</height>
+						<width>450</width>
+						<label>Recomemded Aired TvShows</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="group">
+						<posy>10</posy>
+						<posx>-250</posx>
+						<control type="group">
+							<posx>-40</posx>
+							<posy>40</posy>
+							<control type="image">
+								<description>Main Icon</description>
+								<width>300</width>
+								<height>170</height>
+								<aspectratio>stretch</aspectratio>
+								<texture background="true" diffuse="maskthumbnail.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</texture>
+								<visible>!Control.HasFocus(8013)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="image">
+								<description>Main Icon</description>
+								<width>300</width>
+								<height>170</height>
+								<aspectratio>stretch</aspectratio>
+								<fadetime>200</fadetime>
+								<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8013).ListItem.Thumb]</texture>
+								<visible>Control.HasFocus(8013)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+						</control>
+						<control type="image">
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>170</height>
+							<aspectratio aligny="top">stretch</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<texture background="true" diffuse="maskthumbnail.png">GlassOverlay2.png</texture>
+						</control>
+						<control type="image">
+							<posx>-40</posx>
+							<posy>40</posy>
+							<width>300</width>
+							<height>172</height>
+							<aspectratio aligny="bottom">stretch</aspectratio>
+							<fadetime>IconCrossfadeTime</fadetime>
+							<texture>border-thumbnail-info.png</texture>
+						</control>
+						<control type="label">
+							<posx>-30</posx>
+							<posy>185</posy>
+							<width>280</width>
+							<height>20</height>
+							<font>cirrus_16</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[Container(8013).ListItem.Label]</label>
+							<scroll>true</scroll>
+						</control>
+					</control>
+					<control type="list" id="8013">
+						<posx>850r</posx>
+						<posy>58</posy>
+						<width>1050</width>
+						<height>170</height>
+						<onleft>8003</onleft>
+						<onright>9000</onright>
+						<onup>8013</onup>
+						<ondown>8013</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout height="40" width="330">
+							<control type="label">
+								<posx>510</posx>
+								<posy>0</posy>
+								<width>630</width>
+								<height>40</height>
+								<font>cirrus_24</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<selectedcolor>selected</selectedcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout height="40" width="340">
+							<control type="label">
+								<posx>510</posx>
+								<posy>0</posy>
+								<width>540</width>
+								<height>40</height>
+								<font>cirrus_24</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<selectedcolor>selected</selectedcolor>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+							<control type="image">
+								<posx>65</posx>
+								<posy>0</posy>
+								<width>450</width>
+								<height>40</height>
+								<texture border="0,2,0,2">menuitemFO.png</texture>
+								<visible>Control.HasFocus(8013)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+						</focusedlayout>
+						<include>NextAiredTvShowItem</include>
+					</control>
+				</control>
+				<!-- Stat TVSHOW -->
+				<control type="group">
+					<posx>30r</posx>
+
+					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget)">FirstControl</include>
+					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">SecondControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget)">SecondControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">LastControl</include>
+					
+					<visible>Skin.HasSetting(homepageHideTvShowsStatistics) + Skin.HasSetting(homepageHideStatistics)</visible>
+					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
+					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
+					
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>120</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>10</posy>
+						<height>20</height>
+						<width>450</width>
+						<label>Statistics</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>35</posy>
+						<height>20</height>
+						<width>335</width>
+						<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<scrollout>false</scrollout>
+						<pauseatend>2000</pauseatend>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>60</posy>
+						<height>20</height>
+						<align>right</align>
+						<width>355</width>
+						<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>85</posy>
+						<height>20</height>
+						<width>355</width>
+						<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font12</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+			</control>
+			
+		</control>
+	</include>
+
+</includes>
