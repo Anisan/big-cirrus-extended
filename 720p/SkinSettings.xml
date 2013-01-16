@@ -457,98 +457,6 @@
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
 						</control>
-
-						
-
-						<control type="button" id="206">
-							<!-- Show Recently added info -->
-							<description>Show Recently added info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label>31117</label>
-							<onclick>Skin.ToggleSetting(homepageHideRecentlyAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRecentlyAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-						</control>
-						<control type="radiobutton" id="207">
-							<description>Show Recently Video added info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[3]</label>
-							<onclick>Skin.ToggleSetting(homepageHideRecentlyVideoAdded)</onclick>
-							<onclick>Skin.Reset(homepageHideRandomVideoAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRecentlyVideoAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-						</control>
-						
-						
-						<control type="button" id="211">
-							<description>Show Random info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label>Show Random</label>
-							<onclick>Skin.ToggleSetting(homepageHideRandomAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRandomAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-						</control>
-						<control type="radiobutton" id="212">
-							<description>Show Random video info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[3]</label>
-							<onclick>Skin.ToggleSetting(homepageHideRandomVideoAdded)</onclick>
-							<onclick>Skin.Reset(homepageHideRecentlyVideoAdded)</onclick>
-							<selected>Skin.HasSetting(homepageHideRandomVideoAdded)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideRandomAdded)</visible>
-						</control>
-						
-						
-						<control type="button" id="216">
-							<description>Show statistics Button</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label>Show Home statistics</label>
-							<onclick>Skin.ToggleSetting(homepageHideStatistics)</onclick>
-							<selected>Skin.HasSetting(homepageHideStatistics)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-						</control>
-						<control type="radiobutton" id="217">
-							<description>Show Recently Video added info</description>
-							<width>750</width>
-							<height>40</height>
-							<font>cirrus_20</font>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<label> - $LOCALIZE[3]</label>
-							<onclick>Skin.ToggleSetting(homepageHideVideoStatistics)</onclick>
-							<selected>Skin.HasSetting(homepageHideVideoStatistics)</selected>
-							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
-							<texturenofocus>menuitemNF.png</texturenofocus>
-							<visible>Skin.HasSetting(homepageHideStatistics)</visible>
-						</control>
-						
 						
 						<control type="label" id="221">
 							<width>750</width>
@@ -3593,6 +3501,75 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
+						<control type="radiobutton" id="1801">
+							<description>Enable Videos Widget</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<label>Enable Videos Widgets</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowVideosWidget)</onclick>
+							<selected>Skin.HasSetting(ShowVideosWidget)</selected>
+						</control>
+						<control type="radiobutton" id="1802">
+							<description>Show Recently Videos added info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Recently Videos Added</label>
+							<onclick>Skin.ToggleSetting(ShowRecentlyVideosAddedWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRecentlyVideosAddedWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowVideosWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1803">
+							<description>Show Recomended Videos info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Recomended Videos</label>
+							<onclick>Skin.ToggleSetting(ShowRecomendedVideosWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRecomendedVideosWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowVideosWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1804">
+							<description>Show Random Videos info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Random Videos</label>
+							<onclick>Skin.ToggleSetting(ShowRandomVideosWidget)</onclick>
+							<selected>Skin.HasSetting(ShowRandomVideosWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowVideosWidget)</visible>
+						</control>
+						<control type="radiobutton" id="1805">
+							<description>Show Statistics Videos</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<label> - Videos Statistics Widget</label>
+							<onclick>Skin.ToggleSetting(ShowVideosStatisticsWidget)</onclick>
+							<selected>Skin.HasSetting(ShowVideosStatisticsWidget)</selected>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<visible>Skin.HasSetting(ShowVideosWidget)</visible>
+						</control>
 						
 						<control type="label" id="1810">
 							<width>750</width>
@@ -3604,7 +3581,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="1821">
+						<control type="radiobutton" id="1811">
 							<description>Enable Movies Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3617,7 +3594,7 @@
 							<onclick>Skin.ToggleSetting(ShowMoviesWidget)</onclick>
 							<selected>Skin.HasSetting(ShowMoviesWidget)</selected>
 						</control>
-						<control type="radiobutton" id="1822">
+						<control type="radiobutton" id="1812">
 							<description>Show Recently Movies added info</description>
 							<width>750</width>
 							<height>40</height>
@@ -3631,7 +3608,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMoviesWidget)</visible>
 						</control>
-						<control type="radiobutton" id="1823">
+						<control type="radiobutton" id="1813">
 							<description>Show Recomended Movies info</description>
 							<width>750</width>
 							<height>40</height>
@@ -3645,7 +3622,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMoviesWidget)</visible>
 						</control>
-						<control type="radiobutton" id="1824">
+						<control type="radiobutton" id="1814">
 							<description>Show Random Movies info</description>
 							<width>750</width>
 							<height>40</height>
@@ -3659,7 +3636,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMoviesWidget)</visible>
 						</control>
-						<control type="radiobutton" id="1825">
+						<control type="radiobutton" id="1815">
 							<description>Show Statistics Movies</description>
 							<width>750</width>
 							<height>40</height>

@@ -24,7 +24,6 @@
   <include file="ViewsFileMode.xml" />
   <include file="ViewsPictures.xml" />
   <include file="IncludesCodecFlagging.xml" />
-  <include file="IncludesHomeRecentlyAdded.xml" />
   <include file="ViewsAddonBrowser.xml" />
   <include file="IncludesHomeMenu.xml" />
   <include file="IncludesHomeNowPlaying.xml" />
@@ -42,6 +41,8 @@
   <include file="weather\HourlyForecast.xml" />
   <include file="weather\MapAlerts.xml" />
 
+  <include file="IncludesHomeWidgetsVariables.xml" />
+  
   <!-- Home Weather Widget -->
   <include file="IncludesHomepageWeatherWidget.xml" /> 
 
@@ -50,6 +51,7 @@
   <include file="IncludesHomepageMusicWidgets.xml" /> 
   <include file="IncludesHomepageTvShowsWidgets.xml" /> 
   <include file="IncludesHomepageMoviesWidgets.xml" /> 
+  <include file="IncludesHomepageVideosWidgets.xml" /> 
 
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 
