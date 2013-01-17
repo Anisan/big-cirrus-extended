@@ -106,6 +106,47 @@
 		</content>
 	</include>
 
+	<include name="ContentMovieRecomended">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedMovie.1.Plot)]</label2>
+				<onclick>PlayMedia($INFO[Window(Home).Property(RecommendedMovie.1.File)])</onclick>
+				<icon>-</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</thumb>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedMovie.1.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecommendedMovie.1.RunningTime)]</property>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedMovie.2.Plot)]</label2>
+				<onclick>PlayMedia($INFO[Window(Home).Property(RecommendedMovie.2.File)])</onclick>
+				<icon>-</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</thumb>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedMovie.2.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecommendedMovie.2.RunningTime)]</property>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedMovie.3.Plot)]</label2>
+				<onclick>PlayMedia($INFO[Window(Home).Property(RecommendedMovie.3.File)])</onclick>
+				<icon>-</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</thumb>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedMovie.3.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecommendedMovie.3.RunningTime)]</property>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedMovie.4.Plot)]</label2>
+				<onclick>PlayMedia($INFO[Window(Home).Property(RecommendedMovie.4.File)])</onclick>
+				<icon>-</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</thumb>
+				<property name="Year">$INFO[Window(Home).Property(RecommendedMovie.4.Year)]</property>
+				<property name="RunningTime">$INFO[Window(Home).Property(RecommendedMovie.4.RunningTime)]</property>
+			</item>
+		</content>
+	</include>
+	
 	<include name="IconsMovieRecentlyAdded">
 		<control type="image">
 			<description>Main Icon -3</description>
@@ -195,6 +236,53 @@
 			<height>180</height>
 			<aspectratio align="left">stretch</aspectratio>
 			<texture background="true">$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</texture>
+			<bordertexture border="8">ThumbShadow.png</bordertexture>
+			<bordersize>8</bordersize>
+		</control>
+	</include>
+	
+	<include name="IconsMovieRecomended">
+		<control type="image">
+			<description>Main Icon -3</description>
+			<posx>360</posx>
+			<posy>25</posy>
+			<width>120</width>
+			<height>180</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</texture>
+			<bordertexture border="8">ThumbShadow.png</bordertexture>
+			<bordersize>8</bordersize>
+		</control>
+		<control type="image">
+			<description>Main Icon -2</description>
+			<posx>240</posx>
+			<posy>25</posy>
+			<width>120</width>
+			<height>180</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</texture>
+			<bordertexture border="8">ThumbShadow.png</bordertexture>
+			<bordersize>8</bordersize>
+		</control>
+		<control type="image">
+			<description>Main Icon -1</description>
+			<posx>120</posx>
+			<posy>25</posy>
+			<width>120</width>
+			<height>180</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</texture>
+			<bordertexture border="8">ThumbShadow.png</bordertexture>
+			<bordersize>8</bordersize>
+		</control>
+		<control type="image">
+			<description>Main Icon</description>
+			<posx>0</posx>
+			<posy>25</posy>
+			<width>120</width>
+			<height>180</height>
+			<aspectratio align="left">stretch</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</texture>
 			<bordertexture border="8">ThumbShadow.png</bordertexture>
 			<bordersize>8</bordersize>
 		</control>
