@@ -136,7 +136,7 @@
 					</control>
 					<control type="list" id="49"> <!-- info -->
 						<include>VisibleFadeEffect</include>
-						<visible>!Control.HasFocus(12)</visible>
+						<visible>!Control.HasFocus(10)</visible>
 						<posx>340</posx>
 						<posy>100</posy>
 						<width>600</width>
@@ -448,12 +448,12 @@
 							<posy>75</posy>
 							<aspectratio>keep</aspectratio>
 							<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
-							<visible>!Control.HasFocus(12)</visible>
+							<visible>!Control.HasFocus(10)</visible>
 						</control>
 					</control>
 					<control type="list" id="49">
 						<include>VisibleFadeEffect</include>
-						<visible>!Control.HasFocus(12)</visible>
+						<visible>!Control.HasFocus(10)</visible>
 						<visible>!Control.HasFocus(101)</visible>
 						<posx>340</posx>
 						<posy>100</posy>
@@ -540,7 +540,7 @@
 					</control>					
 				</control>
 				<control type="group"> <!-- EPISODES LEVEL -->
-					<visible>container.content(episodes) + !Control.HasFocus(12)</visible>
+					<visible>container.content(episodes) + !Control.HasFocus(1)</visible>
 					<posy>50</posy>
 					<posx>0</posx>
 					<include>VisibleFadeEffect</include>
@@ -772,7 +772,7 @@
 					</control>
 				</control>
 				<control type="group"> <!-- tv -->
-					<visible>container.content(episodes) + !Control.HasFocus(12)</visible>
+					<visible>container.content(episodes) + !Control.HasFocus(10)</visible>
 					<posx>390</posx>
 					<posy>315</posy>
 					<control type="image">
@@ -799,7 +799,7 @@
 					</control>
 				</control>
 				<control type="group"> <!-- Movie -->
-					<visible>!container.content(episodes) + !Control.HasFocus(12)</visible>
+					<visible>!container.content(episodes) + !Control.HasFocus(10)</visible>
 					<visible>!Control.HasFocus(101)</visible>
 					<posx>390</posx>
 					<posy>280</posy>
@@ -827,7 +827,7 @@
 					</control>
 				</control>
 				<control type="scrollbar" id="61">
-					<visible>!Control.HasFocus(12)</visible>
+					<visible>!Control.HasFocus(10)</visible>
 					<posx>1250</posx>
 					<posy>290</posy>
 					<width>25</width>
@@ -856,7 +856,7 @@
 				</control>
 				<control type="panel" id="50"> <!-- Actor list -->
 					<include>VisibleFadeEffect</include>
-					<visible>!Control.HasFocus(12)</visible>
+					<visible>!Control.HasFocus(10)</visible>
 					<visible>!Control.HasFocus(101)</visible>
 					<posx>380</posx>
 					<posy>330</posy>
@@ -963,15 +963,10 @@
 						<label>184</label>
 					</control>
 					<control type="button" id="10">
-						<description>Get Thumb</description>
+						<description>Get Thumb/Fanart</description>
 						<include>ButtonVideoInfoCommonValues</include>
 						<label>13405</label>
 					</control>
-					<control type="button" id="12">
-						<description>Get Fanart</description>
-						<include>ButtonVideoInfoCommonValues</include>
-						<label>20413</label>
-					</control> 
 					<control type="button" id="11">
 						<description>Play Trailer</description>
 						<include>ButtonVideoInfoCommonValues</include>
@@ -998,18 +993,33 @@
 					<control type="button" id="17">
 					  <description>TvTunes</description> 
 					  <include>ButtonInfoDialogsCommonValues</include> 
-					  <visible>container.content(TVShows) + Skin.HasSetting(TvTunes)</visible> 
-					  <!--nable>System.HasAddon(script.TvTunes)</enable-->
+					  <visible>container.content(TVShows) + Skin.HasSetting(tv_theme)</visible> 
+					  <enable>System.HasAddon(script.tvtunes)</enable>
 					  <label>TvTunes</label> 
-					  <onclick>XBMC.RunScript(script.tvtunes,mode=solo&tvpath=$INFO[ListItem.FilenameAndPath]&tvname=$INFO[ListItem.TVShowTitle])</onclick> 
+					  <!--onclick>XBMC.RunScript(script.tvtunes,mode=solo&tvpath=$INFO[ListItem.FilenameAndPath]&tvname=$INFO[ListItem.TVShowTitle])</onclick--> 
+					  <onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 					</control>
+					<control type="button" id="20">
+                       <label>ExtraFanArt</label>
+                       <include>ButtonInfoDialogsCommonValues</include> 
+					   <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
+                       <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
+					   <visible>Skin.HasSetting(ExtraFanMovies)</visible> 
+                    </control>
+					<control type="button" id="21">
+                       <label>ExtraFanArt</label>
+                       <include>ButtonInfoDialogsCommonValues</include> 
+					   <onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
+                       <visible>Container.Content(tvshows) + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
+					   <visible>Skin.HasSetting(ExtraFanTV)</visible> 
+                    </control>
 
 				</control>
 			</control>
 			
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				<visible>Control.HasFocus(12)</visible>
+				<visible>Control.HasFocus(10)</visible>
 				<posy>140</posy>
 				<posx>380</posx>
 				<control type="image"> <!-- FANART -->
