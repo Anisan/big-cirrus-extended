@@ -6,14 +6,112 @@
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 
-
 			<control type="group">
 				<visible>Container(9000).Hasfocus(4) + !Window.IsVisible(1117)</visible>
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
-				<control type="group" id="7022">
+				
+				<control type="group">
 					<posx>30r</posx>
 					<posy>0</posy>
+					<visible>Skin.HasSetting(LastFotoWidget)</visible>
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>250</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>15</posy>
+						<height>20</height>
+						<width>1050</width>
+						<label>Latest foto</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+
+					<control type="list" id="8000">
+						<orientation>horizontal</orientation>
+						<posx>920r</posx>
+						<posy>40</posy>
+						<width>920</width>
+						<height>200</height>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+						<onup>9000</onup>
+						<ondown>8010</ondown>
+						<itemlayout width="180" height="200">
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>175</width>
+								<height>200</height>
+								<aspectratio alignx="left">scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout width="180" height="200">
+							<control type="image">
+								<posx>-50</posx>
+								<posy>1</posy>
+								<width>300</width>
+								<height>200</height>
+								<aspectratio alignx="left">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>4</posy>
+								<width>500</width>
+								<height>34</height>
+								<font>cirrus_16_Bold</font>
+								<scroll>true</scroll>
+								<align>center</align> 
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Name)]</label>
+								<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=1)</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBLatest.2.Name)]</label>
+								<onclick>-</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBLatest.3.Name)]</label>
+								<onclick>-</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBLatest.3.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBLatest.4.Name)]</label>
+								<onclick>-</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBLatest.4.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBLatest.5.Name)]</label>
+								<onclick>-</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBLatest.5.Path)]</icon>
+							</item>
+						</content>
+					</control>
+				</control>
+
+				<control type="group">
+					<posx>30r</posx>
+					<posy>260</posy>
+					<visible>Skin.HasSetting(RandomFotoWidget)</visible>
 					<control type="image">
 						<description>background</description>
 						<posx>920r</posx>
@@ -36,35 +134,73 @@
 						<textcolor>orange</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
-					<control type="image">
-						<description>foto1</description>
+					<control type="list" id="8010">
+						<orientation>horizontal</orientation>
 						<posx>920r</posx>
-						<aspectratio alignx="left">keep</aspectratio>
 						<posy>40</posy>
 						<width>920</width>
 						<height>200</height>
-						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</texture>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
+						<onup>8000</onup>
+						<ondown>9000</ondown>
+						<itemlayout width="180" height="200">
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>175</width>
+								<height>200</height>
+								<aspectratio alignx="center">scale</aspectratio>
+								<texture border="10" background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout width="180" height="200">
+							<control type="image">
+								<posx>-50</posx>
+								<posy>1</posy>
+								<width>300</width>
+								<height>200</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>4</posy>
+								<width>500</width>
+								<height>34</height>
+								<font>cirrus_16_Bold</font>
+								<scroll>true</scroll>
+								<align>left</align> 
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBRandom.1.Name)]</label>
+								<onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;method='Random'&amp;current=1&amp;limit=1)</onclick> 
+								<icon>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBRandom.2.Name)]</label>
+								<onclick>RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;limit=1&amp;method='Random'&amp;current=2)</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBRandom.3.Name)]</label>
+								<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'limit=1&amp;method='Random'&amp;current=3)</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBRandom.4.Name)]</label>
+								<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;limit=1&amp;method='Random'&amp;current=4)</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBRandom.4.Path)]</icon>
+							</item>
+							<item>
+								<label>$INFO[Window(Home).Property(MyPicsDBRandom.5.Name)]</label>
+								<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;limit=1&amp;method='Random'&amp;current=5)</onclick>
+								<icon>$INFO[Window(Home).Property(MyPicsDBRandom.5.Path)]</icon>
+							</item>
+						</content>
 					</control>
-					<control type="image">
-						<description>foto2</description>
-						<posx>720r</posx>
-						<aspectratio alignx="left">keep</aspectratio>
-						<posy>70</posy>
-						<width>920</width>
-						<height>200</height>
-						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</texture>
-					</control>
-					<control type="image">
-						<description>foto3</description>
-						<posx>520r</posx>
-						<aspectratio alignx="left">keep</aspectratio>
-						<posy>100</posy>
-						<width>920</width>
-						<height>200</height>
-						<texture>$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</texture>
-					</control>
-					
-					
 				</control>
 			</control>
 		</control>

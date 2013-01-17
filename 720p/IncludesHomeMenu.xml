@@ -178,6 +178,8 @@
 					<height>240</height>
 					<align>center</align>
 					<onleft>9000</onleft>
+					<include condition="Skin.HasSetting(LastFotoWidget)">onright8000</include>
+					<include condition="!Skin.HasSetting(LastFotoWidget) + Skin.HasSetting(RandomFotoWidget)">onright8010</include>
 					<!--onright>9001</onright-->
 					<onright>8004</onright>
 					<onup>9013</onup>
