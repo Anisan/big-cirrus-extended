@@ -3757,7 +3757,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>cirrus_20</font>
-							<label>Enable Foto Widget</label>
+							<label>Enable Foto Widgets</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
@@ -3766,6 +3766,32 @@
 							<selected>Skin.HasSetting(ShowFotoWidget)</selected>
 						</control>
 						<control type="radiobutton" id="1016">
+							<width>750</width> 
+							<height>40</height> 
+							<font>cirrus_20</font> 
+							<label> - Latest foto</label> 
+							<textcolor>grey2</textcolor> 
+							<focusedcolor>white</focusedcolor> 
+							<texturefocus>MenuItemFO.png</texturefocus> 
+							<texturenofocus>MenuItemNF.png</texturenofocus> 
+							<onclick>Skin.ToggleSetting(LastFotoWidget)</onclick> 
+							<selected>Skin.HasSetting(LastFotoWidget)</selected> 
+							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
+						</control>
+						<control type="radiobutton" id="1017">
+							<width>750</width> 
+							<height>40</height> 
+							<font>cirrus_20</font> 
+							<label> - Random foto</label> 
+							<textcolor>grey2</textcolor> 
+							<focusedcolor>white</focusedcolor> 
+							<texturefocus>MenuItemFO.png</texturefocus> 
+							<texturenofocus>MenuItemNF.png</texturenofocus> 
+							<onclick>Skin.ToggleSetting(RandomFotoWidget)</onclick> 
+							<selected>Skin.HasSetting(RandomFotoWidget)</selected> 
+							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
+						</control>
+						<control type="radiobutton" id="1018">
 							<description>Enable SystemInfo Widget</description>
 							<width>750</width>
 							<height>40</height>
@@ -3777,6 +3803,19 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(ShowSystemInfoWidget)</onclick>
 							<selected>Skin.HasSetting(ShowSystemInfoWidget)</selected>
+						</control>
+						<control type="radiobutton" id="1019">
+							<width>750</width> 
+							<height>40</height> 
+							<font>cirrus_20</font> 
+							<label> - Advanced parameters</label> 
+							<textcolor>grey2</textcolor> 
+							<focusedcolor>white</focusedcolor> 
+							<texturefocus>MenuItemFO.png</texturefocus> 
+							<texturenofocus>MenuItemNF.png</texturenofocus> 
+							<onclick>Skin.ToggleSetting(AdvancedSystemInfo)</onclick> 
+							<selected>Skin.HasSetting(AdvancedSystemInfo)</selected> 
+							<visible>Skin.HasSetting(ShowSystemInfoWidget)</visible> 
 						</control>
 						
 					</control>

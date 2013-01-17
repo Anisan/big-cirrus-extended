@@ -20,7 +20,8 @@
 					<aspectratio alignx="left">stretch</aspectratio> 
 					<posy>0</posy> 
 					<width>920</width> 
-					<height>380</height> 
+					<include condition="Skin.HasSetting(AdvancedSystemInfo)">AdvancedSize</include>
+					<include condition="!Skin.HasSetting(AdvancedSystemInfo)">NormalSize</include>
 					<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture> 
 				</control>
 
@@ -80,17 +81,24 @@
 						</control>
 					</focusedlayout>
 					<content>
+						<item id="8">
+							<label>XBMC $INFO[System.BuildVersion] ($INFO[System.BuildDate])</label>
+							<onclick>-</onclick>
+							<icon>systeminfo/icon32x32.png</icon>
+						</item>
 						<item id="1">
 							<label>$INFO[Network.IPAddress]</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/connected.png</icon>
 							<visible>System.InternetState</visible>
+							<visible>Skin.HasSetting(AdvancedSystemInfo)</visible>
 						</item>
 						<item id="2">
 							<label>$INFO[Network.IPAddress]</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/disconnected.png</icon>
 							<visible>!System.InternetState</visible>
+							<visible>Skin.HasSetting(AdvancedSystemInfo)</visible>
 						</item>
 						<item id="3">
 							<label>Uptime: $INFO[System.Uptime]</label>
@@ -98,12 +106,12 @@
 							<icon>systeminfo/uptime.png</icon>
 						</item>
 						<item id="4">
-							<label>$INFO[System.CpuFrequency] $LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+							<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/cpu_usage.png</icon>
 						</item>
 						<item id="5">
-							<label>$INFO[System.FreeMemory] $LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
+							<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/ram.png</icon>
 						</item>
@@ -111,16 +119,13 @@
 							<label>$INFO[System.ScreenWidth] x $INFO[System.ScreenHeight] @ $INFO[System.fps] FPS</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/resolution.png</icon>
+							<visible>Skin.HasSetting(AdvancedSystemInfo)</visible>
 						</item>
 						<item id="7">
 							<label>$INFO[System.freespacepercent]</label>
 							<onclick>-</onclick>
 							<icon>systeminfo/harddisk.png</icon>
-						</item>
-						<item id="8">
-							<label>XBMC $INFO[System.BuildVersion] ($INFO[System.BuildDate])</label>
-							<onclick>-</onclick>
-							<icon>systeminfo/icon32x32.png</icon>
+							<visible>Skin.HasSetting(AdvancedSystemInfo)</visible>
 						</item>
 						<item id="9">
 							<label>Temp GPU: $INFO[System.GPUTemperature]</label> 
@@ -136,5 +141,12 @@
 				</control>
 			</control>
 		</control>
+	</include>
+	
+	<include name="NormalSize">
+		<height>260</height>
+	</include>
+	<include name="AdvancedSize">
+		<height>360</height>
 	</include>
 </includes>
