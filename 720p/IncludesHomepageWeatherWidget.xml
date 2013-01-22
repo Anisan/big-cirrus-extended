@@ -501,7 +501,7 @@
 							<width>130</width>
 							<height>20</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>orange</textcolor>
 							<font>cirrus_20_bold</font>
 							<label fallback="-">[B]$INFO[Window(Weather).Property(Day0.Title)][/B]</label>
 						</control>
@@ -534,7 +534,7 @@
 							<width>130</width>
 							<height>20</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>orange</textcolor>
 							<font>cirrus_20_bold</font>
 							<label fallback="-">[B]$INFO[Window(Weather).Property(Day1.Title)][/B]</label>
 						</control>
@@ -567,7 +567,7 @@
 							<width>130</width>
 							<height>20</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>orange</textcolor>
 							<font>cirrus_20_bold</font>
 							<label fallback="-">[B]$INFO[Window(Weather).Property(Day2.Title)][/B]</label>
 						</control>
@@ -600,7 +600,7 @@
 							<width>130</width>
 							<height>20</height>
 							<align>center</align>
-							<textcolor>blue</textcolor>
+							<textcolor>orange</textcolor>
 							<font>cirrus_20_bold</font>
 							<label fallback="-">[B]$INFO[Window(Weather).Property(Day3.Title)][/B]</label>
 						</control>
