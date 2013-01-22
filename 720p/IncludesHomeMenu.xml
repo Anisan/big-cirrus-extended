@@ -92,8 +92,7 @@
 					<height>240</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<!--onright>9001</onright-->
-					<onright>8004</onright>
+					<onright>8030</onright>
 					<onup>9011</onup>
 					<ondown>9011</ondown>
 					<itemgap>0</itemgap>
@@ -147,8 +146,7 @@
 					<height>240</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<!--onright>9001</onright-->
-					<onright>8004</onright>
+					<onright>9000</onright>
 					<onup>9012</onup>
 					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
@@ -177,10 +175,7 @@
 					<height>240</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<include condition="Skin.HasSetting(LastFotoWidget)">onright8000</include>
-					<include condition="!Skin.HasSetting(LastFotoWidget) + Skin.HasSetting(RandomFotoWidget)">onright8010</include>
-					<!--onright>9001</onright-->
-					<onright>8004</onright>
+					<onright>8040</onright>
 					<onup>9013</onup>
 					<ondown>9013</ondown>
 					<itemgap>0</itemgap>

@@ -10,6 +10,19 @@
 				<visible>Library.HasContent(Music) + Container(9000).Hasfocus(3)</visible>
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
+				<control type="button" id="8030">
+                    <description>set focus</description>
+                    <posx>-20</posx>
+                    <posy>-20</posy>
+                    <width>1</width>
+                    <height>1</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <onfocus condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget)">SetFocus(8031)</onfocus>
+                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">SetFocus(8032)</onfocus>
+                    <texturenofocus>-</texturenofocus>
+                    <texturefocus>-</texturefocus>
+				</control>
 				<!-- RecentlyMusicAdded -->
 				<control type="group">
 					<posx>0</posx>
@@ -48,7 +61,7 @@
 							<height>170</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" diffuse="maskthumbnail.png">$INFO[Window.Property(LatestSong.1.Thumb)]</texture>
-							<visible>!Control.HasFocus(8004)</visible>
+							<visible>!Control.HasFocus(8031)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="image">
@@ -59,8 +72,8 @@
 							<height>170</height>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8004).ListItem.Icon]</texture>
-							<visible>Control.HasFocus(8004)</visible>
+							<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8031).ListItem.Icon]</texture>
+							<visible>Control.HasFocus(8031)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="image">
@@ -73,16 +86,16 @@
 							<texture background="true" diffuse="maskthumbnail.png">GlassOverlay2.png</texture>
 						</control>
 					</control>
-					<control type="list" id="8004">
+					<control type="list" id="8031">
 						<posx>930r</posx>
 						<posy>58</posy>
 						<width>800</width>
 						<height>236</height>
 
-						<onleft>8000</onleft>
-						<onright>8014</onright>
-						<onup>8004</onup>
-						<ondown>8004</ondown>
+						<onleft>9000</onleft>
+						<onright>8032</onright>
+						<onup>8031</onup>
+						<ondown>8031</ondown>
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
@@ -121,7 +134,7 @@
 								<width>450</width>
 								<height>40</height>
 								<texture border="0,2,0,2">menuitemFO.png</texture>
-								<visible>Control.HasFocus(8004)</visible>
+								<visible>Control.HasFocus(8031)</visible>
 								<include>VisibleFadeEffect</include>
 							</control>
 						</focusedlayout>
@@ -208,7 +221,7 @@
 							<height>170</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" diffuse="maskthumbnail.png">$INFO[Window.Property(RandomSong.1.Thumb)]</texture>
-							<visible>!Control.HasFocus(8014)</visible>
+							<visible>!Control.HasFocus(8032)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="image">
@@ -219,8 +232,8 @@
 							<height>170</height>
 							<aspectratio>stretch</aspectratio>
 							<fadetime>200</fadetime>
-							<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8014).ListItem.Icon]</texture>
-							<visible>Control.HasFocus(8014)</visible>
+							<texture background="true" diffuse="maskthumbnail.png">$INFO[Container(8032).ListItem.Icon]</texture>
+							<visible>Control.HasFocus(8032)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
 						<control type="image">
@@ -233,16 +246,16 @@
 							<texture background="true" diffuse="maskthumbnail.png">GlassOverlay2.png</texture>
 						</control>
 					</control>
-					<control type="list" id="8014">
+					<control type="list" id="8032">
 						<posx>930r</posx>
 						<posy>58</posy>
 						<width>800</width>
 						<height>236</height>
 
-						<onleft>8004</onleft>
+						<onleft>8031</onleft>
 						<onright>9000</onright>
-						<onup>8014</onup>
-						<ondown>8014</ondown>
+						<onup>8032</onup>
+						<ondown>8032</ondown>
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
@@ -281,7 +294,7 @@
 								<width>450</width>
 								<height>40</height>
 								<texture border="0,2,0,2">menuitemFO.png</texture>
-								<visible>Control.HasFocus(8014)</visible>
+								<visible>Control.HasFocus(8032)</visible>
 								<include>VisibleFadeEffect</include>
 							</control>
 						</focusedlayout>
