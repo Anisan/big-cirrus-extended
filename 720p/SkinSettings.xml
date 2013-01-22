@@ -3819,6 +3819,19 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
+						<control type="radiobutton" id="1841">
+							<description>Enable Program Widget</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<label>Enable Program Widgets</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(ShowProgramWidget)</onclick>
+							<selected>Skin.HasSetting(ShowProgramWidget)</selected>
+						</control>
 						
 						<control type="label" id="1850">
 							<width>750</width>

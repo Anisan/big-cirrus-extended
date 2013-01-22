@@ -29,6 +29,16 @@
 				<animation effect="fade" start="0" end="100" time="500" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="500" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
 				<animation effect="slide" end="270,0" time="500" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus">conditional</animation>
+				
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).HasFocus(1)</visible>
+					<control type="button" id="90051">
+						<onfocus>SetFocus(8050)</onfocus>
+					</control>
+				</control>
+				
+                    
+				
 				<!-- VIDEOS SUBMENU -->
 				<control type="grouplist" id="9010">
 					<posx>10</posx>

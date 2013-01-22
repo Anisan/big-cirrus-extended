@@ -22,6 +22,7 @@
     <include condition="Skin.HasSetting(ShowTvShowsWidget)">HomepageTvShowsWidget</include> 
     <include condition="Skin.HasSetting(ShowMoviesWidget)">HomepageMoviesWidget</include> 
     <include condition="Skin.HasSetting(ShowVideosWidget)">HomepageVideosWidget</include> 
+    <include condition="Skin.HasSetting(ShowProgramWidget)">HomepageProgramWidget</include> 
     
 	<include>HomeNowPlaying</include>
     <include condition="!Skin.HasSetting(horzHomeMenu)">HomeMenu</include>

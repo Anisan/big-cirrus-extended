@@ -52,6 +52,7 @@
   <include file="IncludesHomepageTvShowsWidgets.xml" /> 
   <include file="IncludesHomepageMoviesWidgets.xml" /> 
   <include file="IncludesHomepageVideosWidgets.xml" /> 
+  <include file="IncludesHomepageProgramWidgets.xml" />
 
   <include file="IncludesHomepageSystemInfoWidget.xml" /> 
 

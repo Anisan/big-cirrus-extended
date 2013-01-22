@@ -1,0 +1,151 @@
+<includes>
+	<include name="HomepageProgramWidget">
+		<control type="group">
+			<visible>!Window.IsVisible(Favourites)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+
+			<control type="group">
+				<visible>Container(9000).Hasfocus(1) + !Window.IsVisible(1117)</visible>
+				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
+				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
+
+
+				<control type="group">
+					<posx>30r</posx>
+					<posy>0</posy>
+					<control type="image">
+						<description>background</description>
+						<posx>920r</posx>
+						<aspectratio alignx="left">stretch</aspectratio>
+						<posy>0</posy>
+						<width>920</width>
+						<height>240</height>
+						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>30r</posx>
+						<posy>10</posy>
+						<height>20</height>
+						<width>1050</width>
+						<label>Random addons</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>cirrus_24_Bold</font>
+						<textcolor>orange</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+
+					<control type="list" id="8050">
+						<orientation>horizontal</orientation>
+						<posx>800r</posx>
+						<posy>35</posy>
+						<width>800</width>
+						<height>200</height>
+						<onleft>8050</onleft>
+						<onright>8050</onright>
+						<onup>9000</onup>
+						<ondown>9000</ondown>
+						<viewtype label="535">list</viewtype>
+						<pagecontrol>-</pagecontrol>
+						<scrolltime>0</scrolltime>
+						<itemlayout width="200" height="200">
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>180</width>
+								<height>180</height>
+								<aspectratio alignx="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>165</posy>
+								<width>200</width>
+								<height>34</height>
+								<font>cirrus_16_Bold</font>
+								<alignx>center</alignx> 
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout width="200" height="200">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>200</width>
+								<height>200</height>
+								<texture border="0,2,0,2">menuitemFO.png</texture>
+								<visible>Control.HasFocus(8050)</visible>
+								<include>VisibleFadeEffect</include>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>180</width>
+								<height>180</height>
+								<aspectratio alignx="left">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>165</posy>
+								<width>200</width>
+								<height>34</height>
+								<font>cirrus_16_Bold</font>
+								<scroll>true</scroll>
+								<alignx>center</alignx> 
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<icon>$INFO[Window(Home).Property(RandomAddon.1.Art(thumb))]</icon>
+								<label>$INFO[Window(Home).Property(RandomAddon.1.Title)]</label>
+								<label2>$INFO[Window(Home).Property(RandomAddon.1.Author)]</label2>
+								<property name="Version">$INFO[Window(Home).Property(RandomAddon.1.Version)]</property>
+								<property name="Description">$INFO[Window(Home).Property(RandomAddon.1.Summary)]</property>
+								<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.1.Art(fanart))]</property>
+								<property name="Path">$INFO[Window(Home).Property(RandomAddon.1.Path)]</property>
+								<onclick>XBMC.RunAddon($INFO[Window(Home).Property(RandomAddon.1.Path)])</onclick>
+							</item>
+							<item>
+								<icon>$INFO[Window(Home).Property(RandomAddon.2.Art(thumb))]</icon>
+								<label>$INFO[Window(Home).Property(RandomAddon.2.Title)]</label>
+								<label2>$INFO[Window(Home).Property(RandomAddon.2.Author)]</label2>
+								<property name="Version">$INFO[Window(Home).Property(RandomAddon.2.Version)]</property>
+								<property name="Description">$INFO[Window(Home).Property(RandomAddon.2.Summary)]</property>
+								<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.2.Art(fanart))]</property>
+								<property name="Path">$INFO[Window(Home).Property(RandomAddon.2.Path)]</property>
+								<onclick>XBMC.RunAddon($INFO[Window(Home).Property(RandomAddon.2.Path)])</onclick>
+							</item>
+							<item>
+								<icon>$INFO[Window(Home).Property(RandomAddon.3.Art(thumb))]</icon>
+								<label>$INFO[Window(Home).Property(RandomAddon.3.Title)]</label>
+								<label2>$INFO[Window(Home).Property(RandomAddon.3.Author)]</label2>
+								<property name="Version">$INFO[Window(Home).Property(RandomAddon.3.Version)]</property>
+								<property name="Description">$INFO[Window(Home).Property(RandomAddon.3.Summary)]</property>
+								<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.3.Art(fanart))]</property>
+								<property name="Path">$INFO[Window(Home).Property(RandomAddon.3.Path)]</property>
+								<onclick>XBMC.RunAddon($INFO[Window(Home).Property(RandomAddon.3.Path)])</onclick>
+							</item>
+							<item>
+								<icon>$INFO[Window(Home).Property(RandomAddon.4.Art(thumb))]</icon>
+								<label>$INFO[Window(Home).Property(RandomAddon.4.Title)]</label>
+								<label2>$INFO[Window(Home).Property(RandomAddon.4.Author)]</label2>
+								<property name="Version">$INFO[Window(Home).Property(RandomAddon.4.Version)]</property>
+								<property name="Description">$INFO[Window(Home).Property(RandomAddon.4.Summary)]</property>
+								<property name="Fanart">$INFO[Window(Home).Property(RandomAddon.4.Art(fanart))]</property>
+								<property name="Path">$INFO[Window(Home).Property(RandomAddon.4.Path)]</property>
+								<onclick>XBMC.RunAddon($INFO[Window(Home).Property(RandomAddon.4.Path)])</onclick>
+							</item>
+						</content>
+					</control>
+				</control>
+
+			</control>
+		</control>
+	</include>
+
+</includes>
