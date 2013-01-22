@@ -3523,6 +3523,8 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recently Videos Added</label>
 							<onclick>Skin.ToggleSetting(ShowRecentlyVideosAddedWidget)</onclick>
+							<onclick>Skin.Reset(ShowRecomendedVideosWidget)</onclick>
+							<onclick>Skin.Reset(ShowRandomVideosWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecentlyVideosAddedWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3537,6 +3539,8 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recomended Videos</label>
 							<onclick>Skin.ToggleSetting(ShowRecomendedVideosWidget)</onclick>
+							<onclick>Skin.Reset(ShowRecentlyVideosAddedWidget)</onclick>
+							<onclick>Skin.Reset(ShowRandomVideosWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecomendedVideosWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3551,6 +3555,8 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Random Videos</label>
 							<onclick>Skin.ToggleSetting(ShowRandomVideosWidget)</onclick>
+							<onclick>Skin.Reset(ShowRecentlyVideosAddedWidget)</onclick>
+							<onclick>Skin.Reset(ShowRecomendedVideosWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRandomVideosWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3603,6 +3609,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recently Movies Added</label>
 							<onclick>Skin.ToggleSetting(ShowRecentlyMoviesAddedWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRecomendedMoviesWidget)">Skin.Reset(ShowRandomMoviesWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecentlyMoviesAddedWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3617,6 +3624,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recomended Movies</label>
 							<onclick>Skin.ToggleSetting(ShowRecomendedMoviesWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget)">Skin.Reset(ShowRandomMoviesWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecomendedMoviesWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3631,6 +3639,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Random Movies</label>
 							<onclick>Skin.ToggleSetting(ShowRandomMoviesWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget)">Skin.Reset(ShowRecomendedMoviesWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRandomMoviesWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3683,6 +3692,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recently TvShows Added</label>
 							<onclick>Skin.ToggleSetting(ShowRecentlyTvShowsAddedWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRecomendedTvShowsWidget)">Skin.Reset(ShowRandomTvShowsWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3697,6 +3707,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Recomended TvShows</label>
 							<onclick>Skin.ToggleSetting(ShowRecomendedTvShowsWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRandomTvShowsWidget)">Skin.Reset(ShowRecentlyTvShowsAddedWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRecomendedTvShowsWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
@@ -3711,6 +3722,7 @@
 							<focusedcolor>white</focusedcolor>
 							<label> - Random TvShows</label>
 							<onclick>Skin.ToggleSetting(ShowRandomTvShowsWidget)</onclick>
+							<onclick condition="Skin.HasSetting(ShowRecomendedTvShowsWidget)">Skin.Reset(ShowRecentlyTvShowsAddedWidget)</onclick>
 							<selected>Skin.HasSetting(ShowRandomTvShowsWidget)</selected>
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>

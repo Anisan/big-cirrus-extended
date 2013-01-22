@@ -1002,7 +1002,7 @@
 					<control type="button" id="20">
                        <label>ExtraFanArt</label>
                        <include>ButtonInfoDialogsCommonValues</include> 
-					   <onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
+					   <onclick>RunScript(script.artwork.downloader,mode=custom,mediatype=movie,dbid=$INFO[ListItem.DBID],extrafanart)</onclick>
                        <visible>Container.Content(movies) + system.hasaddon(script.artwork.downloader) + !substring(Container.FolderPath,plugin://)</visible>
 					   <visible>Skin.HasSetting(ExtraFanMovies)</visible> 
                     </control>

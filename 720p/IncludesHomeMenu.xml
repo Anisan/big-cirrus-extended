@@ -37,8 +37,7 @@
 					<height>240</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<include condition="!Skin.HasSetting(homepageHideRandomVideoAdded)">onright8000</include>
-					<include condition="Skin.HasSetting(homepageHideRandomVideoAdded)">onright8010</include>
+					<onright>8000</onright>
 					<onup>9010</onup>
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
@@ -358,7 +357,7 @@
 					<height>400</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<onright>8002</onright>
+					<onright>8010</onright>
 					<onup>9016</onup>
 					<ondown>9016</ondown>
 					<itemgap>0</itemgap>
@@ -411,7 +410,7 @@
 					<height>300</height>
 					<align>center</align>
 					<onleft>9000</onleft>
-					<onright>8003</onright>
+					<onright>8020</onright>
 					<onup>9017</onup>
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>

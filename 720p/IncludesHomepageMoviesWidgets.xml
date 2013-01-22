@@ -11,6 +11,22 @@
 				<visible>Library.HasContent(Movies) + Container(9000).Hasfocus(10)</visible>
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
+				
+				<control type="button" id="8010">
+                    <description>set focus</description>
+                    <posx>-20</posx>
+                    <posy>-20</posy>
+                    <width>1</width>
+                    <height>1</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <onfocus condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget)">SetFocus(8011)</onfocus>
+                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SetFocus(8012)</onfocus>
+                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRandomMoviesWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget)">SetFocus(8013)</onfocus>
+                    <texturenofocus>-</texturenofocus>
+                    <texturefocus>-</texturefocus>
+				</control>
+				
 				<!-- RecentlyMovieAdded -->
 				<control type="group">
 					<posx>0</posx>
@@ -41,12 +57,12 @@
 					<control type="group">
 						<posy>20</posy>
 						<posx>500r</posx>
-						<visible>!Control.HasFocus(8002)</visible>
+						<visible>!Control.HasFocus(8011)</visible>
 						<include>IconsMovieRecentlyAdded</include>
 					</control>
 
 					<control type="group">
-						<visible>Control.HasFocus(8002)</visible>
+						<visible>Control.HasFocus(8011)</visible>
 						<posy>20</posy>
 						<posx>500r</posx>
 						<control type="label">
@@ -55,7 +71,7 @@
 							<height>25</height>
 							<aligny>left</aligny>
 							<posy>25</posy>
-							<label>[COLOR=orange]Year:[/COLOR] $INFO[Container(8002).ListItem.Property(Year)]</label>
+							<label>[COLOR=orange]Year:[/COLOR] $INFO[Container(8011).ListItem.Property(Year)]</label>
 							<font>cirrus_20_Bold</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -66,7 +82,7 @@
 							<height>50</height>
 							<aligny>left</aligny>
 							<posy>50</posy>
-							<label>[COLOR=orange]Time:[/COLOR] $INFO[Container(8002).ListItem.Property(RunningTime)]</label>
+							<label>[COLOR=orange]Time:[/COLOR] $INFO[Container(8011).ListItem.Property(RunningTime)]</label>
 							<font>cirrus_20_Bold</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
@@ -81,7 +97,7 @@
 							<font>cirrus_16</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>black</shadowcolor>
-							<label>$INFO[Container(8002).ListItem.label2]</label>
+							<label>$INFO[Container(8011).ListItem.label2]</label>
 							<autoscroll delay="5000" time="3000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 						<control type="image">
@@ -91,21 +107,21 @@
 							<width>120</width>
 							<height>180</height>
 							<aspectratio align="left">stretch</aspectratio>
-							<texture background="true" >$INFO[Container(8002).ListItem.Thumb]</texture>
+							<texture background="true" >$INFO[Container(8011).ListItem.Thumb]</texture>
 							<bordertexture border="8">ThumbShadow.png</bordertexture>
 							<bordersize>8</bordersize>
 						</control>
 					</control>
 
-					<control type="list" id="8002">
+					<control type="list" id="8011">
 						<posx>820r</posx>
 						<posy>55</posy>
 						<width>320</width>
 						<height>200</height>
 						<onleft>9000</onleft>
 						<onright>8012</onright>
-						<onup>8002</onup>
-						<ondown>8002</ondown>
+						<onup>8011</onup>
+						<ondown>8011</ondown>
 						<viewtype label="535">list</viewtype>
 						<pagecontrol>-</pagecontrol>
 						<scrolltime>0</scrolltime>
@@ -131,7 +147,7 @@
 								<width>330</width>
 								<height>40</height>
 								<texture border="0,2,0,2">menuitemFO.png</texture>
-								<visible>Control.HasFocus(8002)</visible>
+								<visible>Control.HasFocus(8011)</visible>
 								<include>VisibleFadeEffect</include>
 							</control>
 							<control type="label">
@@ -243,7 +259,7 @@
 						<posy>55</posy>
 						<width>320</width>
 						<height>200</height>
-						<onleft>8002</onleft>
+						<onleft>8011</onleft>
 						<onright>9000</onright>
 						<onup>8012</onup>
 						<ondown>8012</ondown>
@@ -389,7 +405,7 @@
 						<posy>55</posy>
 						<width>320</width>
 						<height>200</height>
-						<onleft>8002</onleft>
+						<onleft>8011</onleft>
 						<onright>9000</onright>
 						<onup>8013</onup>
 						<ondown>8013</ondown>
@@ -441,11 +457,14 @@
 				<!-- Stat Movie -->
 				<control type="group">
 					<posx>30r</posx>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">FirstControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
-
+					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">FirstControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+					
 					<visible>Skin.HasSetting(ShowMoviesStatisticsWidget)</visible>
 					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
 					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
