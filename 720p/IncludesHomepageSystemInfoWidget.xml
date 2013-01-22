@@ -6,9 +6,9 @@
 			<animation effect="fade" time="200">WindowClose</animation> 
 
 			<control type="group">
-				<posx>625r</posx>
+				<posx>825r</posx>
 				<posy>0</posy>
-				<width>625</width>
+				<width>825</width>
 				<height>301</height>
 				<visible>Container(9000).Hasfocus(5)</visible> 
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation> 
@@ -40,9 +40,9 @@
 				<control type="list">
 					<posx>0</posx>
 					<posy>40</posy>
-					<width>600</width>
+					<width>800</width>
 					<height>340</height>
-					<itemlayout width="600" height="34">
+					<itemlayout width="800" height="34">
 						<control type="image">
 							<posx>36r</posx>
 							<posy>1</posy>
@@ -53,7 +53,7 @@
 						<control type="label">
 							<posx>50r</posx>
 							<posy>4</posy>
-							<width>600</width>
+							<width>800</width>
 							<height>34</height>
 							<font>cirrus_16_Bold</font>
 							<scroll>true</scroll>
@@ -61,7 +61,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout width="600" height="34">
+					<focusedlayout width="800" height="34">
 						<control type="image">
 							<posx>36r</posx>
 							<posy>1</posy>
@@ -72,7 +72,7 @@
 						<control type="label">
 							<posx>50r</posx>
 							<posy>4</posy>
-							<width>600</width>
+							<width>800</width>
 							<height>34</height>
 							<font>cirrus_16_Bold</font>
 							<scroll>true</scroll>
