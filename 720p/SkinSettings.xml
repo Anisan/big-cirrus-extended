@@ -144,6 +144,11 @@
 						<label2>Home menu widgets</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="9">
+						<label>Debug</label>
+						<label2>Skin debug settings</label2>
+						<onclick>-</onclick>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -457,7 +462,7 @@
 							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
 							<texturenofocus>menuitemNF.png</texturenofocus>
 						</control>
-						
+
 						<control type="label" id="221">
 							<width>750</width>
 							<height>45</height>
@@ -3576,7 +3581,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowVideosWidget)</visible>
 						</control>
-						
+
 						<control type="label" id="1810">
 							<width>750</width>
 							<height>45</height>
@@ -3659,7 +3664,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMoviesWidget)</visible>
 						</control>
-						
+
 						<control type="label" id="1820">
 							<width>750</width>
 							<height>45</height>
@@ -3742,7 +3747,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowTvShowsWidget)</visible>
 						</control>
-						
+
 						<control type="label" id="1830">
 							<width>750</width>
 							<height>45</height>
@@ -3808,7 +3813,7 @@
 							<texturenofocus>menuitemNF.png</texturenofocus>
 							<visible>Skin.HasSetting(ShowMusicWidget)</visible>
 						</control>
-						
+
 						<control type="label" id="1840">
 							<width>750</width>
 							<height>45</height>
@@ -3832,7 +3837,7 @@
 							<onclick>Skin.ToggleSetting(ShowProgramWidget)</onclick>
 							<selected>Skin.HasSetting(ShowProgramWidget)</selected>
 						</control>
-						
+
 						<control type="label" id="1850">
 							<width>750</width>
 							<height>45</height>
@@ -3868,7 +3873,7 @@
 							<selected>Skin.HasSetting(UseNextAiredClearart)</selected> 
 							<visible>Skin.HasSetting(NextAiredWidgets)</visible> 
 						</control>
-						
+
 						<control type="label" id="1860">
 							<width>750</width>
 							<height>45</height>
@@ -3892,7 +3897,7 @@
 							<onclick>Skin.ToggleSetting(ShowWeatherWidget)</onclick>
 							<selected>Skin.HasSetting(ShowWeatherWidget)</selected>
 						</control>
-						
+
 						<control type="label" id="1870">
 							<width>750</width>
 							<height>45</height>
@@ -3942,7 +3947,7 @@
 							<selected>Skin.HasSetting(RandomFotoWidget)</selected> 
 							<visible>Skin.HasSetting(ShowFotoWidget)</visible> 
 						</control>
-						
+
 						<control type="label" id="1880">
 							<width>750</width>
 							<height>45</height>
@@ -3979,7 +3984,7 @@
 							<selected>Skin.HasSetting(AdvancedSystemInfo)</selected> 
 							<visible>Skin.HasSetting(ShowSystemInfoWidget)</visible> 
 						</control>
-						
+
 					</control>
 					<control type="scrollbar" id="64">
 						<posx>1060</posx>
@@ -3996,6 +4001,59 @@
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 						<visible>Container(9000).Hasfocus(8)</visible>
+					</control>
+				</control>
+				<!-- DEBUG -->
+				<control type="group"> 
+					<control type="grouplist" id="9009">
+						<visible>Container(9000).Hasfocus(9)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>750</width>
+						<height>550</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>64</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>64</onright>
+						<onup>9009</onup>
+						<ondown>9009</ondown>
+						<control type="label" id="1800">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Settings skin debug</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="501">
+							<description>Enable Debug Grid</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Enable Debug Grid</label>
+							<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
+							<selected>Skin.HasSetting(DebugGrid)</selected>
+						</control>
+						
+						<control type="radiobutton" id="502">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Disable Debug Info</label>
+							<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
+							<selected>Skin.HasSetting(HideDebugInfo)</selected>
+						</control>
 					</control>
 				</control>
 			</control>

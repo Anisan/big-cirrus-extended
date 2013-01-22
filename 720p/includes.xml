@@ -1,6 +1,8 @@
 <includes>
   <include file="defaults.xml" />
  
+   <include file="Custom_Debug_Overlay.xml"/>
+ 
   <include file="ViewsVideoCoverflow.xml" />
   <include file="ViewsVideoBannerwall.xml" />
   <include file="ViewsVideoVertBannerwall.xml" />         <!-- Added this view571 MOD 1.2.0 by Branlr -->  
@@ -29,7 +31,7 @@
   <include file="IncludesHomeNowPlaying.xml" />
   <include file="IncludesHomeMenuHoriz.xml" />
   
-  <include file="ViewsLiveTV.xml" /> 
+    <include file="ViewsLiveTV.xml" /> 
   <include file="ViewsPVR.xml" /> 
 
   <include file="Includes_Next_Aired.xml" />
