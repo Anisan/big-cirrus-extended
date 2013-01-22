@@ -197,4 +197,40 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
+
+	<include name="WindowID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>blue</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+	</include>
+
+	<include name="DialogID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>orange</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>left</align>
+	</include>
+
+	<include name="PathID">
+		<posx>10r</posx>
+		<posy>10</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>blue</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>right</align>
+	</include>
+
+	<include name="ControlID">
+		<posx>10r</posx>
+		<posy>32</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>orange</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<align>right</align>
+	</include>
 </includes>
