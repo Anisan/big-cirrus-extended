@@ -197,6 +197,16 @@
 		<aligny>center</aligny>
 		<pulseonselect>no</pulseonselect>
 	</default>
+	
+	<include name="MenuItemSettings">
+		<width>750</width>
+		<height>40</height>
+		<font>cirrus_20</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+		<texturenofocus>menuitemNF.png</texturenofocus>
+	</include>
 
 	<include name="WindowID">
 		<width>520</width>
