@@ -7,6 +7,23 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
+		<control type="button" id="2001">
+			<posx>0</posx>
+			<posy>-</posy>
+			<width>357</width>
+			<height>38</height>
+			<font>cirrus_20</font>
+			<align>center</align>
+			<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus border="5">button-focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<label>Cast information</label>
+			<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Label])</onclick>
+			<visible>System.HasAddon(script.metadata.actors)</visible>
+			<visible>Container.Content(Actors) | Container.Content(Directors) | Container.Content(Artists)</visible>
+		</control>
+
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
