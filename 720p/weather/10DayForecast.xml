@@ -13,7 +13,7 @@
 				<label>31904</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
+				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="list" id="51">
