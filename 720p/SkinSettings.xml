@@ -4017,7 +4017,7 @@
 						<onright>64</onright>
 						<onup>9009</onup>
 						<ondown>9009</ondown>
-						<control type="label" id="1800">
+						<control type="label" id="1900">
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_25</font>
@@ -4027,7 +4027,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="501">
+						<control type="radiobutton" id="1901">
 							<description>Enable Debug Grid</description>
 							<width>750</width>
 							<height>40</height>
@@ -4040,8 +4040,7 @@
 							<onclick>Skin.ToggleSetting(DebugGrid)</onclick>
 							<selected>Skin.HasSetting(DebugGrid)</selected>
 						</control>
-						
-						<control type="radiobutton" id="502">
+						<control type="radiobutton" id="1902">
 							<description>Disable Debug Info</description>
 							<width>750</width>
 							<height>40</height>
@@ -4054,6 +4053,95 @@
 							<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
 							<selected>Skin.HasSetting(HideDebugInfo)</selected>
 						</control>
+						<control type="label" id="1910">
+							<width>750</width>
+							<height>45</height>
+							<font>cirrus_25</font>
+							<label>Addons for skin</label>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="1911">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Artwork Downloader</label>
+                            <onclick>Addon.OpenSettings(script.artwork.downloader)</onclick>
+							<selected>system.hasaddon(script.artwork.downloader)</selected>
+						</control>
+						<control type="radiobutton" id="1912">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Tv Tunes</label>
+							<onclick>Addon.OpenSettings(script.tvtunes)</onclick>
+							<selected>system.hasaddon(script.tvtunes)</selected>
+						</control>
+						<control type="radiobutton" id="1913">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Library Editor</label>
+							<onclick>Addon.OpenSettings(script.library.editor)</onclick>
+							<selected>System.HasAddon(script.library.editor)</selected>
+						</control>
+						<control type="radiobutton" id="1914">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Cinema Experience</label>
+							<onclick>Addon.OpenSettings(script.cinema.experience)</onclick>
+							<selected>System.HasAddon(script.cinema.experience)</selected>
+						</control>
+						<control type="radiobutton" id="1915">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>TvShow Next Aired</label>
+							<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+							<selected>System.HasAddon(script.tv.show.next.aired)</selected>
+						</control>
+						<control type="radiobutton" id="1916">
+							<description>Disable Debug Info</description>
+							<width>750</width>
+							<height>40</height>
+							<font>cirrus_20</font>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus flipx="true">listwhitegradient.png</texturefocus>
+							<texturenofocus>menuitemNF.png</texturenofocus>
+							<label>Metadata Actors</label>
+							<onclick>Addon.OpenSettings(script.metadata.actors)</onclick>
+							<selected>System.HasAddon(script.metadata.actors)</selected>
+						</control>
+
 					</control>
 				</control>
 			</control>
