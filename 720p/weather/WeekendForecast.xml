@@ -53,7 +53,7 @@
 						<width>600</width>
 						<height>30</height>
 						<font>font13_title</font>
-						<textcolor>blue</textcolor>
+						<textcolor>orange</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(Weekend.1.LongDay)] - $INFO[Window.Property(Weekend.1.ShortDate)]</label>
@@ -154,7 +154,7 @@
 						<width>600</width>
 						<height>30</height>
 						<font>font13_title</font>
-						<textcolor>blue</textcolor>
+						<textcolor>orange</textcolor>
 						<align>center</align>
 						<aligny>center</aligny>
 						<label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>

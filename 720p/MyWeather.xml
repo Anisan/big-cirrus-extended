@@ -930,7 +930,7 @@
 					<height>35</height>
 					<font>font12</font>
 					<label>31026</label>
-					<textcolor>blue</textcolor>
+					<textcolor>orange</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 				</control>

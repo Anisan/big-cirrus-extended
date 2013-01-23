@@ -314,7 +314,7 @@
 				<scroll>true</scroll>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<label>([COLOR=blue]$INFO[Container(52).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(52).CurrentPage]/$INFO[Container(52).NumPages][/COLOR])</label>
+				<label>([COLOR=orange]$INFO[Container(52).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(52).CurrentPage]/$INFO[Container(52).NumPages][/COLOR])</label>
 			</control>
 		</control>
 	</include>

@@ -63,7 +63,7 @@
 				<width>570</width>
 				<height>30</height>
 				<font>font13_title</font>
-				<textcolor>blue</textcolor>
+				<textcolor>orange</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[33050]</label>
