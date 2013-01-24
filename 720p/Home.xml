@@ -144,7 +144,21 @@
     
          
      
-      <!-- weather Info -->
+      <!-- Logo -->
+	<control type="group">  
+		<posx>0</posx>
+		<posy>0</posy>
+		<visible>!Skin.HasSetting(cleanHome)</visible>
+			
+			<control type="image">
+				<description>Winter</description>
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>55</width>
+				<height>55</height>
+				<visible>system.date(01-16,03-01)</visible>
+				<texture>special://skin/images/winter.png</texture>
+			</control>
 			<control type="image">
 				<description>LOGO</description>
 				<posx>10</posx>
@@ -152,7 +166,6 @@
 				<width>160</width>
 				<height>40</height>
 				<texture>xbmc_logo_white.png</texture>
-				<visible>!Skin.HasSetting(cleanHome)</visible>
 			</control>
 			<control type="image">
 				<description>Christmas</description>
@@ -162,7 +175,16 @@
 				<height>40</height>
 				<visible>system.date(12-15,01-15)</visible>
 				<texture>special://skin/images/santa-hat.png</texture>
-				<visible>!Skin.HasSetting(cleanHome)</visible>
+			</control>
+			
+			<control type="image">
+				<description>Winter</description>
+				<posx>160</posx>
+				<posy>50</posy>
+				<width>55</width>
+				<height>55</height>
+				<visible>system.date(01-16,03-01)</visible>
+				<texture diffuse="diffuse_mirror.png" flipy="true">special://skin/images/winter.png</texture>
 			</control>
 			<control type="image">
 				<description>LOGO Mirror</description>
@@ -171,7 +193,6 @@
 				<width>160</width>
 				<height>40</height>
 				<texture diffuse="diffuse_mirror.png" flipy="true">xbmc_logo_white.png</texture>
-				<visible>!Skin.HasSetting(cleanHome)</visible>
 			</control>
 			<control type="image">
 				<description>Christmas Mirror</description>
@@ -181,8 +202,10 @@
 				<height>40</height>
 				<visible>system.date(12-15,01-15)</visible>
 				<texture diffuse="diffuse_mirror.png" flipy="true">special://skin/images/santa-hat.png</texture>
-				<visible>!Skin.HasSetting(cleanHome)</visible>
 			</control>
+	</control>
+			
+			
 			<control type="group" id="10">
 				<posx>15</posx>
 				<posy>50r</posy>
