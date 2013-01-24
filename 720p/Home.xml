@@ -151,6 +151,15 @@
 		<visible>!Skin.HasSetting(cleanHome)</visible>
 			
 			<control type="image">
+				<description>Spring</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>40</height>
+				<visible>system.date(03-01,04-15)</visible>
+				<texture>special://skin/images/spring.png</texture>
+			</control>
+			<control type="image">
 				<description>Winter</description>
 				<posx>160</posx>
 				<posy>0</posy>
