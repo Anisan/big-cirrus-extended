@@ -21,7 +21,7 @@
 				<width>470</width>
 				<height>18</height>
 				<font>cirrus_16_Bold</font>
-				<textcolor>selected</textcolor>
+				<textcolor>orange</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
 			</control>
