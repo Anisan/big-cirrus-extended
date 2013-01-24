@@ -156,8 +156,17 @@
 				<posy>0</posy>
 				<width>180</width>
 				<height>40</height>
-				<visible>system.date(03-01,04-15)</visible>
+				<visible>system.date(04-15,05-31)</visible>
 				<texture>special://skin/images/spring.png</texture>
+			</control>
+			<control type="image">
+				<description>Spring</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>50</height>
+				<visible>system.date(03-01,04-14)</visible>
+				<texture>special://skin/images/spring2.png</texture>
 			</control>
 			<control type="image">
 				<description>Winter</description>
@@ -187,7 +196,16 @@
 			</control>
 			
 			<control type="image">
-				<description>Winter</description>
+				<description>Mirror Spring</description>
+				<posx>5</posx>
+				<posy>50</posy>
+				<width>180</width>
+				<height>50</height>
+				<visible>system.date(04-15,05-31)</visible>
+				<texture diffuse="diffuse_mirror.png" flipy="true">special://skin/images/spring2.png</texture>
+			</control>
+			<control type="image">
+				<description>Mirror Winter</description>
 				<posx>160</posx>
 				<posy>50</posy>
 				<width>55</width>
