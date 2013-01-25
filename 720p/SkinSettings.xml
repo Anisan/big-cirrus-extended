@@ -2587,6 +2587,13 @@
 							<onclick>Skin.ToggleSetting(EnableAnimationWeather)</onclick>
 							<selected>Skin.HasSetting(EnableAnimationWeather)</selected>
 						</control>
+						<control type="radiobutton" id="1014">
+							<description>Enable Russian Keyboard</description>
+							<include>MenuItemSettings</include>
+							<label>Enable Russian Keyboard</label>
+							<onclick>Skin.ToggleSetting(EnableRussianKeyboard)</onclick>
+							<selected>Skin.HasSetting(EnableRussianKeyboard)</selected>
+						</control>
 						<control type="label" id="1200">
 							<width>750</width>
 							<height>45</height>
@@ -3221,11 +3228,11 @@
 							<selected>Skin.HasSetting(DebugGrid)</selected>
 						</control>
 						<control type="radiobutton" id="1902">
-							<description>Disable Debug Info</description>
+							<description>Enable Debug Info</description>
 							<include>MenuItemSettings</include>
-							<label>Disable Debug Info</label>
-							<onclick>Skin.ToggleSetting(HideDebugInfo)</onclick>
-							<selected>Skin.HasSetting(HideDebugInfo)</selected>
+							<label>Enable Debug Info</label>
+							<onclick>Skin.ToggleSetting(ShowDebugInfo)</onclick>
+							<selected>Skin.HasSetting(ShowDebugInfo)</selected>
 						</control>
 						<control type="label" id="1910">
 							<width>750</width>

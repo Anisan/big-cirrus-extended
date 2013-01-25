@@ -21,7 +21,7 @@
 			<width>520</width>
 			<height>300</height>
 			<itemgap>8</itemgap>
-			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 
 			<!-- Window labels -->
 
@@ -448,7 +448,7 @@
 		<control type="label">
 			<include>PathID</include>
 			<label>$INFO[System.CurrentControl]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
 
 		<!-- Path label -->
@@ -456,7 +456,7 @@
 		<control type="label">
 			<include>ControlID</include>
 			<label>$INFO[Container.FolderPath]</label>
-			<visible>!Skin.HasSetting(HideDebugInfo)</visible>
+			<visible>Skin.HasSetting(ShowDebugInfo)</visible>
 		</control>
 
 	</controls>
