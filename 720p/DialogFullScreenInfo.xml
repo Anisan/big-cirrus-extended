@@ -132,7 +132,7 @@
 					<description>Progressbar</description>
 					<posx>-350</posx>
 					<posy>25r</posy>
-					<width>1040</width>
+					<width>970</width>
 					<height>14</height>
 					<info>Player.Progress</info>
 				</control>
@@ -332,6 +332,7 @@
 				<textcolor>white</textcolor>
 				<label>$INFO[System.Time]</label>
 				<shadowcolor>black</shadowcolor>
+			    <visible>![Skin.HasSetting(clearart) + VideoPlayer.Content(episodes)]</visible> 
 			</control>
 		
 
