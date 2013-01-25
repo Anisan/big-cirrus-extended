@@ -11,17 +11,17 @@
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
 				<control type="button" id="8030">
-                    <description>set focus</description>
-                    <posx>-20</posx>
-                    <posy>-20</posy>
-                    <width>1</width>
-                    <height>1</height>
-                    <label>-</label>
-                    <font>-</font>
-                    <onfocus condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget)">SetFocus(8031)</onfocus>
-                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">SetFocus(8032)</onfocus>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
+					<description>set focus</description>
+					<posx>-20</posx>
+					<posy>-20</posy>
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<font>-</font>
+					<onfocus condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget)">SetFocus(8031)</onfocus>
+					<onfocus condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">SetFocus(8032)</onfocus>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
 				</control>
 				<!-- RecentlyMusicAdded -->
 				<control type="group">
@@ -344,71 +344,141 @@
 				</control>
 				<!-- Stat Music -->
 				<control type="group">
-					<posx>30r</posx>
-					<include condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + !Skin.HasSetting(ShowRandomMusicWidget)]">FirstControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget) + !Skin.HasSetting(ShowRandomMusicWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">SecondControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">LastControl</include>
 					<visible>Skin.HasSetting(ShowMusicStatisticsWidget)</visible>
-					<control type="image">
-						<description>background</description>
-						<posx>920r</posx>
-						<aspectratio alignx="left">stretch</aspectratio>
-						<posy>0</posy>
-						<width>920</width>
-						<height>120</height>
-						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
-					</control>
-					<control type="label">
-						<description>Title label</description>
+					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
+					<control type="group">
+						<visible>!Skin.HasSetting(horzHomeMenu)</visible>
 						<posx>30r</posx>
-						<posy>10</posy>
-						<height>20</height>
-						<width>450</width>
-						<label>Statistics</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>cirrus_24_Bold</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<include condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + !Skin.HasSetting(ShowRandomMusicWidget)]">FirstControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget) + !Skin.HasSetting(ShowRandomMusicWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">SecondControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyMusicAddedWidget) + Skin.HasSetting(ShowRandomMusicWidget)">LastControl</include>
+						<visible>Skin.HasSetting(ShowMusicStatisticsWidget)</visible>
+						<control type="image">
+							<description>background</description>
+							<posx>920r</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>920</width>
+							<height>120</height>
+							<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>30r</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>35</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>60</posy>
+							<height>20</height>
+							<align>right</align>
+							<width>355</width>
+							<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>85</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>35</posy>
-						<height>20</height>
-						<width>335</width>
-						<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>60</posy>
-						<height>20</height>
-						<align>right</align>
-						<width>355</width>
-						<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>85</posy>
-						<height>20</height>
-						<width>355</width>
-						<label>$LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+					<control type="group">
+						<visible>Skin.HasSetting(horzHomeMenu)</visible>
+						<posx>0</posx>
+						<posy>50</posy>
+						<control type="image">
+							<description>background</description>
+							<posx>0</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>220</width>
+							<height>220</height>
+							<texture border="10" flipy="true" flipx="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>10</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>45</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[132]: $INFO[Window.Property(Music.AlbumsCount)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>70</posy>
+							<height>20</height>
+							<align>left</align>
+							<width>355</width>
+							<label>$LOCALIZE[134]: $INFO[Window.Property(Music.SongsCount)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>95</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[133]: $INFO[Window.Property(Music.ArtistsCount)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
 				</control>
 
