@@ -108,9 +108,18 @@
 		<texture>separator.png</texture>
 	</control>
     
-   <control type="group">
-      <posx>290</posx>
-      <posy>15</posy>
+	<include name="pos0">
+	  <posx>0</posx>
+    </include>
+	
+	<include name="pos200">
+	  <posx>200</posx>
+    </include>
+	
+    <control type="group">
+      <include condition="Skin.HasSetting(cleanHome)">pos0</include>
+      <include condition="!Skin.HasSetting(cleanHome)">pos200</include>
+      <posy>20</posy>
       <animation effect="slide" end="0,35" time="300" tween="quadratic" easing="out">WindowClose</animation>
       <animation effect="slide" start="0,35" time="300" tween="quadratic" easing="out">WindowOpen</animation>
       <control type="rss" id="2">
@@ -118,7 +127,7 @@
         <posx>0</posx>
         <posy>670</posy>
         <height>35</height>
-        <width>1040</width>
+        <width>1280</width>
         <font>font12</font>
         <urlset>1</urlset>
         <textcolor>orange</textcolor>
@@ -131,7 +140,7 @@
         <posx>0</posx>
         <posy>645</posy>
         <height>35</height>
-        <width>1040</width>
+        <width>1280</width>
         <font>font12</font>
         <urlset>2</urlset>
         <textcolor>orange</textcolor>

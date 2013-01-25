@@ -10,6 +10,14 @@
 		<posy>480</posy>
 	</include>
 
+	<include name="pos0">
+		<posx>0</posx>
+    </include>
+	
+	<include name="pos200">
+		<posx>200</posx>
+    </include>
+	
 	<include name="ContentMovieRecentlyAdded">
 		<content>
 			<item id="1">
