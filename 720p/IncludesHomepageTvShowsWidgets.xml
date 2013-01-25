@@ -5,28 +5,28 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-			
+
 			<control type="group">
 				<!-- TVSHOW Menu -->
 				<visible>Library.HasContent(TVShows) + Container(9000).Hasfocus(11) + !Window.IsVisible(1117)</visible>
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
-				
+
 				<control type="button" id="8020">
-                    <description>set focus</description>
-                    <posx>-20</posx>
-                    <posy>-20</posy>
-                    <width>1</width>
-                    <height>1</height>
-                    <label>-</label>
-                    <font>-</font>
-                    <onfocus condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)">SetFocus(8021)</onfocus>
-                    <onfocus condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">SetFocus(8022)</onfocus>
-                    <onfocus condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">SetFocus(8023)</onfocus>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
+					<description>set focus</description>
+					<posx>-20</posx>
+					<posy>-20</posy>
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<font>-</font>
+					<onfocus condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget)">SetFocus(8021)</onfocus>
+					<onfocus condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">SetFocus(8022)</onfocus>
+					<onfocus condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">SetFocus(8023)</onfocus>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
 				</control>
-				
+
 				<!-- RecentlyTVShowsAdded -->
 				<control type="group" id="7021">
 					<posx>0</posx>
@@ -346,7 +346,7 @@
 					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget)">SecondControl</include>
 					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">SecondControl</include>
 					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget)">LastControl</include>
-					
+
 					<visible>Skin.HasSetting(ShowRandomTvShowsWidget)  + !Skin.HasSetting(HomeMenuNoMoviesButton)]</visible>
 					<control type="image">
 						<description>background</description>
@@ -485,81 +485,148 @@
 				</control>
 				<!-- Stat TVSHOW -->
 				<control type="group">
-					<posx>30r</posx>
-					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">FirstControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
 					<visible>Skin.HasSetting(homepageHideTvShowsStatistics) + Skin.HasSetting(homepageHideStatistics)</visible>
 					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
-					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
-					
-					<control type="image">
-						<description>background</description>
-						<posx>920r</posx>
-						<aspectratio alignx="left">stretch</aspectratio>
-						<posy>0</posy>
-						<width>920</width>
-						<height>120</height>
-						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
-					</control>
-					<control type="label">
-						<description>Title label</description>
+					<control type="group">
+						<visible>!Skin.HasSetting(horzHomeMenu)</visible>
 						<posx>30r</posx>
-						<posy>10</posy>
-						<height>20</height>
-						<width>450</width>
-						<label>Statistics</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>cirrus_24_Bold</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">FirstControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + Skin.HasSetting(ShowRecomendedTvShowsWidget) + !Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyTvShowsAddedWidget) + !Skin.HasSetting(ShowRecomendedTvShowsWidget) + Skin.HasSetting(ShowRandomTvShowsWidget)">LastControl</include>
+
+						<control type="image">
+							<description>background</description>
+							<posx>920r</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>920</width>
+							<height>120</height>
+							<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>30r</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>35</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>60</posy>
+							<height>20</height>
+							<align>right</align>
+							<width>355</width>
+							<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>85</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>35</posy>
-						<height>20</height>
-						<width>335</width>
-						<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>60</posy>
-						<height>20</height>
-						<align>right</align>
-						<width>355</width>
-						<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>85</posy>
-						<height>20</height>
-						<width>355</width>
-						<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+					<control type="group">
+						<visible>Skin.HasSetting(horzHomeMenu)</visible>
+						<posx>0</posx>
+						<posy>50</posy>
+						<control type="image">
+							<description>background</description>
+							<posx>0</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>220</width>
+							<height>220</height>
+							<texture border="10" flipy="true" flipx="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>10</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>45</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[20343]: $INFO[Window.Property(TVShows.Count)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>70</posy>
+							<height>20</height>
+							<align>left</align>
+							<width>355</width>
+							<label>$LOCALIZE[20360]: $INFO[Window.Property(Episodes.Count)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>95</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[16101]: $INFO[Window.Property(Episodes.UnWatched)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
 				</control>
 			</control>
-			
+
 		</control>
 	</include>
 
