@@ -5,28 +5,28 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-			
+
 			<control type="group">
 				<!-- Movie Widgets -->
 				<visible>Library.HasContent(Movies) + Container(9000).Hasfocus(10)</visible>
 				<animation effect="slide" start="600,0" end="0,0" time="300" delay="300">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-480" time="300">Hidden</animation>
-				
+
 				<control type="button" id="8010">
-                    <description>set focus</description>
-                    <posx>-20</posx>
-                    <posy>-20</posy>
-                    <width>1</width>
-                    <height>1</height>
-                    <label>-</label>
-                    <font>-</font>
-                    <onfocus condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget)">SetFocus(8011)</onfocus>
-                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SetFocus(8012)</onfocus>
-                    <onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRandomMoviesWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget)">SetFocus(8013)</onfocus>
-                    <texturenofocus>-</texturenofocus>
-                    <texturefocus>-</texturefocus>
+					<description>set focus</description>
+					<posx>-20</posx>
+					<posy>-20</posy>
+					<width>1</width>
+					<height>1</height>
+					<label>-</label>
+					<font>-</font>
+					<onfocus condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget)">SetFocus(8011)</onfocus>
+					<onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SetFocus(8012)</onfocus>
+					<onfocus condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRandomMoviesWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget)">SetFocus(8013)</onfocus>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
 				</control>
-				
+
 				<!-- RecentlyMovieAdded -->
 				<control type="group">
 					<posx>0</posx>
@@ -456,78 +456,145 @@
 				</control>
 				<!-- Stat Movie -->
 				<control type="group">
-					<posx>30r</posx>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">FirstControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
-					<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
-					<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
-					
+
 					<visible>Skin.HasSetting(ShowMoviesStatisticsWidget)</visible>
 					<visible>[Player.HasVideo + Skin.HasSetting(homepageVideoinfo)] | !Player.HasVideo</visible>
-					<visible>!Skin.HasSetting(horzHomeMenu)</visible>
-					
-					<control type="image">
-						<description>background</description>
-						<posx>920r</posx>
-						<aspectratio alignx="left">stretch</aspectratio>
-						<posy>0</posy>
-						<width>920</width>
-						<height>120</height>
-						<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
-					</control>
-					<control type="label">
-						<description>Title label</description>
+					<control type="group">
+						<visible>!Skin.HasSetting(horzHomeMenu)</visible>
 						<posx>30r</posx>
-						<posy>10</posy>
-						<height>20</height>
-						<width>450</width>
-						<label>Statistics</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>cirrus_24_Bold</font>
-						<textcolor>orange</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">FirstControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">SecondControl</include>
+						<include condition="!Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + Skin.HasSetting(ShowRecomendedMoviesWidget) + !Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+						<include condition="Skin.HasSetting(ShowRecentlyMoviesAddedWidget) + !Skin.HasSetting(ShowRecomendedMoviesWidget) + Skin.HasSetting(ShowRandomMoviesWidget)">LastControl</include>
+
+						<control type="image">
+							<description>background</description>
+							<posx>920r</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>920</width>
+							<height>120</height>
+							<texture border="10" flipy="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>30r</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>35</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>60</posy>
+							<height>20</height>
+							<align>right</align>
+							<width>355</width>
+							<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>30r</posx>
+							<posy>85</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>35</posy>
-						<height>20</height>
-						<width>335</width>
-						<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scrollout>false</scrollout>
-						<pauseatend>2000</pauseatend>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>60</posy>
-						<height>20</height>
-						<align>right</align>
-						<width>355</width>
-						<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<posx>30r</posx>
-						<posy>85</posy>
-						<height>20</height>
-						<width>355</width>
-						<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
-						<align>right</align>
-						<aligny>center</aligny>
-						<font>font12</font>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+					<control type="group">
+						<visible>Skin.HasSetting(horzHomeMenu)</visible>
+						<posx>0</posx>
+						<posy>50</posy>
+						<control type="image">
+							<description>background</description>
+							<posx>0</posx>
+							<aspectratio alignx="left">stretch</aspectratio>
+							<posy>0</posy>
+							<width>220</width>
+							<height>220</height>
+							<texture border="10" flipy="true" flipx="true" diffuse="recentlyaddeddiffuse.png">rightlistbackground.png</texture>
+						</control>
+						<control type="label">
+							<description>Title label</description>
+							<posx>10</posx>
+							<posy>10</posy>
+							<height>20</height>
+							<width>450</width>
+							<label>Statistics</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>cirrus_24_Bold</font>
+							<textcolor>orange</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>45</posy>
+							<height>20</height>
+							<width>335</width>
+							<label>$LOCALIZE[20342]: $INFO[Window.Property(Movies.Count)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<scrollout>false</scrollout>
+							<pauseatend>2000</pauseatend>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>70</posy>
+							<height>20</height>
+							<align>left</align>
+							<width>355</width>
+							<label>$LOCALIZE[16102]: $INFO[Window.Property(Movies.Watched)]</label>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>95</posy>
+							<height>20</height>
+							<width>355</width>
+							<label>$LOCALIZE[16101]: $INFO[Window.Property(Movies.UnWatched)]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+						</control>
 					</control>
 				</control>
 			</control>
