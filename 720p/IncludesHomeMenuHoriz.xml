@@ -5,7 +5,7 @@
 			<posy>120r</posy>
 			<width>290</width>
 			<height>220</height>
-			<texture>homesubbackground.png</texture>
+			<texture border="00" flipx="true" diffuse="recentlyaddeddiffuse.png">black-back3.png</texture>
 		  </control>
 		<!-- HOME MENU SUBMENUS HORIZONTAL -->
 		<control type="group" id="9001">
@@ -177,6 +177,134 @@
 					</item>
 				</content>
 			</control>
+			
+			<!-- WEATHER SUBMENU -->
+			<control type="wraplist" id="9012">
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9012</onleft>
+				<onright>9012</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8004</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(6)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="90121">
+						<label>Today</label>
+						<onclick>Skin.SetString(Weather,1)</onclick>
+					</item>
+					<item id="90122">
+						<label>4 Day - Mini</label>
+						<onclick>Skin.SetString(Weather,2)</onclick>
+					</item>
+					<item id="90123">
+						<label>4 Day - Full</label>
+						<onclick>Skin.SetString(Weather,3)</onclick>
+					</item>
+				</content>
+			</control>
+			
+			<!-- FOTO SUBMENU -->
+			<control type="wraplist" id="9013">
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9013</onleft>
+				<onright>9013</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8004</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(4)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="90121">
+						<label>Year</label>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period='year'&value=''&viewmode='view'&action='showdate'&name=''")</onclick>
+					</item>
+					<item id="90122">
+						<label>Folders</label>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?method='folders'&folderid=''&onlypics='non'&viewmode='view'&action='showfolder'&name=''")</onclick>
+					</item>
+					<item id="90123">
+						<label>Period</label>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period=''&viewmode='view'&action='showperiod'&name='Period'")</onclick>
+					</item>
+					<item id="90124">
+						<label>Keywords</label>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?kw=''&viewmode='view'&action='showkeywords'&name=''")</onclick>
+					</item>
+					<item id="90125">
+						<label>Collections</label>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?collect=''&method='show'&viewmode='view'&action='showcollection'&name='Collections'")</onclick>
+					</item>
+				</content>
+			</control>
 
 			<!-- SETTINGS SUBMENU -->
 			<control type="wraplist" id="9014">
@@ -228,33 +356,37 @@
 					<onclick>ActivateWindow(Settings)</onclick>
 				</item>
 				<item id="90142">
+					<label>20077</label>
+					<onclick>ActivateWindow(SkinSettings)</onclick>
+				</item>
+				<item id="90143">
 					<label>7</label>
 					<onclick>ActivateWindow(FileManager)</onclick>
 				</item>
-				<item id="90143">
+				<item id="90144">
 					<label>13200</label>
 					<onclick>ActivateWindow(Profiles)</onclick>
 				</item>
-				<item id="90144">
+				<item id="90145">
 					<label>130</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 				</item>
-				<item id="90145">
+				<item id="90146">
 					<label>470</label>
 					<onclick>ActivateWindow(Credits)</onclick>
 				</item>
 				<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
-				<item type="button" id="90146">
+				<item type="button" id="90147">
 					<label>13005</label>
 					<onclick>ActivateWindow(ShutdownMenu)</onclick>
 					<visible>Skin.HasSetting(cleanHome)</visible>
 				</item>
-				<item type="button" id="90147">
+				<item type="button" id="90148">
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<visible>Skin.HasSetting(cleanHome)</visible>
 				</item>
-				<item type="button" id="90148">
+				<item type="button" id="90149">
 					<label>446</label>
 					<onclick>XBMC.PlayDVD()</onclick>
 					<visible>Skin.HasSetting(cleanHome)</visible>
@@ -638,6 +770,13 @@
 					<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
 					<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 				</item>
+				<item id="28">
+					<label>31187</label>
+					<onclick>RunScript(script.tv.show.next.aired)</onclick>
+					<icon>special://skin/backgrounds/tv_shows.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoTVGuideButton) + Library.HasContent(TVShows) + System.HasAddon(script.tv.show.next.aired)</visible>
+				</item>	
 				<item id="3">
 					<label>2</label>
 					<onclick>ActivateWindow(Music)</onclick>
@@ -741,19 +880,19 @@
 				</item>
 			</content>
 		</control>
-		 <control type="label">
-		<animation effect="slide" end="1280,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="1280,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-        <description>Date label</description>
-        <posx>290</posx>
-        <posy>100r</posy>
-        <width>550</width>
-        <height>28</height>
-        <aligny>center</aligny>
-        <font>cirrus_24</font>
-        <textcolor>grey</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <label>$INFO[System.Date]</label>
-      </control>      
+		<control type="label">
+			<animation effect="slide" end="1280,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="1280,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<description>Date label</description>
+			<posx>290</posx>
+			<posy>100r</posy>
+			<width>550</width>
+			<height>28</height>
+			<aligny>center</aligny>
+			<font>cirrus_24</font>
+			<textcolor>grey</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<label>$INFO[System.Date]</label>
+		</control>      
 	</include>
 </includes>

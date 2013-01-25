@@ -108,14 +108,7 @@
 		<texture>separator.png</texture>
 	</control>
     
-	<include name="pos0">
-	  <posx>0</posx>
-    </include>
-	
-	<include name="pos200">
-	  <posx>200</posx>
-    </include>
-	
+
     <control type="group">
       <include condition="Skin.HasSetting(cleanHome)">pos0</include>
       <include condition="!Skin.HasSetting(cleanHome)">pos200</include>
