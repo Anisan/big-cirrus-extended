@@ -2583,7 +2583,7 @@
 						<control type="radiobutton" id="1013">
 							<description>Enable Animation Weather</description>
 							<include>MenuItemSettings</include>
-							<label>Enable Animation Weather</label>
+							<label>31911</label>
 							<onclick>Skin.ToggleSetting(EnableAnimationWeather)</onclick>
 							<selected>Skin.HasSetting(EnableAnimationWeather)</selected>
 						</control>

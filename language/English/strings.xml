@@ -422,7 +422,8 @@
   
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
-  <string id="31201">Categories</string>
+  <string id="31201">Categories</string>
+
   <string id="31202">Show Cast</string>
   <string id="31203">Choose Your Song</string>
   <string id="31204">Section Links</string>
@@ -514,6 +515,6 @@
   <string id="31908">Chance of Precipitation</string>
   <string id="31909">Fetching forecast info...</string>
   <string id="31910">Map Forecast</string>
-
+  <string id="31911">Enable Animation Weather</string>
   
 </strings>
