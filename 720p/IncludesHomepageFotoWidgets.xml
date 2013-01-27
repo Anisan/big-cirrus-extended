@@ -147,7 +147,8 @@
 
 				<control type="group">
 					<posx>30r</posx>
-					<posy>240</posy>
+					<include condition="!Skin.HasSetting(LastFotoWidget)">FirstControl</include>					
+					<include condition="Skin.HasSetting(LastFotoWidget)">SecondControl</include>
 					<visible>Skin.HasSetting(RandomFotoWidget)</visible>
 					<control type="image">
 						<description>background</description>
