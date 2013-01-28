@@ -726,13 +726,19 @@
    			</focusedlayout>
 
 			<content>
-				<item id="6">
-					<label>8</label>
-					<onclick>ActivateWindow(Weather)</onclick>
-					<icon>special://skin/backgrounds/weather.jpg</icon>
-					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
-					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
-					<visible>!Skin.HasSetting(ShowWeatherFanart) | IsEmpty(Skin.String(WeatherFanartDir))</visible>
+				<item id="8">
+					<label>247</label>
+					<onclick>ActivateWindow(Scripts)</onclick>
+					<icon>special://skin/backgrounds/scripts.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+				</item>
+				<item id="35">
+					<label>41024</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<icon>special://skin/backgrounds/favourites.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
+					<visible>!Skin.HasSetting(HomeMenuNoFavouritesButton)</visible>
 				</item>
 				<item id="6">
 					<label>8</label>

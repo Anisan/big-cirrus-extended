@@ -451,6 +451,13 @@
 							<selected>Skin.HasSetting(HomeMenuNoTVGuideButton)</selected>
 							<enable>!Skin.HasSetting(HomeMenuNoTVShowsButton)</enable>
 						</control>
+						<control type="radiobutton" id="232">
+							<description>Hide Favourites Button</description>
+							<include>MenuItemSettings</include>
+							<label>$LOCALIZE[31111] - $LOCALIZE[41024]</label>
+							<onclick>Skin.ToggleSetting(HomeMenuNoFavouritesButton)</onclick>
+							<selected>Skin.HasSetting(HomeMenuNoTVFavouritesButton)</selected>
+						</control>
 
 					</control>
 					<control type="scrollbar" id="60">
@@ -656,6 +663,12 @@
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/scripts.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
+							</item>
+							<item id="8">
+								<label>41024</label>
+								<onclick>-</onclick>
+								<icon>special://skin/backgrounds/favourites.jpg</icon>
+								<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
 							</item>
 							<item id="7">
 								<label>13000</label>
@@ -1092,6 +1105,66 @@
 								<texturenofocus border="5">button-nofocus.png</texturenofocus>
 								<texturefocus border="5">button-focus.png</texturefocus>
 								<onclick>Skin.Reset(Home_Custom_Back_Scripts_Folder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(8)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>cirrus_20</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(Home_Custom_Back_Favourites_Folder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>cirrus_20</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(Home_Custom_Back_Favourites_Folder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>cirrus_20</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">button-nofocus.png</texturenofocus>
+								<texturefocus border="5">button-focus.png</texturefocus>
+								<onclick>Skin.Reset(Home_Custom_Back_Favourites_Folder)</onclick>
 								<onleft>301</onleft>
 								<onright>300</onright>
 								<onup>304</onup>
