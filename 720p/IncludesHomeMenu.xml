@@ -458,6 +458,227 @@
 						<onclick>UpdateLibrary(Video)</onclick>
 					</control>
 				</control>
+			
+				<!-- Custom submenu 1 -->
+				<control type="grouplist" id="9021"> 
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>8020</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(15)</visible>
+					<control type="button" id="90211">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom11.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom11.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom11.path)]</onclick>
+					</control>
+					<control type="button" id="90212">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom12.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom12.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom12.path)]</onclick>
+					</control>
+					<control type="button" id="90213">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom13.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom13.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom13.path)]</onclick>
+					</control>
+					<control type="button" id="90214">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom14.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom14.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom14.path)]</onclick>
+					</control>
+					<control type="button" id="90215">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom15.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom15.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom15.path)]</onclick>
+					</control>
+				</control>
+				<!-- Custom submenu 2 -->
+				<control type="grouplist" id="9022"> 
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>8020</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(16)</visible>
+					<control type="button" id="90221">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom21.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom21.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom21.path)]</onclick>
+					</control>
+					<control type="button" id="90222">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom22.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom22.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom22.path)]</onclick>
+					</control>
+					<control type="button" id="90223">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom23.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom23.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom23.path)]</onclick>
+					</control>
+					<control type="button" id="90224">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom24.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom24.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom24.path)]</onclick>
+					</control>
+					<control type="button" id="90225">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom25.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom25.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom25.path)]</onclick>
+					</control>
+				</control>
+				<!-- Custom submenu 3 -->
+				<control type="grouplist" id="9023"> 
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>8020</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(17)</visible>
+					<control type="button" id="90231">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom31.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom31.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom31.path)]</onclick>
+					</control>
+					<control type="button" id="90232">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom32.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom32.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom32.path)]</onclick>
+					</control>
+					<control type="button" id="90233">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom33.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom33.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom33.path)]</onclick>
+					</control>
+					<control type="button" id="90234">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom34.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom34.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom34.path)]</onclick>
+					</control>
+					<control type="button" id="90235">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom35.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom35.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom35.path)]</onclick>
+					</control>
+				</control>
+				<!-- Custom submenu 4 -->
+				<control type="grouplist" id="9024"> 
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>8020</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(22)</visible>
+					<control type="button" id="90241">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom41.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom41.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom41.path)]</onclick>
+					</control>
+					<control type="button" id="90242">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom42.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom42.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom42.path)]</onclick>
+					</control>
+					<control type="button" id="90243">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom43.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom43.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom43.path)]</onclick>
+					</control>
+					<control type="button" id="90244">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom44.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom44.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom44.path)]</onclick>
+					</control>
+					<control type="button" id="90245">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom45.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom45.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom45.path)]</onclick>
+					</control>
+				</control>
+				<!-- Custom submenu 5 -->
+				<control type="grouplist" id="9025"> 
+					<posx>10</posx>
+					<posy>0</posy>
+					<width>280</width>
+					<height>300</height>
+					<align>center</align>
+					<onleft>9000</onleft>
+					<onright>8020</onright>
+					<onup>9017</onup>
+					<ondown>9017</ondown>
+					<itemgap>0</itemgap>
+					<visible>Container(9000).HasFocus(23)</visible>
+					<control type="button" id="90251">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom51.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom51.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom51.path)]</onclick>
+					</control>
+					<control type="button" id="90252">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom52.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom52.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom52.path)]</onclick>
+					</control>
+					<control type="button" id="90253">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom53.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom53.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom53.path)]</onclick>
+					</control>
+					<control type="button" id="90254">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom54.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom54.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom54.path)]</onclick>
+					</control>
+					<control type="button" id="90255">
+						<include>ButtonHomeSubCommonValues</include>
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom55.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom55.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom55.path)]</onclick>
+					</control>
+				</control>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -466,20 +687,20 @@
 				<height>720</height>
 				<texture>blackgradient.png</texture>
 			</control>
-			 <control type="label">
-		<animation effect="slide" end="1280,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-		<animation effect="slide" start="1280,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-        <description>Date label</description>
-        <posx>290</posx>
-        <posy>10</posy>
-        <width>550</width>
-        <height>28</height>
-        <aligny>center</aligny>
-        <font>cirrus_24</font>
-        <textcolor>grey</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <label>$INFO[System.Date]</label>
-      </control>      
+			<control type="label">
+				<animation effect="slide" end="1280,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="1280,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+				<description>Date label</description>
+				<posx>290</posx>
+				<posy>10</posy>
+				<width>550</width>
+				<height>28</height>
+				<aligny>center</aligny>
+				<font>cirrus_24</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Date]</label>
+		    </control>      
 			<!-- MAIN MENU -->
 			<control type="fixedlist" id="9000">
 				<hitrect x="50" y="50" w="330" h="620" />
@@ -532,7 +753,21 @@
 						<width>18</width>
 						<height>18</height>
 						<texture>HomeHasSub.png</texture>
-						<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(7) | Container(9000).HasFocus(9) | [Container(9000).HasFocus(8) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
+						<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | 
+						Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(7) | 
+						Container(9000).HasFocus(9) | [Container(9000).HasFocus(8) + 
+						[[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | 
+						[Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | 
+						[Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | 
+						[Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | 
+						[Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | 
+						[Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]] | 
+						Container(9000).HasFocus(10) | Container(9000).HasFocus(11) | 
+						[Container(9000).HasFocus(15) + !IsEmpty(Skin.String(SubMenu_Custom11.Label))]| 
+						[Container(9000).HasFocus(16) + !IsEmpty(Skin.String(SubMenu_Custom21.Label))]| 
+						[Container(9000).HasFocus(17) + !IsEmpty(Skin.String(SubMenu_Custom31.Label))]| 
+						[Container(9000).HasFocus(22) + !IsEmpty(Skin.String(SubMenu_Custom41.Label))]| 
+						[Container(9000).HasFocus(23) + !IsEmpty(Skin.String(SubMenu_Custom51.Label))] </visible>
 						<animation effect="fade" start="0" end="100" time="200">Focus</animation>
 						<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
 					</control>
