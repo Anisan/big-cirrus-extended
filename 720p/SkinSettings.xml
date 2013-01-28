@@ -2363,6 +2363,47 @@
 							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom1.Label)][/COLOR]</label2>
 							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom1)</onclick>
 						</control>
+						<control type="button" id="5011">
+							<description>SubMenu11</description>
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 1</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom11.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom11)</onclick>
+							<visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
+						</control>
+						<control type="button" id="5012">
+							<description>SubMenu12</description>
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 2</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom12.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom12)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom11.Label))</visible>
+						</control>
+						<control type="button" id="5013">
+							<description>SubMenu13</description>
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 3</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom13.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom13)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom12.Label))</visible>
+						</control>
+						<control type="button" id="5014">
+							<description>SubMenu14</description>
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 4</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom14.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom14)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom13.Label))</visible>
+						</control>
+						<control type="button" id="5015">
+							<description>SubMenu15</description>
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 5</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom15.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom15)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom14.Label))</visible>
+						</control>
+							
 						<control type="button" id="502">
 							<description>custom home 2</description>
 							<include>MenuItemSettings</include>
@@ -2370,6 +2411,42 @@
 							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom2.Label)][/COLOR]</label2>
 							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom2)</onclick>
 						</control>
+						<control type="button" id="5021">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 1</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom21.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom21)</onclick>
+							<visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
+						</control>
+						<control type="button" id="5022">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 2</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom22.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom22)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom21.Label))</visible>
+						</control>
+						<control type="button" id="5023">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 3</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom23.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom23)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom22.Label))</visible>
+						</control>
+						<control type="button" id="5024">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 4</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom24.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom24)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom23.Label))</visible>
+						</control>
+						<control type="button" id="5025">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 5</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom25.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom25)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom24.Label))</visible>
+						</control>
+						
 						<control type="button" id="503">
 							<description>custom home 3</description>
 							<include>MenuItemSettings</include>
@@ -2377,22 +2454,130 @@
 							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom3.Label)][/COLOR]</label2>
 							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom3)</onclick>
 						</control>
-						<control type="button" id="507">
+						<control type="button" id="5031">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 1</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom31.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom31)</onclick>
+							<visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
+						</control>
+						<control type="button" id="5032">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 2</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom32.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom32)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom31.Label))</visible>
+						</control>
+						<control type="button" id="5033">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 3</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom33.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom33)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom32.Label))</visible>
+						</control>
+						<control type="button" id="5034">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 4</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom34.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom34)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom33.Label))</visible>
+						</control>
+						<control type="button" id="5035">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 5</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom35.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom35)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom34.Label))</visible>
+						</control>
+						
+						<control type="button" id="504">
 							<description>custom home 7</description>
 							<include>MenuItemSettings</include>
 							<label>$LOCALIZE[1036] 4</label>
 							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom4.Label)][/COLOR]</label2>
 							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom4)</onclick>
 						</control>
-						<control type="button" id="508">
+						<control type="button" id="5041">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 1</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom41.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom41)</onclick>
+							<visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
+						</control>
+						<control type="button" id="5042">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 2</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom42.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom42)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom41.Label))</visible>
+						</control>
+						<control type="button" id="5043">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 3</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom43.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom43)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom42.Label))</visible>
+						</control>
+						<control type="button" id="5044">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 4</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom44.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom44)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom43.Label))</visible>
+						</control>
+						<control type="button" id="5045">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 5</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom45.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom45)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom44.Label))</visible>
+						</control>
+						
+						<control type="button" id="505">
 							<description>custom home 8</description>
 							<include>MenuItemSettings</include>
 							<label>$LOCALIZE[1036] 5</label>
 							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom5.Label)][/COLOR]</label2>
 							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom5)</onclick>
 						</control>
+						<control type="button" id="5051">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 1</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom51.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom51)</onclick>
+							<visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
+						</control>
+						<control type="button" id="5052">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 2</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom55.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom52)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom51.Label))</visible>
+						</control>
+						<control type="button" id="5053">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 3</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom53.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom53)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom52.Label))</visible>
+						</control>
+						<control type="button" id="5054">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 4</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom54.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom54)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom53.Label))</visible>
+						</control>
+						<control type="button" id="5055">
+							<include>MenuItemSettings</include>
+							<label> - $LOCALIZE[1034] 5</label>
+							<label2>[COLOR=gray]$INFO[Skin.String(SubMenu_Custom55.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=SubMenu_Custom55)</onclick>
+							<visible>!IsEmpty(Skin.String(SubMenu_Custom54.Label))</visible>
+						</control>
+						
 
-						<control type="radiobutton" id="504">
+						<control type="radiobutton" id="506">
 							<description>custom home 4</description>
 							<include>MenuItemSettings</include><label>Custom Playlist 1</label>
 							<onfocus>Skin.SetString(MoviesCustom,4)</onfocus>
@@ -2417,7 +2602,7 @@
 							<visible>Skin.HasSetting(Menu_Custom4) + Skin.String(MoviesCustom,4)</visible>
 						</control>
 
-						<control type="radiobutton" id="505">
+						<control type="radiobutton" id="507">
 							<description>custom home 5</description>
 							<include>MenuItemSettings</include><label>Custom Playlist 2</label>
 							<onfocus>Skin.SetString(MoviesCustom,5)</onfocus>
@@ -2442,7 +2627,7 @@
 							<visible>Skin.HasSetting(Menu_Custom5) + Skin.String(MoviesCustom,5)</visible>
 						</control>
 
-						<control type="radiobutton" id="506">
+						<control type="radiobutton" id="508">
 							<description>custom home 6</description>
 							<include>MenuItemSettings</include><label>Custom Playlist 3</label>
 							<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
@@ -3264,6 +3449,20 @@
 							<label>Metadata Actors</label>
 							<onclick>Addon.OpenSettings(script.metadata.actors)</onclick>
 							<selected>System.HasAddon(script.metadata.actors)</selected>
+						</control>
+						<control type="radiobutton" id="1917">
+							<description>Metadata Actors</description>
+							<include>MenuItemSettings</include>
+							<label>service.skin.widgets</label>
+							<onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
+							<selected>System.HasAddon(service.skin.widgets)</selected>
+						</control>
+						<control type="radiobutton" id="1918">
+							<description>Metadata Actors</description>
+							<include>MenuItemSettings</include>
+							<label>script.favourites</label>
+							<onclick>Addon.OpenSettings(script.favourites)</onclick>
+							<selected>System.HasAddon(script.favourites)</selected>
 						</control>
 
 					</control>
