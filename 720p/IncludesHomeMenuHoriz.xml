@@ -820,43 +820,43 @@
 				<!-- CUSTOM HOME MENU ITEMS -->
 				<item id="15">
 					<description>Custom Movie One</description>
-					<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+					<label>$INFO[Skin.String(Menu_Custom1.Label)]</label>
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom1)</visible>
+					<onclick>$INFO[Skin.String(Menu_Custom1.Path)]</onclick>
+                    <visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
 				</item>
 				<item id="16">
 					<description>Custom Movie Two</description>
-					<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+					<label>$INFO[Skin.String(Menu_Custom2.Label)]</label>
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom2)</visible>
+					<onclick>$INFO[Skin.String(Menu_Custom2.Path)]</onclick>
+                    <visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
 				</item>
 				<item id="17">
 					<description>Custom Movie Three</description>
-					<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+					<label>$INFO[Skin.String(Menu_Custom3.Label)]</label>
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom3)</visible>
+					<onclick>$INFO[Skin.String(Menu_Custom3.Path)]</onclick>
+                    <visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
 				</item>
 				<item id="22">
 					<description>Custom Movie Seven</description>
-					<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
+					<label>$INFO[Skin.String(Menu_Custom4.Label)]</label>
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
-					<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom7_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom7)</visible>
+					<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom4.Path)]</onclick>
+                    <visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
 				</item>
 				<item id="23">
 					<description>Custom Movie Eight</description>
-					<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
+					<label>$INFO[Skin.String(Menu_Custom5.Label)]</label>
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
-					<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
-					<onclick>$INFO[Skin.String(Menu_Custom8_Path)]</onclick>
-					<visible>Skin.HasSetting(Menu_Custom8)</visible>
+					<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+					<onclick>$INFO[Skin.String(Menu_Custom5.Path)]</onclick>
+                    <visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
 				</item>
 				<item id="19">
 					<description>Custom Movie Four</description>

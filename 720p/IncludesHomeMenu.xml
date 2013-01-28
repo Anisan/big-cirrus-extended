@@ -611,44 +611,43 @@
 						<visible>!Skin.HasSetting(HomeMenuNoTVGuideButton) + Library.HasContent(TVShows) + System.HasAddon(script.tv.show.next.aired)</visible>
 					</item>	
 					<item id="15">
-						<description>Custom Movie One</description>
-						<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
-						<icon>special://skin/media/backgrounds/custom.jpg</icon>
-						<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
-						<onclick>$INFO[Skin.String(Menu_Custom1_Path)]</onclick>
-						<visible>Skin.HasSetting(Menu_Custom1)</visible>
-					</item>
+ 						<description>Custom Movie One</description>
+                        <label>$INFO[Skin.String(Menu_Custom1.Label)]</label>
+                        <onclick>$INFO[Skin.String(Menu_Custom1.path)]</onclick>
+                        <icon>special://skin/media/backgrounds/custom.jpg</icon>
+                        <thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
+                        <visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
+                    </item>
 					<item id="16">
 						<description>Custom Movie Two</description>
-						<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
-						<icon>special://skin/media/backgrounds/custom.jpg</icon>
-						<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
-						<onclick>$INFO[Skin.String(Menu_Custom2_Path)]</onclick>
-						<visible>Skin.HasSetting(Menu_Custom2)</visible>
+                        <label>$INFO[Skin.String(Menu_Custom2.Label)]</label>
+                        <onclick>$INFO[Skin.String(Menu_Custom2.path)]</onclick>
+                        <icon>special://skin/media/backgrounds/custom.jpg</icon>
+                        <thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
+                        <visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
 					</item>
 					<item id="17">
 						<description>Custom Movie Three</description>
-						<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
-						<icon>special://skin/media/backgrounds/custom.jpg</icon>
-						<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
-						<onclick>$INFO[Skin.String(Menu_Custom3_Path)]</onclick>
-						<visible>Skin.HasSetting(Menu_Custom3)</visible>
+                        <label>$INFO[Skin.String(Menu_Custom3.Label)]</label>
+                        <onclick>$INFO[Skin.String(Menu_Custom3.path)]</onclick>
+                        <icon>special://skin/media/backgrounds/custom.jpg</icon>
+                        <thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
+                        <visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
 					</item>
 					<item id="22">
 						<description>Custom Movie Seven</description>
-						<label>$INFO[Skin.String(Menu_Custom7_Label)]</label>
-						<icon>special://skin/media/backgrounds/custom.jpg</icon>
-						<thumb>$INFO[Skin.String(Menu_Custom7_Folder)]</thumb>
-						<onclick>$INFO[Skin.String(Menu_Custom7_Path)]</onclick>
-						<visible>Skin.HasSetting(Menu_Custom7)</visible>
+                        <label>$INFO[Skin.String(Menu_Custom4.Label)]</label>
+                        <onclick>$INFO[Skin.String(Menu_Custom4.path)]</onclick>
+                        <icon>special://skin/media/backgrounds/custom.jpg</icon>
+                        <thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
+                        <visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
 					</item>
 					<item id="23">
-						<description>Custom Movie Eight</description>
-						<label>$INFO[Skin.String(Menu_Custom8_Label)]</label>
-						<icon>special://skin/media/backgrounds/custom.jpg</icon>
-						<thumb>$INFO[Skin.String(Menu_Custom8_Folder)]</thumb>
-						<onclick>$INFO[Skin.String(Menu_Custom8_Path)]</onclick>
-						<visible>Skin.HasSetting(Menu_Custom8)</visible>
+                        <label>$INFO[Skin.String(Menu_Custom5.Label)]</label>
+                        <onclick>$INFO[Skin.String(Menu_Custom5.path)]</onclick>
+                        <icon>special://skin/media/backgrounds/custom.jpg</icon>
+                        <thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
+                        <visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
 					</item>
 					<item id="19">
 						<description>Custom Movie Four</description>

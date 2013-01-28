@@ -456,7 +456,7 @@
 							<include>MenuItemSettings</include>
 							<label>$LOCALIZE[31111] - $LOCALIZE[41024]</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoFavouritesButton)</onclick>
-							<selected>Skin.HasSetting(HomeMenuNoTVFavouritesButton)</selected>
+							<selected>Skin.HasSetting(HomeMenuNoFavouritesButton)</selected>
 						</control>
 
 					</control>
@@ -677,39 +677,39 @@
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Settings_Folder)]</thumb>
 							</item>
 							<item id="15">
-								<label>$INFO[Skin.String(Menu_Custom1_Label)]</label>
+								<label>$INFO[Skin.String(Menu_Custom1.Label)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Custom1)</visible>
+								<visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
 							</item>
 							<item id="16">
-								<label>$INFO[Skin.String(Menu_Custom2_Label)]</label>
+								<label>$INFO[Skin.String(Menu_Custom2.Label)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Custom2)</visible>
+								<visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
 							</item>
 							<item id="17">
-								<label>$INFO[Skin.String(Menu_Custom3_Label)]</label>
+								<label>$INFO[Skin.String(Menu_Custom3.Label)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Custom3)</visible>
+								<visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
 							</item>
 							<item id="19">
-								<label>$INFO[Skin.String(Menu_Custom4_Label)]</label>
+								<label>$INFO[Skin.String(Menu_Custom4.Label)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Custom4)</visible>
+								<visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
 							</item>
 							<item id="20">
-								<label>$INFO[Skin.String(Menu_Custom5_Label)]</label>
+								<label>$INFO[Skin.String(Menu_Custom5.Label)]</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/custom.jpg</icon>
 								<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
-								<visible>Skin.HasSetting(Menu_Custom5)</visible>
+								<visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
 							</item>
 							<item id="21">
 								<label>$INFO[Skin.String(Menu_Custom6_Label)]</label>
@@ -2356,135 +2356,40 @@
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
-						<control type="radiobutton" id="501">
+						<control type="button" id="501">
 							<description>custom home 1</description>
-							<include>MenuItemSettings</include><label>Custom Favorite 1</label>
-							<onfocus>Skin.SetString(MoviesCustom,1)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom1)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom1)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub)</enable>
-						</control>
-						<control type="button" id="8201">
-							<description>Menu Movies Sub Custom8 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Custom1_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
+							<label>$LOCALIZE[1036] 1</label>
+							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom1.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom1)</onclick>
 						</control>
-						<control type="button" id="8202">
-							<description>Menu Movies Sub Custom8 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom1_Path)][/COLOR]</label2>
-							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom1_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom1) + Skin.String(MoviesCustom,1)</visible>
-						</control>
-
-
-						<control type="radiobutton" id="502">
+						<control type="button" id="502">
 							<description>custom home 2</description>
-							<include>MenuItemSettings</include><label>Custom Favorite 2</label>
-							<onfocus>Skin.SetString(MoviesCustom,2)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom2)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom2)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub2)</enable>
-						</control>
-						<control type="button" id="8203">
-							<description>Menu Movies Sub Custom8 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Custom2_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
+							<label>$LOCALIZE[1036] 2</label>
+							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom2.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom2)</onclick>
 						</control>
-						<control type="button" id="8204">
-							<description>Menu Movies Sub Custom8 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom2_Path)][/COLOR]</label2>
-							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom2_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom2) + Skin.String(MoviesCustom,2)</visible>
-						</control>
-
-						<control type="radiobutton" id="503">
+						<control type="button" id="503">
 							<description>custom home 3</description>
-							<include>MenuItemSettings</include><label>Custom Favorite 3</label>
-							<onfocus>Skin.SetString(MoviesCustom,3)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom3)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom3)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub3)</enable>
-						</control>
-						<control type="button" id="8205">
-							<description>Menu Movies Sub Custom3 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Custom3_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
+							<label>$LOCALIZE[1036] 3</label>
+							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom3.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom3)</onclick>
 						</control>
-						<control type="button" id="8206">
-							<description>Menu Movies Sub Custom3 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom3_Path)][/COLOR]</label2>
-							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom3_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom3) + Skin.String(MoviesCustom,3)</visible>
-						</control>
-
-						<control type="radiobutton" id="507">
+						<control type="button" id="507">
 							<description>custom home 7</description>
-							<include>MenuItemSettings</include><label>Custom Favorite 4</label>
-							<onfocus>Skin.SetString(MoviesCustom,7)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom7)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom7)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub7)</enable>
-						</control>
-						<control type="button" id="8213">
-							<description>Menu Movies Sub Custom7 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Custom7_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
+							<label>$LOCALIZE[1036] 4</label>
+							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom4.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom4)</onclick>
 						</control>
-						<control type="button" id="8214">
-							<description>Menu Movies Sub Custom7 Path</description>
-							<label>- Set Playlist</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom7_Path)][/COLOR]</label2>
-							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom7_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom7) + Skin.String(MoviesCustom,7)</visible>
-						</control>
-
-						<control type="radiobutton" id="508">
+						<control type="button" id="508">
 							<description>custom home 8</description>
-							<include>MenuItemSettings</include><label>Custom Favorite 5</label>
-							<onfocus>Skin.SetString(MoviesCustom,8)</onfocus>
-							<onclick>Skin.ToggleSetting(Menu_Custom8)</onclick>
-							<selected>Skin.HasSetting(Menu_Custom8)</selected>
-							<enable>!Skin.HasSetting(Menu_Movies_Sub8)</enable>
-						</control>
-						<control type="button" id="8215">
-							<description>Menu Movies Sub Custom8 Label</description>
-							<label>- Set Label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom8_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Custom8_Label)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom8) + Skin.String(MoviesCustom,8)</visible>
-						</control>
-						<control type="button" id="8216">
-							<description>Menu Movies Sub Custom8 Path</description>
-							<label>- Set Favorite</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom8_Path)][/COLOR]</label2>
-							<include>MenuItemSettings</include>
-							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom8_Path)</onclick>
-							<onclick>ActivateWindow(1114)</onclick>
-							<visible>Skin.HasSetting(Menu_Custom8) + Skin.String(MoviesCustom,8)</visible>
+							<label>$LOCALIZE[1036] 5</label>
+							<label2>[COLOR=orange]$INFO[Skin.String(Menu_Custom5.Label)][/COLOR]</label2>
+							<onclick>RunScript(script.favourites,changetitle=true&amp;property=Menu_Custom5)</onclick>
 						</control>
 
 						<control type="radiobutton" id="504">
