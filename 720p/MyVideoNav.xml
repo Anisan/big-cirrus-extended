@@ -544,27 +544,30 @@
 					<include>ButtonCommonValues</include>
 					<label>41082</label>
 					<onclick>Skin.ToggleSetting(poster)</onclick>
+					<onclick>Skin.Reset(banner)</onclick>
+					<onclick>Skin.Reset(widethumb)</onclick>
 					<selected>Skin.HasSetting(poster)</selected>
 					<visible>Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies) + Control.IsVisible(569) | Control.IsVisible(668) | Control.IsVisible(570)</visible>
-					<enable>!Skin.HasSetting(banner) + !Skin.HasSetting(widethumb)</enable>
 				</control>
 				<control type="radiobutton" id="1026">
 				<description>Enable Banner</description>
 					<include>ButtonCommonValues</include>
 					<label>41081</label>
 					<onclick>Skin.ToggleSetting(banner)</onclick>
+					<onclick>Skin.Reset(poster)</onclick>
+					<onclick>Skin.Reset(widethumb)</onclick>
 					<selected>Skin.HasSetting(banner)</selected>
 					<visible>Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies) + Control.IsVisible(569) | Control.IsVisible(668) | Control.IsVisible(570)</visible>
-					<enable>!Skin.HasSetting(poster) + !Skin.HasSetting(widethumb)</enable>
 				</control>
 				<control type="radiobutton" id="1028">
 				<description>Enable Widethumb</description>
 				<include>ButtonCommonValues</include>
 					<label>41083</label>
 					<onclick>Skin.ToggleSetting(widethumb)</onclick>
+					<onclick>Skin.Reset(poster)</onclick>
+					<onclick>Skin.Reset(banner)</onclick>
 					<selected>Skin.HasSetting(widethumb)</selected>
 					<visible>Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Movies) + Control.IsVisible(569) | Control.IsVisible(668) | Control.IsVisible(570)</visible>
-					<enable>!Skin.HasSetting(banner) + !Skin.HasSetting(poster)</enable>
 				</control>
 				<control type="radiobutton" id="2057">
 					<description>Toggle Rightlist posters</description>
