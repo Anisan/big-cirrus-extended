@@ -18,6 +18,7 @@
   <string id="31025">Элементы</string>
   <string id="31026">Другие Опции</string>
   <string id="31027">Местность</string>
+  
  
   <!-- обозначения Типа Вида -->
   <string id="31028">Карусель Постеров</string>
@@ -114,7 +115,8 @@
   <string id="31302">Меню</string>
   <string id="31303">Источник данных</string> 
 
-
+  <string id="41024">Избранное</string>
+  
 
 
 
