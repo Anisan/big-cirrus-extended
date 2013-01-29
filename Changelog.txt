@@ -1,3 +1,9 @@
+[B]2.1.3[/B]
+add subitems custom menu
+
+[B]2.0.0[/B]
+support Frodo
+
 [B]1.0.17[/B]
 change size fonts
 add weather 36hour
