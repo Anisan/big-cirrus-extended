@@ -189,7 +189,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/dvd.png</texture>
+							<texture>flagging/cases/dvd.png</texture>
 							<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 						</control>
 						<control type="image"> <!-- Bluray Case -->
@@ -199,7 +199,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/bluray.png</texture>
+							<texture>flagging/cases/bluray.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image"> <!-- HDDVD Case -->
@@ -209,7 +209,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/hddvd.png</texture>
+							<texture>flagging/cases/hddvd.png</texture>
 							<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image">
@@ -231,7 +231,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/dvd-clear.png</texture>
+							<texture>flagging/cases/dvd-clear.png</texture>
 							<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 						</control>
 						<control type="image"> <!-- Bluray Clear Case -->
@@ -241,7 +241,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/bluray-clear.png</texture>
+							<texture>flagging/cases/bluray-clear.png</texture>
 							<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image"> <!-- HDDVD Clear Case -->
@@ -251,7 +251,7 @@
 							<height>250</height>
 							<aspectratio aligny="bottom">stretch</aspectratio>
 							<fadetime>IconCrossfadeTime</fadetime>
-							<texture>special://skin/extras/flagging/cases/hddvd-clear.png</texture>
+							<texture>flagging/cases/hddvd-clear.png</texture>
 							<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 						</control>
 						<control type="image">
@@ -326,7 +326,7 @@
 						<width>410</width>
 						<height>630</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/dvd.png</texture>
+						<texture>flagging/cases/dvd.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
 					<control type="image"> <!-- Bluray Case -->
@@ -335,7 +335,7 @@
 						<width>410</width>
 						<height>630</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/bluray.png</texture>
+						<texture>flagging/cases/bluray.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
 					<control type="image"> <!-- HDDVD Case -->
@@ -344,7 +344,7 @@
 						<width>410</width>
 						<height>630</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/hddvd.png</texture>
+						<texture>flagging/cases/hddvd.png</texture>
 						<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
 					<control type="image">
@@ -387,7 +387,7 @@
 						<width>415</width>
 						<height>620</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/dvd-clear.png</texture>
+						<texture>flagging/cases/dvd-clear.png</texture>
 						<visible>![stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080) | stringcompare(ListItem.VideoResolution,540)]</visible>
 					</control>
 					<control type="image"> <!-- Bluray Clear Case -->
@@ -396,7 +396,7 @@
 						<width>415</width>
 						<height>620</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/bluray-clear.png</texture>
+						<texture>flagging/cases/bluray-clear.png</texture>
 						<visible>[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + !stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
 					<control type="image"> <!-- HDDVD Clear Case -->
@@ -405,7 +405,7 @@
 						<width>415</width>
 						<height>620</height>
 						<aspectratio aligny="bottom">stretch</aspectratio>
-						<texture>special://skin/extras/flagging/cases/hddvd-clear.png</texture>
+						<texture>flagging/cases/hddvd-clear.png</texture>
 						<visible>stringcompare(ListItem.VideoResolution,540)</visible>
 					</control>
 					<control type="image">
@@ -561,7 +561,7 @@
 					<aspectratio>keep</aspectratio>
 					<align>right</align>
 					<aligny>top</aligny>
-					<texture diffuse="maskflags.png">$INFO[listitem.Studio,special://skin/extras/flagging/studios/,.png]</texture>
+					<texture diffuse="maskflags.png">$INFO[listitem.Studio,flagging/studios/,.png]</texture>
 				</control>
 				<!-- Changes End Butchabay MOD 1.2.0 -->
 				<!--<control type="grouplist">
