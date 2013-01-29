@@ -1,17 +1,17 @@
 <includes>
 	<include name="HomeMenuHoriz">
-		 <control type="image">
+		<control type="image">
 			<posx>-5</posx>
 			<posy>120r</posy>
 			<width>290</width>
 			<height>220</height>
 			<texture border="00" flipx="true" diffuse="recentlyaddeddiffuse.png">black-back3.png</texture>
-		  </control>
+		</control>
 		<!-- HOME MENU SUBMENUS HORIZONTAL -->
 		<control type="group" id="9001">
 			<posx>-250</posx>
 			<posy>325r</posy>
-			
+
 			<control type="image"> <!-- background bar for horizontal submenus -->
 				<posx>0</posx>
 				<posy>85</posy>
@@ -20,7 +20,7 @@
 				<texture>horzmenuback.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			
+
 			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(9001).HasFocus">conditional</animation>
 			<animation effect="fade" start="0" end="100" delay="300" time="200" condition="ControlGroup(9001).HasFocus">conditional</animation>
 			<animation effect="fade" start="100" end="0" time="0" condition="ControlGroup(9001).HasFocus">WindowClose</animation>
@@ -36,7 +36,7 @@
 					<onfocus>SetFocus(8050)</onfocus>
 				</control>
 			</control>
-				
+
 			<!-- VIDEOS SUBMENU -->
 			<control type="wraplist" id="9010">
 				<posx>40</posx>
@@ -184,7 +184,7 @@
 					</item>
 				</content>
 			</control>
-			
+
 			<!-- WEATHER SUBMENU -->
 			<control type="wraplist" id="9012">
 				<posx>40</posx>
@@ -244,7 +244,7 @@
 					</item>
 				</content>
 			</control>
-			
+
 			<!-- FOTO SUBMENU -->
 			<control type="wraplist" id="9013">
 				<posx>40</posx>
@@ -292,23 +292,23 @@
 				<content>
 					<item id="90121">
 						<label>Year</label>
-						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period='year'&value=''&viewmode='view'&action='showdate'&name=''")</onclick>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period='year'&amp;value=''&amp;viewmode='view'&amp;action='showdate'&amp;name=''")</onclick>
 					</item>
 					<item id="90122">
 						<label>Folders</label>
-						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?method='folders'&folderid=''&onlypics='non'&viewmode='view'&action='showfolder'&name=''")</onclick>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?method='folders'&amp;folderid=''&amp;onlypics='non'&amp;viewmode='view'&amp;action='showfolder'&amp;name=''")</onclick>
 					</item>
 					<item id="90123">
 						<label>Period</label>
-						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period=''&viewmode='view'&action='showperiod'&name='Period'")</onclick>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?period=''&amp;viewmode='view'&amp;action='showperiod'&amp;name='Period'")</onclick>
 					</item>
 					<item id="90124">
 						<label>Keywords</label>
-						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?kw=''&viewmode='view'&action='showkeywords'&name=''")</onclick>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?kw=''&amp;viewmode='view'&amp;action='showkeywords'&amp;name=''")</onclick>
 					</item>
 					<item id="90125">
 						<label>Collections</label>
-						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?collect=''&method='show'&viewmode='view'&action='showcollection'&name='Collections'")</onclick>
+						<onclick>ActivateWindow(10002,"plugin://plugin.image.mypicsdb/?collect=''&amp;method='show'&amp;viewmode='view'&amp;action='showcollection'&amp;name='Collections'")</onclick>
 					</item>
 				</content>
 			</control>
@@ -329,7 +329,7 @@
 				<ondown>9000</ondown>
 				<itemgap>0</itemgap>
 				<visible>Container(9000).HasFocus(5)</visible>
- 				<itemlayout width="270" height="245">
+				<itemlayout width="270" height="245">
 					<control type="group">	
 						<posx>20</posx>
 						<posy>-3</posy>
@@ -358,46 +358,46 @@
 					</control>
 				</focusedlayout>
 				<content>
-				<item id="90141">
-					<label>5</label>
-					<onclick>ActivateWindow(Settings)</onclick>
-				</item>
-				<item id="90142">
-					<label>20077</label>
-					<onclick>ActivateWindow(SkinSettings)</onclick>
-				</item>
-				<item id="90143">
-					<label>7</label>
-					<onclick>ActivateWindow(FileManager)</onclick>
-				</item>
-				<item id="90144">
-					<label>13200</label>
-					<onclick>ActivateWindow(Profiles)</onclick>
-				</item>
-				<item id="90145">
-					<label>130</label>
-					<onclick>ActivateWindow(SystemInfo)</onclick>
-				</item>
-				<item id="90146">
-					<label>470</label>
-					<onclick>ActivateWindow(Credits)</onclick>
-				</item>
-				<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
-				<item type="button" id="90147">
-					<label>13005</label>
-					<onclick>ActivateWindow(ShutdownMenu)</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
-				<item type="button" id="90148">
-					<label>1036</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
-				<item type="button" id="90149">
-					<label>446</label>
-					<onclick>XBMC.PlayDVD()</onclick>
-					<visible>Skin.HasSetting(cleanHome)</visible>
-				</item>
+					<item id="90141">
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</item>
+					<item id="90142">
+						<label>20077</label>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
+					</item>
+					<item id="90143">
+						<label>7</label>
+						<onclick>ActivateWindow(FileManager)</onclick>
+					</item>
+					<item id="90144">
+						<label>13200</label>
+						<onclick>ActivateWindow(Profiles)</onclick>
+					</item>
+					<item id="90145">
+						<label>130</label>
+						<onclick>ActivateWindow(SystemInfo)</onclick>
+					</item>
+					<item id="90146">
+						<label>470</label>
+						<onclick>ActivateWindow(Credits)</onclick>
+					</item>
+					<!-- WHEN CLEAN HOME SELECTED (shutdown, play dvd etc added to settings submenu -->
+					<item type="button" id="90147">
+						<label>13005</label>
+						<onclick>ActivateWindow(ShutdownMenu)</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
+					<item type="button" id="90148">
+						<label>1036</label>
+						<onclick>ActivateWindow(Favourites)</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
+					<item type="button" id="90149">
+						<label>446</label>
+						<onclick>XBMC.PlayDVD()</onclick>
+						<visible>Skin.HasSetting(cleanHome)</visible>
+					</item>
 				</content>
 			</control>
 
@@ -489,7 +489,7 @@
 						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
 					</item>
 				</content>
-				
+
 			</control>
 
 			<!-- MOVIES SUBMENU -->
@@ -571,7 +571,7 @@
 					</item>
 				</content>
 			</control>
- 
+
 			<!-- TV SHOWS SUBMENU -->
 			<control type="wraplist" id="9017">
 				<posx>40</posx>
@@ -592,7 +592,7 @@
 					<control type="group">	
 						<posx>20</posx>
 						<posy>-3</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -606,7 +606,7 @@
 					<control type="group">	
 						<posx>20</posx>
 						<posy>-3</posy>
-						<control type="label"><!--Movie title-->
+						<control type="label">
 							<width>270</width>
 							<height>56</height>
 							<label>$INFO[ListItem.Label]</label>
@@ -643,8 +643,370 @@
 					</item>
 				</content>
 			</control>
+			<!-- Custom submenu 1 -->
+			<control type="wraplist" id="9021"> 
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8020</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(15)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="90211">
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom11.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom11.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom11.path)]</onclick>
+					</item>
+					<item id="90212">
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom12.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom12.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom12.path)]</onclick>
+					</item>
+					<item  id="90213">
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom13.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom13.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom13.path)]</onclick>
+					</item>
+					<item id="90214">
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom14.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom14.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom14.path)]</onclick>
+					</item>
+					<item  id="90215">
+						<visible>!IsEmpty(Skin.String(SubMenu_Custom15.Label))</visible>
+						<label>$INFO[Skin.String(SubMenu_Custom15.Label)]</label>
+						<onclick>$INFO[Skin.String(SubMenu_Custom15.path)]</onclick>
+					</item>
+				</content>
+
+			</control>
+			<!-- Custom submenu 2 -->
+			<control type="wraplist" id="9022"> 
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8020</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(16)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="90221">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom21.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom21.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom21.path)]</onclick>
+				</item>
+				<item id="90222">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom22.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom22.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom22.path)]</onclick>
+				</item>
+				<item id="90223">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom23.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom23.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom23.path)]</onclick>
+				</item>
+				<item id="90224">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom24.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom24.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom24.path)]</onclick>
+				</item>
+				<item id="90225">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom25.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom25.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom25.path)]</onclick>
+				</item>
+				</content>
+			</control>
+			<!-- Custom submenu 3 -->
+			<control type="wraplist" id="9023"> 
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8020</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(17)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="90231">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom31.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom31.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom31.path)]</onclick>
+				</item>
+				<item id="90232">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom32.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom32.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom32.path)]</onclick>
+				</item>
+				<item id="90233">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom33.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom33.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom33.path)]</onclick>
+				</item>
+				<item id="90234">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom34.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom34.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom34.path)]</onclick>
+				</item>
+				<item id="90235">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom35.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom35.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom35.path)]</onclick>
+				</item>
+				</content>
+			</control>
+			<!-- Custom submenu 4 -->
+			<control type="wraplist" id="9024"> 
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8020</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(22)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="90241">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom41.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom41.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom41.path)]</onclick>
+				</item>
+				<item id="90242">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom42.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom42.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom42.path)]</onclick>
+				</item>
+				<item id="90243">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom43.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom43.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom43.path)]</onclick>
+				</item>
+				<item id="90244">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom44.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom44.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom44.path)]</onclick>
+				</item>
+				<item id="90245">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom45.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom45.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom45.path)]</onclick>
+				</item>
+				</content>
+			</control>
+			<!-- Custom submenu 5 -->
+			<control type="wraplist" id="9025"> 
+				<posx>40</posx>
+				<posy>30</posy>
+				<width>1280</width>
+				<height>240</height>
+				<align>center</align>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<scrolltime>200</scrolltime>
+				<onup>8020</onup>
+				<ondown>9000</ondown>
+				<itemgap>0</itemgap>
+				<visible>Container(9000).HasFocus(23)</visible>
+				<itemlayout width="270" height="245">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>grey3</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="270" height="515">
+					<control type="group">	
+						<posx>20</posx>
+						<posy>-3</posy>
+						<control type="label">
+							<width>270</width>
+							<height>56</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>cirrus_30</font>
+							<textcolor>white</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+				<item id="90251">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom51.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom51.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom51.path)]</onclick>
+				</item>
+				<item id="90252">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom52.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom52.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom52.path)]</onclick>
+				</item>
+				<item id="90253">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom53.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom53.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom53.path)]</onclick>
+				</item>
+				<item id="90254">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom54.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom54.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom54.path)]</onclick>
+				</item>
+				<item id="90255">
+					<visible>!IsEmpty(Skin.String(SubMenu_Custom55.Label))</visible>
+					<label>$INFO[Skin.String(SubMenu_Custom55.Label)]</label>
+					<onclick>$INFO[Skin.String(SubMenu_Custom55.path)]</onclick>
+				</item>
+				</content>
+			</control>
+
 		</control>	
-	
+
 		<!-- Background for hoizontal menu -->
 		<control type="image">
 			<posx>0</posx>
@@ -656,74 +1018,74 @@
 
 		<!-- HORIZONTAL MAIN MENU -->
 		<control type="wraplist" id="9000">
-            <posx>-175</posx>
-            <posy>200r</posy>
-            <width>1515</width>
-            <height>100</height>
-            <onleft>9000</onleft>
-            <onright>9000</onright>
-            <onup>9001</onup>
-            <ondown>10</ondown>
-            <pagecontrol>-</pagecontrol>
-            <scrolltime>300</scrolltime>
-            <focusposition>1</focusposition>
-            <orientation>horizontal</orientation>
-            <animation effect="fade" start="0" end="100" time="200">Visible</animation>
-            <animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
+			<posx>-175</posx>
+			<posy>200r</posy>
+			<width>1515</width>
+			<height>100</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9001</onup>
+			<ondown>10</ondown>
+			<pagecontrol>-</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<focusposition>1</focusposition>
+			<orientation>horizontal</orientation>
+			<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+			<animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
 
 			<!-- ITEM LAYOUT NOT LOWERED -->
-            <itemlayout height="100" width="405">
-                <control type="label">
-                    <posx>460</posx>
-                    <posy>21</posy>
-                    <width>360</width><!-- width left and right of center word space -->
-                    <height>40</height><!-- height left and right of center word space -->
-                    <font>cirrus_50</font>
-                    <textcolor>grey3</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="label">
-                    <posx>460</posx>
-                    <posy>21</posy>
-                    <width>360</width>
-                    <height>40</height>
-                    <font>cirrus_50</font>
-                    <textcolor>grey3</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
-                    <animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
-                </control>
-            </itemlayout>
+			<itemlayout height="100" width="405">
+				<control type="label">
+					<posx>460</posx>
+					<posy>21</posy>
+					<width>360</width><!-- width left and right of center word space -->
+					<height>40</height><!-- height left and right of center word space -->
+					<font>cirrus_50</font>
+					<textcolor>grey3</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>460</posx>
+					<posy>21</posy>
+					<width>360</width>
+					<height>40</height>
+					<font>cirrus_50</font>
+					<textcolor>grey3</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
+				</control>
+			</itemlayout>
 
 			<!-- FOCUSED LAYOUT NOT LOWERED -->
-            <focusedlayout height="100" width="350">
-                <control type="label">
-                    <posx>405</posx>
-                    <posy>21</posy>
-                    <width>360</width><!-- width of word space -->
-                    <height>40</height><!-- height of word space-->
-                    <font>cirrus_50</font>
-                    <textcolor>white</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
-                </control>
-                <control type="label">
-                    <posx>405</posx>
-                    <posy>21</posy>
-                    <width>360</width><!-- width of word space -->
-                    <height>40</height><!-- height of word space-->
-                    <font>cirrus_50</font>
-                    <textcolor>grey3</textcolor>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <label>$INFO[ListItem.Label]</label>
-                    <animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
-                </control>
-   			</focusedlayout>
+			<focusedlayout height="100" width="350">
+				<control type="label">
+					<posx>405</posx>
+					<posy>21</posy>
+					<width>360</width><!-- width of word space -->
+					<height>40</height><!-- height of word space-->
+					<font>cirrus_50</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>405</posx>
+					<posy>21</posy>
+					<width>360</width><!-- width of word space -->
+					<height>40</height><!-- height of word space-->
+					<font>cirrus_50</font>
+					<textcolor>grey3</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="10" end="10" time="0" condition="true">Conditional</animation>
+				</control>
+			</focusedlayout>
 
 			<content>
 				<item id="8">
@@ -791,11 +1153,11 @@
 					<visible>!Skin.HasSetting(HomeMenuNoTVGuideButton) + Library.HasContent(TVShows) + System.HasAddon(script.tv.show.next.aired)</visible>
 				</item>	
 				<item id="33">
-					  <label>Live TV</label> 
-					  <onclick>ActivateWindow(TV)</onclick> 
-					  <icon>special://skin/backgrounds/tv.jpg</icon> 
-					  <thumb>$INFO[Skin.String(Home_Custom_Back_LiveTV_Folder)]</thumb> 
-					  <visible>[Skin.HasSetting(LiveTvIsEnable) + !Skin.HasSetting(HomeMenuNoLiveTVButton)]</visible> 
+					<label>Live TV</label> 
+					<onclick>ActivateWindow(TV)</onclick> 
+					<icon>special://skin/backgrounds/tv.jpg</icon> 
+					<thumb>$INFO[Skin.String(Home_Custom_Back_LiveTV_Folder)]</thumb> 
+					<visible>[Skin.HasSetting(LiveTvIsEnable) + !Skin.HasSetting(HomeMenuNoLiveTVButton)]</visible> 
 				</item>
 				<item id="3">
 					<label>2</label>
@@ -824,7 +1186,7 @@
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom1_Folder)]</thumb>
 					<onclick>$INFO[Skin.String(Menu_Custom1.Path)]</onclick>
-                    <visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
+					<visible>!IsEmpty(Skin.String(Menu_Custom1.Label))</visible>
 				</item>
 				<item id="16">
 					<description>Custom Movie Two</description>
@@ -832,7 +1194,7 @@
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom2_Folder)]</thumb>
 					<onclick>$INFO[Skin.String(Menu_Custom2.Path)]</onclick>
-                    <visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
+					<visible>!IsEmpty(Skin.String(Menu_Custom2.Label))</visible>
 				</item>
 				<item id="17">
 					<description>Custom Movie Three</description>
@@ -840,7 +1202,7 @@
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom3_Folder)]</thumb>
 					<onclick>$INFO[Skin.String(Menu_Custom3.Path)]</onclick>
-                    <visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
+					<visible>!IsEmpty(Skin.String(Menu_Custom3.Label))</visible>
 				</item>
 				<item id="22">
 					<description>Custom Movie Seven</description>
@@ -848,7 +1210,7 @@
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom4_Folder)]</thumb>
 					<onclick>$INFO[Skin.String(Menu_Custom4.Path)]</onclick>
-                    <visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
+					<visible>!IsEmpty(Skin.String(Menu_Custom4.Label))</visible>
 				</item>
 				<item id="23">
 					<description>Custom Movie Eight</description>
@@ -856,7 +1218,7 @@
 					<icon>special://skin/media/backgrounds/custom.jpg</icon>
 					<thumb>$INFO[Skin.String(Menu_Custom5_Folder)]</thumb>
 					<onclick>$INFO[Skin.String(Menu_Custom5.Path)]</onclick>
-                    <visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
+					<visible>!IsEmpty(Skin.String(Menu_Custom5.Label))</visible>
 				</item>
 				<item id="19">
 					<description>Custom Movie Four</description>

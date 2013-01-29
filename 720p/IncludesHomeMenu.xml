@@ -36,9 +36,7 @@
 						<onfocus>SetFocus(8050)</onfocus>
 					</control>
 				</control>
-				
-                    
-				
+				                   
 				<!-- VIDEOS SUBMENU -->
 				<control type="grouplist" id="9010">
 					<posx>10</posx>
@@ -355,7 +353,8 @@
 					</control>
 				</control>
 				<!-- MY MAIN MENU MODS -->
-				<control type="grouplist" id="9016"> <!-- Movie -->
+				<!-- Movie -->
+				<control type="grouplist" id="9016"> 
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>280</width>
@@ -408,7 +407,8 @@
 						<onclick>UpdateLibrary(Video)</onclick>
 					</control>
 				</control>
-				<control type="grouplist" id="9017"> <!-- TVShow -->
+				 <!-- TVShow -->
+				<control type="grouplist" id="9017">
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>280</width>
@@ -458,7 +458,6 @@
 						<onclick>UpdateLibrary(Video)</onclick>
 					</control>
 				</control>
-			
 				<!-- Custom submenu 1 -->
 				<control type="grouplist" id="9021"> 
 					<posx>10</posx>
@@ -718,7 +717,7 @@
 				<movement>1</movement>
 				<animation effect="fade" start="0" end="100" time="20">Visible</animation>
 				<animation effect="fade" start="100" end="30" time="20" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus | ControlGroup(10).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8001)">conditional</animation>
-				<itemlayout height="60" width="380">
+				<itemlayout height="70" width="380">
 					<control type="label">
 						<posx>40</posx>
 						<posy>21</posy>
