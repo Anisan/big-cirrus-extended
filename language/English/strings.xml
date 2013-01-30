@@ -140,77 +140,17 @@
   <string id="41006">Skin debug settings</string>
   <string id="41101">View Options</string>
   <string id="41107">Enable/Disable Views</string>
-  
-  
+    
   <string id="41007">Enable LiveTV</string>
-  
-  <string id="41008">Enable CDArt animation on Home</string>
-  
+  <string id="41008">Enable/Disable Mods</string>
   <string id="41009">Enable ClearArt</string>
-  <string id="41010">Enable New Media Flags</string>
-  <string id="41011">Enable Artist Slideshow Script on music visualitation screen</string>
-  <string id="41012">Enable Custom Background on music visualization screen</string>
-  <string id="41013">Enable Black Background on music visualization screen</string>
-  
-   <!-- New labels Settings (Home Window)  -->
-  <string id="41014">Clean Home Now Playing</string>
-  <string id="41015">Enable Video Window on Home</string>
-  <string id="41016">Enable Video Window Global</string>
-  <string id="41017">Clean Home Screen (remove logo and buttons)</string>
-  <string id="41018">Enable Horizontal Home menu</string>
-  <string id="41019">Lower Horizontal Home menu</string>
-  <string id="41020">Enable Animated Backgrounds</string>
-  <string id="41021">Global Animated Backgrounds</string>
-  
-   <!-- New labels Settings (Background Customizer)  -->
-  <string id="41022">Power</string>
-  <string id="41023">Play Disc</string>
-  <string id="41025">Music Visualisation</string>
-  <string id="41025">Music Visualisation</string>
-  <string id="41026">Games</string>
-  
- <!-- New labels Settings (Addons Submenus)  -->
-  <string id="41027">Addon Submenu</string>
-  <string id="41028">Choose Custom Addon [B]1[/B]</string>
-  <string id="41029">Choose Custom Addon [B]2[/B]</string>
-  <string id="41030">Choose Custom Addon [B]3[/B]</string>
-  <string id="41031">Choose Custom Addon [B]4[/B]</string>
-  <string id="41032">Choose Custom Addon [B]5[/B]</string>
-  
-   <!-- New labels Settings (Programs Submenus)  -->
-  <string id="41033">Choose Custom Program [B]1[/B]</string>
-  <string id="41034">Choose Custom Program [B]2[/B]</string>
-  <string id="41035">Choose Custom Program [B]3[/B]</string>
-  <string id="41036">Choose Custom Program [B]4[/B]</string>
-  <string id="41037">Choose Custom Program [B]5[/B]</string>
-  
-   <!-- New labels Settings (Movie Submenus)  -->
-  <string id="41038">Movie Submenu</string>
-  <string id="41039">Disable Video Files</string>
-  <string id="41040">Disable Title</string>
-  <string id="41041">Disable Genre</string>
-  <string id="41042">Disable Years</string>
-  <string id="41043">Disable Recently Added</string>
-  <string id="41044">Disable Actor</string>
-  <string id="41045">Disable Director</string>
-  <string id="41046">Disable Library Update</string>
-  <string id="41047">Disable Video Addons</string>
-  
-  <string id="41048">Choose Playlist [B]1[/B]</string>
-  <string id="41049">Choose Playlist [B]2[/B]</string>
-  <string id="41050">Choose Playlist [B]3[/B]</string>
-  <string id="41051">Choose Playlist [B]4[/B]</string>
-  <string id="41052">Choose Playlist [B]5[/B]</string>
-  <string id="41053">Choose Playlist [B]6[/B]</string>
-  
-  <!-- New labels Settings (Movie Submenus Addon)  -->
-  <string id="41054">Choose Custom Addon [B]1[/B]</string>
-  <string id="41055">Choose Custom Addon [B]2[/B]</string>
-  <string id="41056">Choose Custom Addon [B]3[/B]</string>
-  
-   <!-- New labels Settings (TV Submenus)  -->
-  <string id="41064">TV Submenu</string>
-  
+  <string id="41010">Enable Russian Keyboard</string>
+  <string id="41011">Enable Scripts</string>
+  <string id="41012">Enable CDArt animation on music visualization screen</string>
+  <string id="41013">Enable button Cinema Experience</string>
+  <string id="41014">Enable button DB editor</string>
+  <string id="41015">ExtraFanArt</string>
+   
   <!-- New labels Settings (Custom Home Items)  -->
   <string id="41065">Add Custom Items to Home Screen</string>
   <string id="41070">- Set Playlist</string>
@@ -220,16 +160,12 @@
   <string id="41074">Custom Playlist 3</string>
   <string id="41075">Custom Playlist 4</string>
   <string id="41076">Custom Playlist 5</string>
-  <string id="41077">Custom Playlist 6</string>
-  <string id="41078">Custom Playlist 7</string>
-  <string id="41079">Custom Playlist 8</string>
   
   <!-- New labels Settings (Custom MOD Items)  -->
-  <string id="41080">Enable/Disable Mods</string> <!-- v2.08  -->
-  <string id="41081">Enable Banner</string> <!-- v2.08  -->
-  <string id="41082">Enable Poster</string> <!-- v2.08  -->
-  <string id="41083">Enable Widethumbs</string> <!-- v2.08  -->
-  <string id="41084">Enable Landscape</string> <!-- v2.08  -->
+  <string id="41081">Enable Banner</string> 
+  <string id="41082">Enable Poster</string> 
+  <string id="41083">Enable Widethumbs</string> 
+  <string id="41084">Enable Landscape</string> 
   <string id="41085">Enable .jpg support for BannerView</string>
   <string id="41086">Enable Extra Fanart for Movies</string>
   <string id="41087">Enable Extra Fanart for TV Shows</string>

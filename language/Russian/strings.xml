@@ -132,7 +132,7 @@
   
 	<!-- Custom Skin Settings -->
   <string id="41000">Виджеты</string>
-  <string id="41001">Виджеты гланого меню</string>
+  <string id="41001">Виджеты главного меню</string>
   <string id="41002">Доп. меню</string>
   <string id="41003">Пункты главного меню</string>
   <string id="41004">Расширения</string>
@@ -141,38 +141,35 @@
   <string id="41101">Настроки Вида</string>
   <string id="41107">Включить/выключить Виды</string>
   
+  <string id="41007">Включить LiveTV</string>
+  <string id="41008">Включить/выключить Моды</string>
+  <string id="41009">Включить ClearArt</string>
+  <string id="41010">Включить русскую клавиатуру</string>
+  <string id="41011">Включить скрипты</string>
+  <string id="41012">Включить CDArt анимацию в полноэкранном проигрывании музыки</string>
+  <string id="41013">Включить кнопку Cinema Experience</string>
+  <string id="41014">Включить кнопку DB editor</string>
+  <string id="41015">Extra FanArt</string>
   
+    <!-- New labels Settings (Custom Home Items)  -->
+  <string id="41065">Добавить пункт в Главное меню</string>
+  <string id="41070">- Плейлист</string>
+  <string id="41071">- Название</string>
+  <string id="41072">Плейлист 1</string>
+  <string id="41073">Плейлист 2</string>
+  <string id="41074">Плейлист 3</string>
+  <string id="41075">Плейлист 4</string>
+  <string id="41076">Плейлист 5</string>
 
+  <!-- New labels Settings (Custom MOD Items)  -->
+  <string id="41081">Показать Баннер</string> 
+  <string id="41082">Показать Постер</string> 
+  <string id="41083">Показать Widethumbs</string> 
+  <string id="41084">Показать Landscape</string> 
+  <string id="41085">Включить поддержку .jpg для баннеров</string>
+  <string id="41086">Включить Extra Fanart для Фильмов</string>
+  <string id="41087">Включить Extra Fanart для Сериалов</string>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <string id="31303"></string>
   <string id="31304">Изображение</string>
   <string id="31305">Не Вставлен Диск</string>
@@ -220,7 +217,8 @@
   <string id="31405">[B]НАСТРОЙКА ПАРАМЕТРОВ СЕТИ[/B][CR][CR]Настроить управление XBMC через UPnP и HTTP · Настроить обмен файлами[CR]Изменить настройки доступа в интернет</string>
   <string id="31406">[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]Настроить и откалибровать экраны · Настроить вывод аудио · Настроить[CR]дистанционное управление · Настроить параметры энергосбережения · Включить отладку · Настроить блокировку</string>
   <string id="31407">[B]НАСТРОЙКА ПАРАМЕТРОВ ОБЛОЖКИ[/B][CR][CR]Настроить обложку Confluence · Добавить и удалить пункты главного меню[CR]Изменить фон обложки</string>
-<string id="31408">[B]НАСТРОЙКА ДОПОЛНЕНИЙ[/B][CR][CR]Управление установленными дополнениями · Установка дополнений с xbmc.org[CR]Изменение настроек дополнений</string>
-
+  <string id="31408">[B]НАСТРОЙКА ДОПОЛНЕНИЙ[/B][CR][CR]Управление установленными дополнениями · Установка дополнений с xbmc.org[CR]Изменение настроек дополнений</string>
+  <string id="31409">[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Настройка полноэкранной информации · Настройка отображения EPG</string>
+  
   <string id="31421">Выберите ваш профиль пользователя XBMC[CR]чтобы войти в систему и продолжить.</string>
 </strings>

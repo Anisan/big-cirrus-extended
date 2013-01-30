@@ -24,16 +24,16 @@
 			<control type="image">
 				<description>LOGO</description>
 				<posx>100</posx>
-				<posy>30</posy>
+				<posy>20</posy>
 				<width>160</width>
 				<height>40</height>
 				<texture>xbmc_logo_white.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<posx>-70</posx>
-				<posy>90</posy>
+				<posy>80</posy>
 				<width>340</width>
-				<height>500</height>
+				<height>540</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
 				<onup>9000</onup>
@@ -2672,7 +2672,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_20</font>
-							<label>Enable/Disable Mods</label>
+							<label>41008</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2688,7 +2688,7 @@
 						<control type="radiobutton" id="1014">
 							<description>Enable Russian Keyboard</description>
 							<include>MenuItemSettings</include>
-							<label>Enable Russian Keyboard</label>
+							<label>41010</label>
 							<onclick>Skin.ToggleSetting(EnableRussianKeyboard)</onclick>
 							<selected>Skin.HasSetting(EnableRussianKeyboard)</selected>
 						</control>
@@ -2696,7 +2696,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_20</font>
-							<label>Enable Scripts</label>
+							<label>41011</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2717,19 +2717,19 @@
 						</control>
 						<control type="radiobutton" id="1203">
 							<include>MenuItemSettings</include>
-							<label>Enable CDArt animation on music visualization screen</label>
+							<label>41012</label>
 							<onclick>Skin.ToggleSetting(cdart)</onclick>
 							<selected>Skin.HasSetting(cdart)</selected>
 						</control>
 						<control type="radiobutton" id="1204">
 							<include>MenuItemSettings</include>
-							<label>Enable button Cinema Experience</label>
+							<label>41013</label>
 							<onclick>Skin.ToggleSetting(buttonCinExp)</onclick>
 							<selected>Skin.HasSetting(buttonCinExp)</selected>
 						</control>
 						<control type="radiobutton" id="1205">
 							<include>MenuItemSettings</include>
-							<label>Enable button DB editor</label>
+							<label>41014</label>
 							<onclick>Skin.ToggleSetting(buttonBDEdit)</onclick>
 							<selected>Skin.HasSetting(buttonBDEdit)</selected>
 						</control>
@@ -2738,7 +2738,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_20</font>
-							<label>ExtraFanArt</label>
+							<label>41015</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2783,7 +2783,7 @@
 						<visible>Container(9000).Hasfocus(6)</visible>
 					</control>
 				</control>
-				<!-- ENABLE DISABLE VIDEO VIEWS -->
+				<!-- ENABLE DISABLE VIEWS -->
 				<control type="group">
 					<control type="grouplist" id="9007">
 						<visible>Container(9000).Hasfocus(7)</visible>

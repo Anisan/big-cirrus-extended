@@ -95,7 +95,7 @@
             <icon>special://skin/backgrounds/videos_settings.jpg</icon>
           </item>
 		  <item id="10">
-			  <label>TV</label> 
+			  <label>31502</label> 
 			  <label2>31409</label2> 
 			  <onclick>ActivateWindow(MyTVSettings)</onclick> 
 			  <icon>special://skin/backgrounds/tv.jpg</icon> 
