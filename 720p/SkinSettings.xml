@@ -30,9 +30,9 @@
 				<texture>xbmc_logo_white.png</texture>
 			</control>
 			<control type="list" id="9000">
-				<posx>-20</posx>
+				<posx>-70</posx>
 				<posy>90</posy>
-				<width>290</width>
+				<width>340</width>
 				<height>500</height>
 				<onleft>9010</onleft>
 				<onright>9010</onright>
@@ -40,18 +40,18 @@
 				<ondown>9000</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
-				<itemlayout height="60" width="290">
+				<itemlayout height="60" width="340">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>290</width>
+						<width>340</width>
 						<height>71</height>
 						<texture border="5">menuitemNF.png</texture>
 					</control>
 					<control type="label">
-						<posx>280</posx>
+						<posx>330</posx>
 						<posy>10</posy>
-						<width>380</width>
+						<width>480</width>
 						<height>25</height>
 						<font>cirrus_35</font>
 						<textcolor>grey3</textcolor>
@@ -60,7 +60,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>280</posx>
+						<posx>330</posx>
 						<posy>37</posy>
 						<width>870</width>
 						<height>25</height>
@@ -71,17 +71,17 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="260">
+				<focusedlayout height="60" width="340">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>290</width>
+						<width>340</width>
 						<height>61</height>
 						<texture border="5">listwhitegradient.png</texture>
 						<animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>280</posx>
+						<posx>330</posx>
 						<posy>10</posy>
 						<width>380</width>
 						<height>25</height>
@@ -92,7 +92,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<posx>280</posx>
+						<posx>330</posx>
 						<posy>37</posy>
 						<width>870</width>
 						<height>25</height>
@@ -125,13 +125,13 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="5">
-						<label>Custom Home</label>
-						<label2>Home Menu Items</label2>
+						<label>41002</label>
+						<label2>41003</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="6">
-						<label>Extended Mod</label>
-						<label2>Extended Mod Items</label2>
+						<label>41004</label>
+						<label2>41004</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="7">
@@ -140,13 +140,13 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="8">
-						<label>Widgets</label>
-						<label2>Home menu widgets</label2>
+						<label>41000</label>
+						<label2>41001</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="9">
-						<label>Debug</label>
-						<label2>Skin debug settings</label2>
+						<label>41005</label>
+						<label2>41006</label2>
 						<onclick>-</onclick>
 					</item>
 				</content>
@@ -218,12 +218,10 @@
 						<control type="radiobutton" id="105">
 							<description>Enable LiveTV</description> 
 							<include>MenuItemSettings</include>
-							<label>Enable LiveTV</label> 
+							<label>41007</label> 
 							<onclick>Skin.ToggleSetting(LiveTvIsEnable)</onclick> 
 							<selected>Skin.HasSetting(LiveTvIsEnable)</selected> 
 						</control>
-
-
 						<control type="radiobutton" id="106">
 							<include>MenuItemSettings</include>
 							<label>20189</label>
@@ -403,7 +401,7 @@
 						<control type="radiobutton" id="230">
 							<description>Hide LiveTV Button</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[31111] - LiveTV</label>
+							<label>$LOCALIZE[31111] - $LOCALIZE[31502]</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoLiveTVButton)</onclick>
 							<selected>Skin.HasSetting(HomeMenuNoLiveTVButton)</selected>
 							<visible>Skin.HasSetting(LiveTvIsEnable)</visible> 
@@ -2251,85 +2249,17 @@
 
 						<control type="radiobutton" id="427">
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[31129]</label><onclick>Skin.ToggleSetting(SubtitleDownload_Enable)</onclick>
+							<label>$LOCALIZE[31129]</label>
+							<onclick>Skin.ToggleSetting(SubtitleDownload_Enable)</onclick>
 							<selected>Skin.HasSetting(SubtitleDownload_Enable)</selected>
 						</control>
 						<control type="button" id="428">
 							<include>MenuItemSettings</include>
 							<label>- $LOCALIZE[31130]</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2><onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+							<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
+							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 							<visible>Skin.HasSetting(SubtitleDownload_Enable)</visible>
 						</control>
-
-						<control type="label" id="430">
-							<width>750</width>
-							<height>45</height>
-							<font>cirrus_20</font>
-							<label>Custom button OSD</label>
-							<textcolor>orange</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>
-
-						<control type="radiobutton" id="431">
-							<include>MenuItemSettings</include>
-							<label>Custom Music Button Script</label>
-							<onclick>Skin.ToggleSetting(CustomMusicScript_Enable)</onclick>
-							<selected>Skin.HasSetting(CustomMusicScript_Enable)</selected>
-						</control>
-						<control type="button" id="432">
-							<include>MenuItemSettings</include>
-							<label>- addon</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomMusicScript_Path)][/COLOR]</label2>
-							<onclick>Skin.SetAddon(CustomMusicScript_Path,xbmc.python.script)</onclick>
-							<visible>Skin.HasSetting(CustomMusicScript_Enable)</visible>
-						</control>
-						<control type="button" id="433">
-							<include>MenuItemSettings</include>
-							<label>- image</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomMusicImage_Path)][/COLOR]</label2>
-							<onclick>Skin.SetImage(CustomMusicImage_Path)</onclick>
-							<visible>Skin.HasSetting(CustomMusicScript_Enable)</visible>
-						</control>
-						<control type="button" id="434">
-							<include>MenuItemSettings</include><label> - label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomMusicLabel)][/COLOR]</label2>
-							<onclick>Skin.SetString(CustomMusicLabel)</onclick>
-							<visible>Skin.HasSetting(CustomMusicScript_Enable)</visible>
-						</control>
-
-						<control type="radiobutton" id="435">
-							<include>MenuItemSettings</include>
-							<label>Custom Video Button Script</label>
-							<onclick>Skin.ToggleSetting(CustomVideoScript_Enable)</onclick>
-							<selected>Skin.HasSetting(CustomVideoScript_Enable)</selected>
-						</control>
-						<control type="button" id="436">
-							<include>MenuItemSettings</include>
-							<label>- addon</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomVideoScript_Path)][/COLOR]</label2>
-							<onclick>Skin.SetAddon(CustomVideoScript_Path,xbmc.python.script)</onclick>
-							<visible>Skin.HasSetting(CustomVideoScript_Enable)</visible>
-						</control>
-						<control type="button" id="437">
-							<include>MenuItemSettings</include>
-							<label>- image</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomVideoImage_Path)][/COLOR]</label2>
-							<onclick>Skin.SetImage(CustomVideoImage_Path)</onclick>
-							<visible>Skin.HasSetting(CustomVideoScript_Enable)</visible>
-						</control>
-						<control type="button" id="438">
-							<include>MenuItemSettings</include>
-							<label> - label</label>
-							<label2>[COLOR=selected]$INFO[Skin.String(CustomVideoLabel)][/COLOR]</label2>
-							<onclick>Skin.SetString(CustomVideoLabel)</onclick>
-							<visible>Skin.HasSetting(CustomVideoScript_Enable)</visible>
-						</control>
-
-
-
-
 					</control>
 				</control>
 				<!-- Custom Home -->
@@ -2350,7 +2280,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>cirrus_20</font>
-							<label>Add Custom Items to Home Screen</label>
+							<label>41065</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2579,7 +2509,8 @@
 
 						<control type="radiobutton" id="506">
 							<description>custom home 4</description>
-							<include>MenuItemSettings</include><label>Custom Playlist 1</label>
+							<include>MenuItemSettings</include>
+							<label>41072</label>
 							<onfocus>Skin.SetString(MoviesCustom,4)</onfocus>
 							<onclick>Skin.ToggleSetting(Menu_Custom4)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom4)</selected>
@@ -2587,7 +2518,7 @@
 						</control>
 						<control type="button" id="8207">
 							<description>Menu Movies Sub Custom4 Label</description>
-							<label>- Set Label</label>
+							<label>41071</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetString(Menu_Custom4_Label)</onclick>
@@ -2595,7 +2526,7 @@
 						</control>
 						<control type="button" id="8208">
 							<description>Menu Movies Sub Custom4 Path</description>
-							<label>- Set Playlist</label>
+							<label>41070</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom4_Path)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetFile(Menu_Custom4_Path,,special://profile/playlists)</onclick>
@@ -2604,7 +2535,8 @@
 
 						<control type="radiobutton" id="507">
 							<description>custom home 5</description>
-							<include>MenuItemSettings</include><label>Custom Playlist 2</label>
+							<include>MenuItemSettings</include>
+							<label>41073</label>
 							<onfocus>Skin.SetString(MoviesCustom,5)</onfocus>
 							<onclick>Skin.ToggleSetting(Menu_Custom5)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom5)</selected>
@@ -2612,7 +2544,7 @@
 						</control>
 						<control type="button" id="8209">
 							<description>Menu Movies Sub Custom5 Label</description>
-							<label>- Set Label</label>
+							<label>41071</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetString(Menu_Custom5_Label)</onclick>
@@ -2620,7 +2552,7 @@
 						</control>
 						<control type="button" id="8210">
 							<description>Menu Movies Sub Custom5 Path</description>
-							<label>- Set Playlist</label>
+							<label>41070</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom5_Path)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetFile(Menu_Custom5_Path,.xsp,special://profile/playlists)</onclick>
@@ -2629,7 +2561,8 @@
 
 						<control type="radiobutton" id="508">
 							<description>custom home 6</description>
-							<include>MenuItemSettings</include><label>Custom Playlist 3</label>
+							<include>MenuItemSettings</include>
+							<label>41074</label>
 							<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
 							<onclick>Skin.ToggleSetting(Menu_Custom6)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom6)</selected>
@@ -2637,7 +2570,7 @@
 						</control>
 						<control type="button" id="8211">
 							<description>Menu Movies Sub Custom6 Label</description>
-							<label>- Set Label</label>
+							<label>41071</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetString(Menu_Custom6_Label)</onclick>
@@ -2645,7 +2578,7 @@
 						</control>
 						<control type="button" id="8212">
 							<description>Menu Movies Sub Custom6 Path</description>
-							<label>- Set Playlist</label>
+							<label>41070</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom6_Path)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetFile(Menu_Custom6_Path,,special://profile/playlists)</onclick>
@@ -2654,7 +2587,8 @@
 
 						<control type="radiobutton" id="509">
 							<description>custom home 9</description>
-							<include>MenuItemSettings</include><label>Custom Playlist 4</label>
+							<include>MenuItemSettings</include>
+							<label>41075</label>
 							<onfocus>Skin.SetString(MoviesCustom,9)</onfocus>
 							<onclick>Skin.ToggleSetting(Menu_Custom9)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom9)</selected>
@@ -2662,7 +2596,7 @@
 						</control>
 						<control type="button" id="8217">
 							<description>Menu Movies Sub Custom9 Label</description>
-							<label>- Set Label</label>
+							<label>41071</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom9_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetString(Menu_Custom9_Label)</onclick>
@@ -2670,7 +2604,7 @@
 						</control>
 						<control type="button" id="8218">
 							<description>Menu Movies Sub Custom9 Path</description>
-							<label>- Set Playlist</label>
+							<label>41070</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom9_Path)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetFile(Menu_Custom9_Path,,special://profile/playlists)</onclick>
@@ -2679,7 +2613,8 @@
 
 						<control type="radiobutton" id="510">
 							<description>custom home 10</description>
-							<include>MenuItemSettings</include><label>Custom Playlist 5</label>
+							<include>MenuItemSettings</include>
+							<label>41076</label>
 							<onfocus>Skin.SetString(MoviesCustom,10)</onfocus>
 							<onclick>Skin.ToggleSetting(Menu_Custom10)</onclick>
 							<selected>Skin.HasSetting(Menu_Custom10)</selected>
@@ -2687,7 +2622,7 @@
 						</control>
 						<control type="button" id="8219">
 							<description>Menu Movies Sub Custom10 Label</description>
-							<label>- Set Label</label>
+							<label>41071</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom10_Label)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetString(Menu_Custom10_Label)</onclick>
@@ -2695,7 +2630,7 @@
 						</control>
 						<control type="button" id="8220">
 							<description>Menu Movies Sub Custom10 Path</description>
-							<label>- Set Playlist</label>
+							<label>41070</label>
 							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom10_Path)][/COLOR]</label2>
 							<include>MenuItemSettings</include>
 							<onclick>Skin.SetFile(Menu_Custom10_Path,,special://profile/playlists)</onclick>
@@ -2776,7 +2711,7 @@
 						</control>
 						<control type="radiobutton" id="1202">
 							<include>MenuItemSettings</include>
-							<label>Enable ClearArt</label>
+							<label>41009</label>
 							<onclick>Skin.ToggleSetting(clearart)</onclick>
 							<selected>Skin.HasSetting(clearart)</selected>
 						</control>
@@ -2875,7 +2810,7 @@
 						<control type="label" id="1043">
 							<description>Movies and TV Shows</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41102] / $LOCALIZE[41103]</label>
+							<label>$LOCALIZE[20342] / $LOCALIZE[20343]</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2898,7 +2833,7 @@
 						<control type="label" id="1048">
 							<description>Movies</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41102]</label>
+							<label>$LOCALIZE[20342]</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -2942,7 +2877,7 @@
 						<control type="label" id="1055">
 							<description>TV Shows</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41103]</label>
+							<label>$LOCALIZE[20343]</label>
 							<textcolor>orange</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>

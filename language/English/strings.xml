@@ -130,18 +130,22 @@
   <string id="31252">TWC Script</string>
   <string id="31253">10 day</string> 
   
-   <!-- New labels Settings (Custom Skin Settings)  -->
-  <string id="41000">Custom Menu</string>
-  <string id="41001">Change Submenues</string>
+  <!-- Custom Skin Settings -->
+  <string id="41000">Widgets</string>
+  <string id="41001">Home menu widgets</string>
   <string id="41002">Custom Home</string>
   <string id="41003">Home Menu Items</string>
   <string id="41004">Extended Mod</string>
-  <string id="41005">Mod Buttons</string>
+  <string id="41005">Debug</string>
+  <string id="41006">Skin debug settings</string>
+  <string id="41101">View Options</string>
+  <string id="41107">Enable/Disable Views</string>
   
-    <!-- New labels Settings (General)  -->
-  <string id="41006">Enable Kiosk Mode (disable slideout menu)</string>
-  <string id="41007">Enable CDArt animation on music visualization screen</string>
+  
+  <string id="41007">Enable LiveTV</string>
+  
   <string id="41008">Enable CDArt animation on Home</string>
+  
   <string id="41009">Enable ClearArt</string>
   <string id="41010">Enable New Media Flags</string>
   <string id="41011">Enable Artist Slideshow Script on music visualitation screen</string>
@@ -209,12 +213,8 @@
   
   <!-- New labels Settings (Custom Home Items)  -->
   <string id="41065">Add Custom Items to Home Screen</string>
-  <string id="41066">Custom Favorite 1</string>
-  <string id="41067">Custom Favorite 2</string>
-  <string id="41068">Custom Favorite 3</string>
-  <string id="41069">Custom Favorite 4</string>
   <string id="41070">- Set Playlist</string>
-  <string id="41071">Custom Favorite 5</string>
+  <string id="41071">- Set Label</string>
   <string id="41072">Custom Playlist 1</string>
   <string id="41073">Custom Playlist 2</string>
   <string id="41074">Custom Playlist 3</string>
@@ -250,13 +250,9 @@
   <string id="41100">Play Disc</string>
   
     <!-- New labels Misc.  Cirrus Extended v2 -->
-  <string id="41101">View Options</string>
-  <string id="41102">Movies</string>
-  <string id="41103">TV Shows</string>
   <string id="41104">Music</string>
   <string id="41105">Video Plugins</string>
   <string id="41106">Addons</string>
-  <string id="41107">Enable/Disable Views</string>
   <string id="41108">Enable</string>
   <string id="41109">Disable</string>
   <string id="41110">Get Artwork</string>

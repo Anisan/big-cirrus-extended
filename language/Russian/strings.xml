@@ -130,11 +130,18 @@
   <string id="31252">TWC Script</string>
   <string id="31253">10 дней</string> 
   
-  <!-- Дополнительные обозначения -->
-  <string id="31300">Текущая Температура</string>
-  <string id="31301">Последнее Обновление</string>
-  <string id="31302">Меню</string>
-  <string id="31303">Источник данных</string> 
+	<!-- Custom Skin Settings -->
+  <string id="41000">Виджеты</string>
+  <string id="41001">Виджеты гланого меню</string>
+  <string id="41002">Доп. меню</string>
+  <string id="41003">Пункты главного меню</string>
+  <string id="41004">Расширения</string>
+  <string id="41005">Отладка</string>
+  <string id="41006">Помощь в отладке скина</string>
+  <string id="41101">Настроки Вида</string>
+  <string id="41107">Включить/выключить Виды</string>
+  
+  
 
   
 
