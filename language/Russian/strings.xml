@@ -2,12 +2,9 @@
 <strings>
   <!-- Различные обозначения -->
   <string id="31000">Измените</string>
-  <string id="31001">Любовь</string>
-  <string id="31002">Ненависть</string>
-  <string id="31003">Настройки Питания</string>
-  <string id="31004">Работает</string>
-  <string id="31005">Спрятать ИНФО</string>
-
+  <string id="31001">Настройки Питания</string>
+  <string id="31002">Работает</string>
+  
   <string id="31007">Дополнения</string>
 
   <string id="31020">Недавно Добавленные</string>
@@ -19,13 +16,35 @@
   <string id="31026">Другие Опции</string>
   <string id="31027">Местность</string>
   
- 
-  <!-- обозначения Типа Вида -->
+   <!-- обозначения Типа Вида -->
   <string id="31028">Карусель Постеров</string>
   <string id="31029">Фанарт</string>
   <string id="31030">Полный список</string>
   <string id="31031">Миниатюры</string>
   <string id="31032">Карусель Изображений</string>
+  <string id="40000">Фанарт постер</string>      	 <!--ViewsGamesFanart -->
+  <string id="40001">Фанарт 1</string>      	 <!--ViewsGamesFanartSquare -->
+  <string id="40002">Фанарт 2</string>       	 <!--ViewsGamesFanartWide -->
+  <string id="40003">Правый список</string>       		 <!--ViewsGamesRightlist -->
+  <string id="40004">Правый список Square</string>       <!--ViewsGamesRightlist -->
+  <string id="40005">Правый список Landscape</string>    <!--ViewsGamesRightlistLandscape  -->
+  <string id="40006">Правый список Лого</string> 	 	 <!--ViewsTVLogoRightlist  -->
+  <string id="41111">Правый список Лого</string>	     <!--ViewsGamesLogoRightlist  -->
+  <string id="41112">Music Coverflow</string>
+  <string id="41113">Music Фанарт</string>
+  <string id="41114">Music Правый список</string>
+  <string id="41115">Music Стена</string>
+  <string id="41116">Фанарт Карусель Лого</string>
+  <string id="41117">Правый список баннеров</string>
+  <string id="41118">Стена баннеров</string>
+  <string id="41119">Большой постер</string>
+  <string id="41120">Компактный</string>
+  <string id="41121">Coverflow</string>			   	<!--Movie Coverflow  -->
+  <string id="41122">Карусель Фанарт</string>
+  <string id="41123">Половина стены</string>		    	<!--Movie Halfwall  -->
+  <string id="41124">Половина стены</string>			    <!--TV Halfwall  -->
+  <string id="41125">Стена баннеров 2</string>		    <!--TV Bannerwall Vertical  -->
+  <string id="41126">Стена</string>		            <!--Movie Wall  -->
 
   <!-- Дополнительные обозначения -->
   <string id="31040">Воспроизводится</string>
@@ -38,8 +57,14 @@
   <string id="31047">Текущие Настройки</string>
   <string id="31048">Настройки Визуализации</string>
   <string id="31049">Время Окончания</string>
-
-
+  <string id="31050">Время Начала</string>
+  <string id="31052">Imdb</string>
+  <string id="31053">Год</string>
+  <string id="31054">Длительность</string>
+  <string id="31063">Сезон</string>
+  <string id="31064">Эпизод</string>
+  <string id="31065">Рейтинг</string>
+  <string id="31066">Режисер</string>
   <!-- обозначения Редактора Списков -->
   <string id="31055">Открыть плейлист</string>
   <string id="31056">Сохранить плейлист</string>
@@ -49,7 +74,6 @@
   <string id="31060">Этот файл сгруппирован, выберите часть которую вы хотите воспроизвести.</string>
   <string id="31061">Выбранные</string>
   <string id="31061">Текущее Выделение</string>
-  
   <!-- обозначения настроек оболочки -->
   <string id="31100"></string>
   <string id="31101">Настройки главного экрана</string>
@@ -106,16 +130,12 @@
   <string id="31252">TWC Script</string>
   <string id="31253">10 дней</string> 
   
-  <string id="31948">Вероятность осадков</string> 
-  <string id="31970">Получение даных о погоде...</string> 
-
   <!-- Дополнительные обозначения -->
   <string id="31300">Текущая Температура</string>
   <string id="31301">Последнее Обновление</string>
   <string id="31302">Меню</string>
   <string id="31303">Источник данных</string> 
 
-  <string id="41024">Избранное</string>
   
 
 

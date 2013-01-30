@@ -1096,7 +1096,7 @@
 					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 				</item>
 				<item id="35">
-					<label>41024</label>
+					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>special://skin/backgrounds/favourites.jpg</icon>
 					<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>

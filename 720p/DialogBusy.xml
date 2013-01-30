@@ -44,7 +44,7 @@
 				<height>32</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>$LOCALIZE[31004]</label>
+				<label>$LOCALIZE[31002]</label>
 				<font>font12</font>
 			</control>
 		</control>

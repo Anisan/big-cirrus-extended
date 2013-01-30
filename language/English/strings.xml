@@ -2,12 +2,9 @@
 <strings>
   <!-- Misc labels -->
   <string id="31000">Change Your</string>
-  <string id="31001">Love</string>
-  <string id="31002">Hate</string>
-  <string id="31003">Power Options</string>
-  <string id="31004">Working...</string>
-  <string id="31005">Hide INFO</string>
-
+  <string id="31001">Power Options</string>
+  <string id="31002">Working...</string>
+  
   <string id="31007">Video Addons</string>
 
   <string id="31020">Recently Added</string>
@@ -22,6 +19,9 @@
   <!-- View Type labels -->
   <string id="31028">Poster Wrap</string>
   <string id="31029">Fanart</string>
+  <string id="31030">Full list</string>
+  <string id="31031">Pic Thumbs</string>
+  <string id="31032">Image Wrap</string>
   <string id="40000">Fanart Poster</string>      	 <!--ViewsGamesFanart -->
   <string id="40001">Fanart Square</string>      	 <!--ViewsGamesFanartSquare -->
   <string id="40002">Fanart Wide</string>       	 <!--ViewsGamesFanartWide -->
@@ -45,10 +45,6 @@
   <string id="41124">Half Wall</string>			    <!--TV Halfwall  -->
   <string id="41125">Banner Wall2</string>		    <!--TV Bannerwall Vertical  -->
   <string id="41126">Wall</string>		            <!--Movie Wall  -->
-  
-  <string id="31030">Full list</string>
-  <string id="31031">Pic Thumbs</string>
-  <string id="31032">Image Wrap</string>
 
   <!-- Extra labels -->
   <string id="31040">Now Playing</string>
@@ -105,15 +101,34 @@
   <string id="31123">Use "Posters" instead of "Banners" for TV Shows</string>
   <string id="31124">Show Background "Now Playing" Video</string>
   <string id="31125">Show Background "Now Playing" Visualization</string>
-
   <string id="31126">Enable Lyrics in Music OSD</string>
   <string id="31127">PATH TO LYRICS SCRIPT</string>
   <string id="31128">XBMC Lyrics</string>
   <string id="31129">Enable Subtitle Download in Video OSD</string>
   <string id="31130">PATH TO SUBTITLE SCRIPT</string>
+  <string id="31131">Enable TvTunes</string>
+  <string id="31132">Enable icon trailer in list movie</string>
+  <string id="31133">Enable plot in fullscreen info</string>
+  <string id="31134">Clear main menu (hide logo and buttons)</string>
+  <string id="31135">Horizontal main menu</string>
+  <string id="31136">Bottom control panel</string>
 
   <string id="31140">Music OSD</string>
   <string id="31141">Video OSD</string>
+      
+  <!-- Script labels -->
+  <string id="31200">Shortcuts</string>
+  <string id="31201">Categories</string>
+  <string id="31202">Show Cast</string>
+  <string id="31203">Choose Your Song</string>
+  <string id="31204">Section Links</string>
+  <string id="31205">Lyrics Source</string>
+
+  <!-- The Weather Channel Script labels -->
+  <string id="31250">Radar &amp; Forecast</string>
+  <string id="31251">Forecast</string>
+  <string id="31252">TWC Script</string>
+  <string id="31253">10 day</string> 
   
    <!-- New labels Settings (Custom Skin Settings)  -->
   <string id="41000">Custom Menu</string>
@@ -146,7 +161,7 @@
    <!-- New labels Settings (Background Customizer)  -->
   <string id="41022">Power</string>
   <string id="41023">Play Disc</string>
-  <string id="41024">Favourites</string>
+  <string id="41025">Music Visualisation</string>
   <string id="41025">Music Visualisation</string>
   <string id="41026">Games</string>
   
@@ -188,15 +203,6 @@
   <string id="41054">Choose Custom Addon [B]1[/B]</string>
   <string id="41055">Choose Custom Addon [B]2[/B]</string>
   <string id="41056">Choose Custom Addon [B]3[/B]</string>
-  
-   <!-- New labels Settings (Movie Submenus Favourites)  -->
-  <string id="41057">Choose Custom Favourite [B]1[/B]</string>
-  <string id="41058"> - Set Label</string>
-  <string id="41059"> - Set Favourite</string>
-  <string id="41060">Choose Custom Favourite [B]2[/B]</string>
-  <string id="41061">Choose Custom Favourite [B]3[/B]</string>
-  <string id="41062">Choose Custom Favourite [B]4[/B]</string>
-  <string id="41063">Choose Custom Favourite [B]5[/B]</string>
   
    <!-- New labels Settings (TV Submenus)  -->
   <string id="41064">TV Submenu</string>
@@ -411,28 +417,11 @@
   <string id="41270">Show Movie Disc</string>
   <string id="41271">Total Seasons:</string>
   
-  
-  
-  
    <!-- New labels PVR.  Cirrus Extended v2 -->
   <string id="41150">Record</string>
   <string id="41151">Recording</string>
   <string id="41152">Channel List</string>
   <string id="41153">Teletext</string>
-  
-  <!-- Script labels -->
-  <string id="31200">Shortcuts</string>
-  <string id="31201">Categories</string>
-
-  <string id="31202">Show Cast</string>
-  <string id="31203">Choose Your Song</string>
-  <string id="31204">Section Links</string>
-  <string id="31205">Lyrics Source</string>
-
-  <!-- The Weather Channel Script labels -->
-  <string id="31250">Radar &amp; Forecast</string>
-  <string id="31251">Forecast</string>
-  <string id="31252">TWC Script</string>
 
   <!-- Extra labels -->
   <string id="31300">Current Temp</string>

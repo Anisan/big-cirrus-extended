@@ -170,7 +170,7 @@
           <textcolor>grey2</textcolor>
           <align>right</align>
           <aligny>center</aligny>
-          <label>$LOCALIZE[31003]</label>
+          <label>$LOCALIZE[31001]</label>
         </control>
         <control type="button" id="20">
           <description>Power push button</description>

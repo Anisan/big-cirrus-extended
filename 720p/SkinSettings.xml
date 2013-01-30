@@ -454,7 +454,7 @@
 						<control type="radiobutton" id="232">
 							<description>Hide Favourites Button</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[31111] - $LOCALIZE[41024]</label>
+							<label>$LOCALIZE[31111] - $LOCALIZE[1036]</label>
 							<onclick>Skin.ToggleSetting(HomeMenuNoFavouritesButton)</onclick>
 							<selected>Skin.HasSetting(HomeMenuNoFavouritesButton)</selected>
 						</control>
@@ -665,7 +665,7 @@
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Scripts_Folder)]</thumb>
 							</item>
 							<item id="8">
-								<label>41024</label>
+								<label>1036</label>
 								<onclick>-</onclick>
 								<icon>special://skin/backgrounds/favourites.jpg</icon>
 								<thumb>$INFO[Skin.String(Home_Custom_Back_Favourites_Folder)]</thumb>
@@ -2884,14 +2884,14 @@
 						<control type="radiobutton" id="1045">
 							<description>Rightlist</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[40003]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[40003]</label>
 							<onclick>Skin.ToggleSetting(rightlist_view)</onclick>
 							<selected>Skin.HasSetting(rightlist_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1046">
 							<description>Wall</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41126]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41126]</label>
 							<onclick>Skin.ToggleSetting(wall_view)</onclick>
 							<selected>Skin.HasSetting(wall_view)</selected>
 						</control> 
@@ -2907,35 +2907,35 @@
 						<control type="radiobutton" id="1049">
 							<description>Big Poster</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41119]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41119]</label>
 							<onclick>Skin.ToggleSetting(bigposter_view)</onclick>
 							<selected>Skin.HasSetting(bigposter_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1050">
 							<description>Compact</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41120]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41120]</label>
 							<onclick>Skin.ToggleSetting(compact_view)</onclick>
 							<selected>Skin.HasSetting(compact_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1051">
 							<description>Coverflow</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41121]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41121]</label>
 							<onclick>Skin.ToggleSetting(coverflow_view)</onclick>
 							<selected>Skin.HasSetting(coverflow_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1052">
 							<description>Fanart Slide</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41122]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41122]</label>
 							<onclick>Skin.ToggleSetting(fanartslide_view)</onclick>
 							<selected>Skin.HasSetting(fanartslide_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1053">
 							<description>Halfwall</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41123]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41123]</label>
 							<onclick>Skin.ToggleSetting(halfwall_view)</onclick>
 							<selected>Skin.HasSetting(halfwall_view)</selected>
 						</control> 
@@ -2951,42 +2951,42 @@
 						<control type="radiobutton" id="1056">
 							<description>TV Logo Slide</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41116]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41116]</label>
 							<onclick>Skin.ToggleSetting(tvlogo_view)</onclick>
 							<selected>Skin.HasSetting(tvlogo_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1057">
 							<description>TV Logo Rightlist</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[40006]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[40006]</label>
 							<onclick>Skin.ToggleSetting(tvlogorightlist_view)</onclick>
 							<selected>Skin.HasSetting(tvlogorightlist_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1058">
 							<description>Bannerlist</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41117]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41117]</label>
 							<onclick>Skin.ToggleSetting(bannerlist_view)</onclick>
 							<selected>Skin.HasSetting(bannerlist_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1059">
 							<description>Bannerwall</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41118]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41118]</label>
 							<onclick>Skin.ToggleSetting(bannerwall_view)</onclick>
 							<selected>Skin.HasSetting(bannerwall_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1060">
 							<description>Bannerwall 2</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41125]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41125]</label>
 							<onclick>Skin.ToggleSetting(bannerwallvert_view)</onclick>
 							<selected>Skin.HasSetting(bannerwallvert_view)</selected>
 						</control> 
 						<control type="radiobutton" id="1061">
 							<description>Halfwall TV</description>
 							<include>MenuItemSettings</include>
-							<label>$LOCALIZE[41108] $LOCALIZE[41124]</label>
+							<label>$LOCALIZE[24022] $LOCALIZE[41124]</label>
 							<onclick>Skin.ToggleSetting(halfwalltv_view)</onclick>
 							<selected>Skin.HasSetting(halfwalltv_view)</selected>
 						</control> 
