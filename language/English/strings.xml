@@ -171,35 +171,8 @@
   <string id="41087">Enable Extra Fanart for TV Shows</string>
   
   <string id="41089">Enable Season Thumb</string> <!-- v2.08  -->
-  <string id="41090">Enable PlotOutline for Movies in Rightlist,Coverflow,Fanart</string>
-  <string id="41091">Enable IMDB Rating Number in RightlistView</string>
-  <string id="41092">Set Path for Advanced Launcher Games Art</string>
-  <string id="41093">- Set Path</string>
-  <string id="41094">Hide Trailer Flag</string>
-  <string id="41095">Show Path in Video Info Screen</string>
-  <string id="41096">Run Logo Downloader Script</string>
- <!--  <string id="41097">Enable Slim OSD by Zombierobot</string> -->
   
-  <!-- New labels Settings (Home Items)  -->
-  <string id="41098">Addons</string>
-  <string id="41099">TV Shows</string>
-  <string id="41100">Play Disc</string>
-  
-    <!-- New labels Misc.  Cirrus Extended v2 -->
-  <string id="41104">Music</string>
-  <string id="41105">Video Plugins</string>
-  <string id="41106">Addons</string>
-  <string id="41108">Enable</string>
-  <string id="41109">Disable</string>
-  <string id="41110">Get Artwork</string>
-  <string id="41127">Edit Library</string>
-  <string id="41128">Path:</string>
-  <string id="41129">Total</string>
-  <string id="41130">Watched</string>
-  <string id="41131">Unwatched</string>
-  <string id="41132">Featured Music</string>
-  <string id="41133">Featured Songs</string>
-  
+ 
    <!-- New labels Misc.  Cirrus Extended v2 *** NEW V2.03 -->
   <string id="41134">Settings</string>
   <string id="41135">Random Fanart Backdrops</string>
