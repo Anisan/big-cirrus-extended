@@ -3399,6 +3399,13 @@
 							<onclick>Addon.OpenSettings(script.favourites)</onclick>
 							<selected>System.HasAddon(script.favourites)</selected>
 						</control>
+						<control type="radiobutton" id="1919">
+							<description>script globalsearch</description>
+							<include>MenuItemSettings</include>
+							<label>script.globalsearch</label>
+							<onclick>Addon.OpenSettings(script.globalsearch)</onclick>
+							<selected>System.HasAddon(script.globalsearch)</selected>
+						</control>
 
 					</control>
 				</control>

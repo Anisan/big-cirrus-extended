@@ -240,6 +240,25 @@
 				<posy>50r</posy>
 				<control type="button" id="20">
 					<description>Power push button</description>
+					<posx>135</posx>
+					<posy>0</posy>
+					<width>43</width>
+					<height>43</height>
+					<label>-</label>
+					<font>-</font>
+					<aligny>-</aligny>
+					<onclick>RunScript(script.globalsearch)</onclick>
+					<texturefocus>homeglobalsearchbuttonFO.png</texturefocus>
+					<texturenofocus border="-5,-5,-5,-5">homeglobalsearchbuttonNF.png</texturenofocus>
+					<onleft>21</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<visible>System.HasAddon(script.globalsearch)</visible>
+					<visible>!Skin.HasSetting(cleanHome)</visible>
+				</control>
+				<control type="button" id="21">
+					<description>Power push button</description>
 					<posx>90</posx>
 					<posy>0</posy>
 					<width>43</width>
@@ -250,15 +269,13 @@
 					<onclick>ActivateWindow(ShutdownMenu)</onclick>
 					<texturefocus>homepowerbuttonFO.png</texturefocus>
 					<texturenofocus>homepowerbuttonNF.png</texturenofocus>
-					<onleft>21</onleft>
-					<onright>9000</onright>
+					<onleft>22</onleft>
+					<onright>20</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<visible>!Skin.HasSetting(cleanHome)</visible>
 				</control>
-				
-
-				<control type="button" id="21">
+				<control type="button" id="22">
 					<description>Favourites push button</description>
 					<posx>45</posx>
 					<posy>0</posy>
@@ -270,14 +287,14 @@
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<texturefocus>homefavouritesbuttonFO.png</texturefocus>
 					<texturenofocus>homefavouritesbuttonNF.png</texturenofocus>
-					<onleft>22</onleft>
-					<onright>20</onright>
+					<onleft>23</onleft>
+					<onright>21</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<visible>!Skin.HasSetting(cleanHome)</visible>
 				</control>
 				
-				<control type="button" id="22">
+				<control type="button" id="23">
 					<description>Play Disc Media push button</description>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -290,13 +307,13 @@
 					<texturefocus>homeplaybuttonFO.png</texturefocus>
 					<texturenofocus>homeplaybuttonNF.png</texturenofocus>
 					<onleft>9000</onleft>
-					<onright>23</onright>
+					<onright>22</onright>
 					<onup>9000</onup>
 					<ondown>9000</ondown>
 					<visible>!Skin.HasSetting(cleanHome)</visible>
 					<enable>System.HasMediaDVD</enable>
 				</control>
-				<control type="button" id="23">
+				<control type="button" id="24">
 					<description>Play Disc Media push button</description>
 					<posx>0</posx>
 					<posy>0</posy>
