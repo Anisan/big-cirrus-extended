@@ -83,18 +83,18 @@
 					<control type="label">
 						<posx>120</posx>
 						<posy>40</posy>
-						<width>100</width>
+						<width>400</width>
 						<height>40</height>
 						<font>font13_title</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
+						<align>left</align>
 						<aligny>center</aligny>
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.1.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
 						<posx>590</posx>
-						<posy>60</posy>
+						<posy>80</posy>
 						<width>390</width>
 						<height>20</height>
 						<font>font12</font>
@@ -162,18 +162,18 @@
 					<control type="label">
 						<posx>120</posx>
 						<posy>40</posy>
-						<width>100</width>
+						<width>400</width>
 						<height>40</height>
 						<font>font13_title</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
+						<align>left</align>
 						<aligny>center</aligny>
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.2.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
 						<posx>590</posx>
-						<posy>60</posy>
+						<posy>80</posy>
 						<width>390</width>
 						<height>20</height>
 						<font>font12</font>
@@ -241,18 +241,18 @@
 					<control type="label">
 						<posx>120</posx>
 						<posy>40</posy>
-						<width>100</width>
+						<width>400</width>
 						<height>40</height>
 						<font>font13_title</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>selected</selectedcolor>
-						<align>center</align>
+						<align>left</align>
 						<aligny>center</aligny>
 						<label>[COLOR=grey2]$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR][/COLOR]$INFO[Window.Property(36Hour.3.Temperature),[B] ,[/B]]</label>
 					</control>
 					<control type="label">
 						<posx>590</posx>
-						<posy>60</posy>
+						<posy>80</posy>
 						<width>390</width>
 						<height>20</height>
 						<font>font12</font>
