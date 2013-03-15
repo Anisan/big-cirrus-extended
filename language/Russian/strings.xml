@@ -170,7 +170,10 @@
   <string id="41086">Включить Extra Fanart для Фильмов</string>
   <string id="41087">Включить Extra Fanart для Сериалов</string>
   
-  <string id="31303"></string>
+  <string id="31300">Текущая температура</string>
+  <string id="31301">Последнее обновление</string>
+  <string id="31302">Menu</string>
+  <string id="31303">Источник данных</string>
   <string id="31304">Изображение</string>
   <string id="31305">Не Вставлен Диск</string>
   <string id="31306">Извлечь</string>
@@ -221,4 +224,18 @@
   <string id="31409">[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Настройка полноэкранной информации · Настройка отображения EPG</string>
   
   <string id="31421">Выберите ваш профиль пользователя XBMC[CR]чтобы войти в систему и продолжить.</string>
+  
+  <!-- Weather plugin -->
+  <string id="31900">Карты Погоды</string>
+  <string id="31901">Прогноз на 36 часов</string>
+  <string id="31902">Почасовой прогноз</string>
+  <string id="31903">Прогноз на выходные</string>
+  <string id="31904">Прогноз на 10 суток</string>
+  <string id="31905">Прогноз</string>
+  <string id="31906">Карты &amp; Video</string>
+  <string id="31907">Видео прогноз [COLOR=grey2](полноэкранное воспроизведение)[/COLOR]</string>
+  <string id="31908">Вероятность осадков</string>
+  <string id="31909">Получение прогноза...</string>
+  <string id="31910">Карта погоды</string>
+  <string id="31911">Включить анимацию</string>
 </strings>
