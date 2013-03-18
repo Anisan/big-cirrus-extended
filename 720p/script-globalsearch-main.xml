@@ -6,6 +6,7 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
+		
 	<controls>
 		<control type="group" id="100">
 			<include>VisibleFadeEffect</include>
@@ -105,18 +106,9 @@
 				<animation effect="fade" time="200">Hidden</animation>
 				<visible>Control.HasFocus(181)</visible>
 			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>videoinfoback.png</texture>
-				<animation effect="fade" time="400">WindowOpen</animation>
-				<animation effect="fade" time="200">WindowClose</animation>
-			</control>
 			<control type="group">
 				<posx>90</posx>
-				<posy>30</posy>
+				<posy>60</posy>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 					<effect type="fade" start="0" end="100" time="300" />
@@ -126,35 +118,11 @@
 					<effect type="fade" start="100" end="0" time="300" />
 				</animation>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
-					<width>1090</width>
-					<height>630</height>
-					<texture border="15">ContentPanel.png</texture>
-				</control>
-				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
-					<width>1090</width>
-					<height>630</height>
-					<texture border="15">ContentPanel.png</texture>
-				</control>
-				<control type="button">
-					<description>Close Window button</description>
-					<posx>980</posx>
-					<posy>11</posy>
-					<width>64</width>
-					<height>32</height>
-					<label>-</label>
-					<font>-</font>
-					<onclick>PreviousMenu</onclick>
-					<texturefocus>DialogCloseButton-focus.png</texturefocus>
-					<texturenofocus>DialogCloseButton.png</texturenofocus>
-					<onleft>1</onleft>
-					<onright>1</onright>
-					<onup>1</onup>
-					<ondown>1</ondown>
-					<visible>system.getbool(input.enablemouse)</visible>
+					<posx>-90</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>640</height>
+					<texture border="20">videoinfoback.png</texture>
 				</control>
 				<control type="image">
 					<description>LOGO</description>
@@ -289,7 +257,7 @@
 							<visible>Control.IsVisible(189)</visible>
 						</item>
 						<item id="10">
-							<label>[COLOR=blue]$INFO[Control.GetLabel(198)][/COLOR]</label>
+							<label>[COLOR=orange]$INFO[Control.GetLabel(198)][/COLOR]</label>
 							<label2>$LOCALIZE[31207]</label2>
 							<onclick>Control.Setfocus(9000,0)</onclick>
 							<onclick>SendClick(198)</onclick>
@@ -299,23 +267,15 @@
 				</control>
 				<control type="image">
 					<posx>268</posx>
-					<posy>10</posy>
-					<width>790</width>
-					<height>618</height>
+					<posy>1</posy>
+					<width>802</width>
+					<height>636</height>
 					<texture border="5">homesubbackground.png</texture>
-				</control>
-				<control type="image">
-					<posx>268</posx>
-					<posy>10</posy>
-					<width>804</width>
-					<height>100</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>GlassTitleBar.png</texture>
 				</control>
 				<control type="label">
 					<description>header label Finished Searching</description>
 					<posx>300</posx>
-					<posy>20</posy>
+					<posy>0</posy>
 					<width>740</width>
 					<height>30</height>
 					<font>font16</font>
@@ -329,7 +289,7 @@
 				<control type="label">
 					<description>header Label Still Searching</description>
 					<posx>300</posx>
-					<posy>20</posy>
+					<posy>10</posy>
 					<width>740</width>
 					<height>30</height>
 					<font>font16</font>
@@ -360,7 +320,7 @@
 					<font>-</font>
 				</control>
 				<control type="label" id="199">
-					<posx>40</posx>
+					<posx>10</posx>
 					<posy>358</posy>
 					<width>1200</width>
 					<height>20</height>
@@ -381,7 +341,7 @@
 					<effect type="fade" start="100" end="0" time="300" />
 				</animation>
 				<posx>380</posx>
-				<posy>90</posy>
+				<posy>60</posy>
 				<control type="button" id="198">
 					<!-- Hide this button  off the screen because we use the list above to pass to it instead -->
 					<posx>2000</posx>
@@ -405,7 +365,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="110">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -420,9 +380,9 @@
 							<visible>Container(9000).HasFocus(1)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>118</onright>
 							<onup>111</onup>
@@ -605,7 +565,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -620,7 +580,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -628,7 +588,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(111).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(111).CurrentPage]/$INFO[Container(111).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(111).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(111).CurrentPage]/$INFO[Container(111).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(1)</visible>
 						</control>
 
@@ -637,7 +597,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="120">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -652,9 +612,9 @@
 							<visible>Container(9000).HasFocus(2)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>128</onright>
 							<onup>121</onup>
@@ -779,7 +739,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -794,7 +754,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -802,7 +762,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(121).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(121).CurrentPage]/$INFO[Container(121).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(121).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(121).CurrentPage]/$INFO[Container(121).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(2)</visible>
 						</control>
 					</control>
@@ -810,7 +770,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="130">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -825,9 +785,9 @@
 							<visible>Container(9000).HasFocus(3)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>138</onright>
 							<onup>131</onup>
@@ -910,7 +870,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -925,7 +885,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -933,7 +893,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(131).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(131).CurrentPage]/$INFO[Container(131).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(131).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(131).CurrentPage]/$INFO[Container(131).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(3)</visible>
 						</control>
 					</control>
@@ -941,7 +901,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="140">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -955,9 +915,9 @@
 						<control type="panel" id="141">
 							<visible>Container(9000).HasFocus(4)</visible>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>148</onright>
 							<onup>141</onup>
@@ -1078,7 +1038,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -1093,7 +1053,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -1101,7 +1061,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(141).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(141).CurrentPage]/$INFO[Container(141).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(141).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(141).CurrentPage]/$INFO[Container(141).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(4)</visible>
 						</control>
 					</control>
@@ -1109,7 +1069,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="150">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -1124,9 +1084,9 @@
 							<visible>Container(9000).HasFocus(5)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>158</onright>
 							<onup>151</onup>
@@ -1267,7 +1227,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -1282,7 +1242,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -1290,7 +1250,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(151).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(151).CurrentPage]/$INFO[Container(151).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(151).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(151).CurrentPage]/$INFO[Container(151).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(5)</visible>
 						</control>
 					</control>
@@ -1298,7 +1258,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="160">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -1313,9 +1273,9 @@
 							<visible>Container(9000).HasFocus(6)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>168</onright>
 							<onup>161</onup>
@@ -1420,7 +1380,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -1435,7 +1395,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -1443,7 +1403,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(161).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(161).CurrentPage]/$INFO[Container(161).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(161).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(161).CurrentPage]/$INFO[Container(161).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(6)</visible>
 						</control>
 					</control>
@@ -1451,7 +1411,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="170">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -1466,9 +1426,9 @@
 							<visible>Container(9000).HasFocus(7)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>178</onright>
 							<onup>171</onup>
@@ -1573,7 +1533,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -1588,7 +1548,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -1596,7 +1556,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(171).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(171).CurrentPage]/$INFO[Container(171).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(171).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(171).CurrentPage]/$INFO[Container(171).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(7)</visible>
 						</control>
 					</control>
@@ -1604,7 +1564,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>750</width>
-						<height>530</height>
+						<height>640</height>
 						<control type="label" id="180">
 							<!-- Hide this Control off the screen because we use the list above to pass to it instead -->
 							<posx>2000</posx>
@@ -1619,9 +1579,9 @@
 							<visible>Container(9000).HasFocus(8)</visible>
 							<include>VisibleFadeEffect</include>
 							<posx>0</posx>
-							<posy>0</posy>
+							<posy>40</posy>
 							<width>750</width>
-							<height>530</height>
+							<height>560</height>
 							<onleft>9000</onleft>
 							<onright>188</onright>
 							<onup>181</onup>
@@ -1746,7 +1706,7 @@
 							<posx>770</posx>
 							<posy>0</posy>
 							<width>25</width>
-							<height>530</height>
+							<height>640</height>
 							<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 							<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 							<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -1761,7 +1721,7 @@
 						<control type="label">
 							<description>number of files/pages in list text label</description>
 							<posx>750</posx>
-							<posy>530</posy>
+							<posy>600</posy>
 							<width>500</width>
 							<height>35</height>
 							<font>font12</font>
@@ -1769,7 +1729,7 @@
 							<aligny>center</aligny>
 							<scroll>true</scroll>
 							<textcolor>grey</textcolor>
-							<label>([COLOR=blue]$INFO[Container(181).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(181).CurrentPage]/$INFO[Container(181).NumPages][/COLOR])</label>
+							<label>([COLOR=orange]$INFO[Container(181).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(181).CurrentPage]/$INFO[Container(181).NumPages][/COLOR])</label>
 							<visible>Container(9000).Hasfocus(8)</visible>
 						</control>
 					</control>
