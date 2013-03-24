@@ -18,7 +18,7 @@
 		<aspectratio>stretch</aspectratio>
       </control>
       <control type="image">
-        <posx>370r</posx>
+        <posx>630r</posx>
         <posy>30</posy>
         <width>200</width>
         <height>200</height>
@@ -29,8 +29,8 @@
         <bordersize>8</bordersize>
       </control>
       <control type="list" id="450">
-        <posx>390r</posx>
-        <posy>250</posy>
+        <posx>380r</posx>
+        <posy>30</posy>
         <width>450</width>
         <height>380</height>
         <onup>450</onup>
